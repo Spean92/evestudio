@@ -1,0 +1,1174 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+
+}
+body input:required:valid,
+body textarea:required:valid {
+
+}
+/**/
+/**/
+/**/
+
+/**/
+/**/
+/**/
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+body {
+	font-family: "RobotoRegular", sans-serif;
+	font-size: 16px;
+}
+main.content {
+	padding: 0;
+	background: #000;
+}
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+	position: relative;
+	z-index: 5;
+}
+img {
+	width: 100%;
+}
+header {
+	height: 76px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(0, 0, 0, 0.3);
+	transition: all .3s ease-in-out;
+	z-index: 10;
+}
+header.active {
+	background: rgba(255, 255, 255, 0.9);
+	border-color: rgba(32, 35, 39, 0.1);
+	z-index: 50;
+}
+header.active .right div{
+	border-color: rgba(32, 35, 39, 0.1) !important;
+	color: black;
+}
+header.active .right div.bars {
+	border-color: black !important;
+}
+header.active .right div.bars1:before {
+	border-color: black !important;
+}
+
+header .left {
+	float: left;
+	margin-top: 12px;
+}
+header .left .img_logo{
+	width: 67px;
+	height: 54px;
+	overflow: hidden;
+}
+header .right {
+	float: right;
+	margin-top: 25px;
+}
+header .right div {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	font-family: "Segoe UI Light";
+	color: rgb(255, 255, 255);
+	line-height: 1.2;
+}
+header .right div.home {
+  text-align: left;
+	padding-right: 25px;
+	border-right: 1px solid rgba(255,255,255,0.2);
+}
+header .right div.home span.pagins {
+	font-family: "Segoe UI Bold";
+}
+header .right div.bars {
+	width: 30px;
+	height: 18px;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	padding-left: 25px;
+	margin-left: 25px;
+	cursor: pointer;
+	position: relative;
+}
+header .right div.bars1:before {
+  content: "";
+  position: absolute;
+  top: 5.5px;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+}
+#nav {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 6;
+	background: #000;
+	transition: al 0.4s;
+}
+#nav .container {
+	padding-top: 26vh;
+	padding-bottom: 165px;
+	padding-left: 0;
+	padding-right: 0;
+	height: 100vh;
+	max-width: 1300px;
+	overflow: hidden;
+	position: relative;
+}
+#nav .container>h1 {
+	  font-size: 56px;
+	  font-family: "Segoe UI Light";
+	  color: rgb(255, 255, 255);
+	  text-align: left;
+		font-weight: normal;
+		margin-top: 0;
+}
+#nav .container>.nav-list {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 0;
+	margin-top: 0;
+	counter-reset: section;
+}
+#nav .container>.nav-list>li {
+	-webkit-flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	-webkit-flex-basis: 0;
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+}
+#nav .container>.nav-list>li h3 {
+	width: 90%;
+	padding-bottom: 6px;
+	border-bottom: 1px solid white;
+	margin-bottom: 15px;
+}
+#nav .container>.nav-list>li:last-child h3 {
+	width: 100%;
+}
+#nav .container>.nav-list>li:last-child ul li {
+	width: 100%;
+}
+#nav .container>.nav-list>li h3 a {
+  font-size: 17px;
+  font-family: "Segoe UI Black";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1.414;
+  text-align: left;
+	transition: all .3s ease-in-out;
+}
+#nav .container>.nav-list>li h3 a:hover {
+	opacity: 0.5;
+}
+#nav .container>.nav-list>li ul li {
+	width: 90%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+#nav .container>.nav-list>li ul li a {
+  font-size: 14px;
+  font-family: "Segoe UI Light";
+  color: rgb(255, 255, 255);
+  line-height: 32px;
+  text-align: left;
+	transition: all .3s ease-in-out;
+}
+#nav .container>.nav-list>li ul li a:hover {
+	opacity: 0.5;
+}
+#nav .foot {
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	position: absolute;
+	bottom: 0;
+	height: 115px;
+	width: 100%;
+}
+#nav .foot .wrapper {
+
+}
+#nav .foot .wrapper .left{
+	display: inline-block;
+	width: 40%;
+	vertical-align: top;
+	color: white;
+	padding-top: 43px;
+	font-size: 14px;
+  font-family: "Segoe UI Light";
+  color: rgb(255, 255, 255);
+}
+#nav .foot .wrapper .right{
+	display: inline-block;
+	width: 47%;
+	vertical-align: top;
+	float: right;
+}
+#nav .foot .wrapper .right div{
+	display: inline-block;
+	width: 25.7%;
+	vertical-align: top;
+	text-align: right;
+	padding-top: 44px;
+	margin-left: 40px
+}
+#nav .foot .wrapper .right div:first-child{
+	display: inline-block;
+	width: 32%;
+	vertical-align: top;
+	text-align: right;
+	padding-top: 41px;
+	margin-left: 40px;
+  margin-right: -40px;
+	z-index: 2;
+}
+#nav .foot .wrapper .right div:last-child{
+	display: inline-block;
+	width: 32%;
+	vertical-align: top;
+	text-align: right;
+	padding-top: 44px;
+	padding-top: 34px;
+	margin-left: 0;
+
+}
+#nav .foot .wrapper .right div.soc a{
+	height: 30px;
+	max-width: 30px;
+	margin: 0 3px;
+}
+#nav .foot .wrapper .right div a{
+	display: inline-block;
+	vertical-align: top;
+	color: white;
+  font-size: 14px;
+  font-family: "Segoe UI Light";
+  color: rgb(255, 255, 255);
+  line-height: 1.571;
+  text-align: left;
+	transition: all .2s ease-in-out;
+}
+#nav .foot .wrapper .right div a:hover{
+	opacity: 0.6;
+}
+
+#nav .foot .wrapper .right div a img{
+	height: 100%;
+}
+/*FOOTER*/
+footer {
+	position: relative;
+	background: #fff;
+}
+footer .footer {
+	padding: 55px 0;
+}
+footer .footer>div{
+	display: inline-block;
+	vertical-align: top;
+	width: 16%;
+}
+
+footer .footer div ul li a, footer .footer div ul li{
+  font-size: 14px;
+  font-family: "Segoe UI";
+  color: rgb(0, 0, 0);
+  line-height: 1.571;
+  text-align: left;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-ms-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+footer .footer div ul>li:first-child {
+	font-family: "Segoe UI Black";
+	/*text-transform: uppercase;*/
+}
+footer .footer>div>ul>li>a:hover, footer .footer div a:hover li {
+	opacity: 0.5;
+}
+footer .footer div.visit {
+	transform: translateX(40px);
+}
+footer .footer div.follow {
+	transform: translateX(130px);
+}
+footer .footer div.logo {
+  font-size: 10.698px;
+  font-family: "Segoe UI";
+  color: rgb(0, 0, 0);
+  line-height: 2.056;
+  text-align: left;
+	transform: translateX(180px);
+}
+footer .footer div.icons {
+	display: none;
+}
+div.icons {
+	display: none;
+}
+footer .footer div.logo .img_logo{
+	width: 75px;
+	overflow: hidden;
+	display: block;
+	margin-bottom: 4px;
+}
+footer .footer div.logo .img_logo img{
+	width: 100%;
+}
+footer .footer div.top {
+	text-align: right;
+	width: 20%;
+	float: right;
+}
+footer .footer div.top .wrap{
+
+}
+footer .footer div.top .wrap a{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	background: url(../img/arrow_hover.png) no-repeat;
+	background-size: contain;
+	text-align: center;
+	-webkit-transition: all .3s linear;
+	-moz-transition: all .3s linear;
+	-ms-transition: all .3s linear;
+	-o-transition: all .3s linear;
+	transition: all .3s linear;
+}
+footer .footer div.top .wrap a:hover{
+	background: url(../img/arrow_black.png) no-repeat;
+	background-size: contain;
+}
+footer .footer div .copy{
+	display: none;
+}
+
+/*-------------------------------------*/
+/*-----------------BOX-1---------------*/
+/*-------------------------------------*/
+
+.mainpage .content .box-1{
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.mainpage .content .box-1 .bg{
+	background: url(../img/box-1.png) no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 4;
+}
+.mainpage .content .box-1 .video_pattern{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+	background: url(../img/dot.png);
+}
+.mainpage .content .box-1 video{
+	width: 100%;
+	display: none;
+	position: fixed;
+	z-index: 2;
+}
+.mainpage .content .box-1 .sound {
+	position: absolute;
+	bottom: 20px;
+	right: 50%;
+	margin-right: -540px;
+	display: none;
+	z-index: 20;
+	cursor: pointer;
+}
+.mainpage .content .box-1 .sound img{
+	width: 	30px;
+	height: 30px;
+}
+.mainpage .content .box-1 #play {
+	position: absolute;
+	bottom: 20px;
+	right: 50%;
+	margin-right: -585px;
+	display: none;
+	z-index: 20;
+	cursor: pointer;
+}
+.mainpage .content .box-1 #play img{
+	width: 	22px;
+	height: 28px;
+}
+.mainpage .content .box-1 .text{
+	padding-top: 29vh;
+	z-index: 52;
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+}
+.mainpage .content .box-1 .text h1{
+  font-size: 55px;
+	width: 100%;
+  font-family: "Segoe UI Bold";
+  color: rgb(255, 255, 255);
+  line-height: 70px;
+  text-align: center;
+	margin-bottom: 30px;
+}
+.mainpage .content .box-1 .text p{
+  font-size: 21px;
+	width: 50%;
+	margin: 0 auto;
+  font-family: "Segoe UI Light";
+  color: rgb(255, 255, 255);
+  line-height: 34px;
+  text-align: center;
+}
+.mainpage .content .box-1 .text p span{
+	border: 2px white solid;
+	font-weight: bolder;
+	font-size: 20px;
+	line-height: 17px;
+	padding: 0px 10px 7px 10px;
+	font-family: "Segoe UI Bold";
+	display: inline-block;
+}
+hr {
+	border-color: black;
+	margin: 0;
+	padding-top: 10px;
+}
+hr.thin {
+	border-color: rgba(32, 35, 39, 0.1);
+	margin: 0;
+	padding: 0;
+}
+.clearfix {
+	clear: both;
+}
+/*-------------------------------------*/
+/*-----------------BOX-2---------------*/
+/*-------------------------------------*/
+.mainpage .content .box-2 {
+	background: #fff;
+	padding-bottom: 0px;
+  margin-top: 100vh;
+	position: relative;
+}
+.mainpage .content .box-2 .wrapper{
+	padding-top: 30px;
+}
+.mainpage .content .box-2 div .item.case1 {
+	height: 760px;
+	position: relative;
+	margin-top: 64px;
+	padding-top: 87px;
+}
+.mainpage .content .box-2 div .item.case2 {
+	height: 615px;
+	position: relative;
+	margin-top: 60px;
+	padding-top: 0px;
+	margin-bottom: 50px;
+}
+.mainpage .content .box-2 div .item.case3 {
+	height: 575px;
+	position: relative;
+	margin-top: 60px;
+	padding-top: 0px;
+}
+.mainpage .content .box-2 div .item.case4 {
+	height: 610px;
+	position: relative;
+	margin-top: 60px;
+	padding-top: 0px;
+}
+.mainpage .content .box-2 div .item.case5 {
+	height: 600px;
+	position: relative;
+	margin-top: 60px;
+	padding-top: 0px;
+}
+.mainpage .content .box-2 div .item .left{
+	height: 100%;
+	/*margin-top: 50px;*/
+	width: 750px;
+	float: left;
+}
+.mainpage .content .box-2 div .item.case1 .left .img{
+	width: 100%;
+	height: 100%;
+	float: left;
+	background: url(../img/videopeoduction.png) no-repeat;
+	background-position: -200px center;
+	/*background-size: 140%;*/
+background-size: contain;
+}
+.mainpage .content .box-2 div .item.case2 .left .img{
+	width: 100%;
+	height: 100%;
+	max-width: 837px;
+  max-height: 615px;
+	float: left;
+	background: url(../img/web-dev.png) no-repeat;
+	background-position: right 80px;
+	background-size: 140%;
+/*background-size: cover;*/
+}
+.mainpage .content .box-2 div .item.case3 .left .img{
+	width: 100%;
+	height: 100%;
+	max-width: 826px;
+	max-height: 575px;
+	float: left;
+	background: url(../img/design-dev.png) no-repeat;
+	background-position: -170px 0px;
+	background-size: 110%;
+	/* background-size: cover; */
+	/* background-size: contain; */
+}
+.mainpage .content .box-2 div .item.case4 .left .img{
+	width: 100%;
+	height: 100%;
+	max-width: 837px;
+	max-height: 615px;
+	float: left;
+	background: url(../img/branding.png) no-repeat;
+	background-position: right center;
+	background-size: 140%;
+/*background-size: cover;*/
+}
+.mainpage .content .box-2 div .item.case5 .left .img{
+	width: 100%;
+	height: 100%;
+	max-width: 837px;
+	max-height: 545px;
+	float: left;
+	background: url(../img/marketing.png) no-repeat;
+	background-position: -80px 80px;
+	background-size: 100%;
+	/* background-size: cover; */
+}
+.mainpage .content .box-2 div .item .right{
+	width: 490px;
+	float: left;
+	margin-left: 30px;
+	margin-top: 55px;
+}
+.mainpage .content .box-2 div .item .right{
+
+}
+.mainpage .content .box-2 div .item .right .first h2{
+  font-size: 55px;
+  font-family: "SegoeUILight";
+  color: rgb(0, 0, 0);
+  line-height: 60px;
+	margin-bottom: 20px;
+	font-weight: normal;
+	margin-top: -10px;
+}
+.mainpage .content .box-2 div .item .right .second p{
+	font-size: 15px;
+	font-family: "Segoe UI";
+	color: rgb(0, 0, 0);
+	line-height: 1.6;
+	text-align: left;
+	margin-bottom: 100px;
+	width: 100%;
+}
+.mainpage .content .box-2 div .item .right .hrbold {
+	border-width: 2px;
+}
+.mainpage .content .box-2 div .item .right .third p.border{
+	display: block;
+	font-size: 22px;
+	font-family: "Segoe UI Bold";
+	text-transform: uppercase;
+	color: rgb(0, 0, 0);
+	line-height: 1.46;
+	text-align: left;
+	/*border: 2px solid black;*/
+	/*padding-left: 5px;*/
+	margin-bottom: 0;
+}
+.mainpage .content .box-2 div .item .right .third p:last-child{
+	font-size: 15px;
+	font-family: "Segoe UI";
+	color: rgb(0, 0, 0);
+	line-height: 1.6;
+	text-align: left;
+	/*width: 70%;*/
+	margin-bottom: 45px;
+	margin-top: 10px;
+}
+.mainpage .content .box-2 div .item .right a {
+  font-size: 15px;
+  font-family: "Segoe UI Bold";
+  color: rgb(0, 0, 0);
+	margin-top: -15px;
+  display: block;
+	transition: all .2s ease-in-out;
+}
+.mainpage .content .box-2 div .item .right a:hover {
+	opacity: 0.5;
+}
+/*-------------------------------------*/
+/*-----------------BOX-3---------------*/
+/*-------------------------------------*/
+.mainpage .content .box-3 {
+	background: #fff;
+	padding-bottom: 80px;
+	position: relative;
+}
+.mainpage .content .box-3 .header {
+	width: 810px;
+}
+.mainpage .content .box-3 .header h2{
+  font-size: 60px;
+  font-family: "Segoe UI Light";
+  color: rgb(0, 0, 0);
+  line-height: 1;
+  text-align: left;
+	margin-top: 0;
+	padding-top: 64px;
+	font-weight: normal;
+	margin-bottom: 30px;
+}
+.mainpage .content .box-3 .header hr{
+	border-width: 2px;
+}
+.mainpage .content .box-3 .clients {
+	width: 1000px;
+	margin: 40px auto 50px auto;
+}
+.mainpage .content .box-3 .clients_mob {
+	display: none;
+}
+.mainpage .content .box-3 .clients .lid {
+	width: 24%;
+	padding: 40px 70px;
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+	max-height: 160px;
+	overflow: hidden;
+}
+.mainpage .content .box-3 .clients .row .lid:first-child {
+	padding: 40px 74px;
+}
+.mainpage .content .box-3 .clients .row:first-child .lid:first-child {
+
+}
+.mainpage .content .box-3 .clients .row .lid:nth-child(2) {
+	padding: 40px 71px;
+
+}
+.mainpage .content .box-3 .clients .row .lid:nth-child(3) {
+	padding: 40px 75px;
+
+}
+.mainpage .content .box-3 .clients .row .lid:nth-child(4) {
+	padding: 40px 76px;
+
+}
+.mainpage .content .box-3 .clients .lid a img{
+  max-height: 70px;
+	min-height: 25px;
+	/*-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);*/
+	/*filter: url(grayscale.svg); /* Firefox 4+ */
+	/*filter: gray;  IE 6-9 */
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.mainpage .content .box-3 .clients .lid a img:hover{
+	cursor: pointer;
+	-webkit-filter: none;
+	-moz-filter: none;
+	-ms-filter: none;
+	-o-filter: none;
+	filter: none;
+	/*filter: url(grayscale.svg); /* Firefox 4+ */
+	filter: none; /* IE 6-9 */
+}
+.mainpage .content .box-3 .clients .lid a img.noBlack:hover{
+	opacity: 0.6;
+}
+.mainpage .content .box-3 .all_clients {
+  font-size: 15px;
+  font-family: "Segoe UI Bold";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+	line-height: 1.4;
+  text-align: left;
+	display: block;
+	width: 270px;
+	padding: 0;
+	border: none;
+	margin-left: auto;
+	transition: all .2s ease-in-out;
+}
+.mainpage .content .box-3 .all_clients:hover {
+	opacity: 0.5;
+}
+
+/*-------------------------------------*/
+/*-----------------BOX-1---------------*/
+/*-------------------------------------*/
+
+.projects .content .box-1{
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.projects .content .box-1 .bg{
+	background: url(../img/box-1.png) no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 4;
+}
+
+
+.projects .content .box-1 .text{
+	padding-top: 31vh;
+	z-index: 52;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+}
+.projects .content .box-1 .text h1 {
+  font-size: 60px;
+	width: 100%;
+  font-family: "Segoe UI Bold";
+  color: rgb(255, 255, 255);
+  line-height: 1;
+  text-align: center;
+	margin-bottom: 30px;
+}
+
+/*-------------------------------------*/
+/*-----------------BOX-2---------------*/
+/*-------------------------------------*/
+.projects .content .box-2 {
+	background: #fff;
+	padding-bottom: 0px;
+  margin-top: 100vh;
+	position: relative;
+}
+.projects .content .box-2 .wrapper{
+	padding-top: 64px;
+}
+.projects .content .box-2 .header {
+
+}
+.projects .content .box-2 .header h2{
+  font-size: 56px;
+  font-family: "Segoe UI Light";
+	font-weight: normal;
+  color: rgb(0, 0, 0);
+  line-height: 1.071;
+  text-align: left;
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+.projects .content .box-2 .cases {
+	padding-bottom: 50px;
+}
+.projects .content .box-2 .cases .item {
+	width: 270px;
+	/*height: 224px;*/
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 25px;
+	margin-bottom: 44px;
+	cursor: pointer;
+}
+.projects .content .box-2 .cases .item:nth-child(4n) {
+	margin-right: 0px;
+}
+.projects .content .box-2 .cases .item .img {
+	width: 270px;
+	height: 190px;
+	overflow: hidden;
+	position: relative;
+}
+.projects .content .box-2 .cases .item .img img{
+	width: 100%;
+}
+.projects .content .box-2 .cases .item .text {
+	width: 100%;
+  font-size: 22px;
+  font-family: "Segoe UI Bold";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: left;
+  margin-top: 13px;
+}
+
+/*-------------------------------------*/
+/*-----------------BOX-3---------------*/
+/*-------------------------------------*/
+.projects .content .box-3 {
+	background: #fff;
+	padding-bottom: 80px;
+	position: relative;
+	padding-bottom: 140px;
+}
+.projects .content .box-3 .header {
+
+}
+.projects .content .box-3 .header h2{
+  font-size: 56px;
+  font-family: "Segoe UI Light";
+	font-weight: normal;
+  color: rgb(0, 0, 0);
+  text-align: left;
+	margin-top: 0;
+	padding-top: 54px;
+	margin-bottom: 40px;
+}
+.projects .content .box-3 .clientsTable {
+
+}
+.projects .content .box-3 .clientsTable .clientRow {
+	width: 268px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 28px;
+}
+.projects .content .box-3 .clientsTable .clientRow:nth-child(4n) {
+	margin-right: 0px;
+}
+.projects .content .box-3 .clientsTable .clientRow ul{
+	width: 100%;
+	border-top: 2px solid black;
+}
+.projects .content .box-3 .clientsTable .clientRow ul li{
+	width: 100%;
+	border-bottom: 1px solid rgba(32, 35, 39, 0.1);
+	padding-left: 45px;
+}
+.projects .content .box-3 .clientsTable .clientRow ul li:first-child {
+	margin-top: 5px;
+}
+.projects .content .box-3 .clientsTable .clientRow ul li a{
+	display: inline-block;
+	width: 100%;
+  font-size: 15px;
+  font-family: "Segoe UI";
+  color: rgb(0, 0, 0);
+  line-height: 2.8;
+  text-align: left;
+	transition: opacity .2s linear;
+	cursor: default;
+}
+.projects .content .box-3 .clientsTable .clientRow ul li a span {
+	float: right;
+	margin-right: 3px;
+}
+.projects .content .box-3 .clientsTable .clientRow ul li a img{
+	width: initial;
+	height: 13px;
+}
+.projects .content .box-3 .clientsTable .clientRow ul li .more:hover{
+	opacity: 0.4;
+	cursor: pointer;
+}
+/**/
+/*marley*/
+/**/
+figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+	}
+figcaption, figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+figcaption h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+figcaption h2, figcaption p {
+    margin: 0;
+}
+figcaption h2 span {
+    font-weight: 800;
+}
+.effect-marley h2, .effect-marley p {
+    position: absolute;
+    right: 30px;
+    left: 30px;
+    padding: 10px 0;
+}
+.effect-marley h2 {
+    top: 30px;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+
+.effect-marley:hover h2 {
+    -webkit-transform: translate3d(0,0,0);
+    /* transform: translate3d(0,0,0); */
+}
+.effect-marley h2::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    content: '';
+    -webkit-transform: translate3d(0,40px,0);
+    transform: translate3d(0,40px,0);
+}
+.effect-marley h2::after, .effect-marley p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+.effect-marley h2, .effect-marley p {
+    position: absolute;
+    right: 30px;
+    left: 30px;
+    padding: 10px 0;
+}
+.effect-marley p {
+    bottom: 30px;
+    line-height: 1.5;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+.effect-marley h2::after, .effect-marley p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+.effect-marley:hover h2::after, .effect-marley:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+/**/
+/*dexter*/
+/**/
+.effect-dexter figcaption {
+    padding: 3em;
+    text-align: left;
+}
+.effect-dexter {
+    background: -webkit-linear-gradient(top, rgba(37,141,200,1) 0%, rgba(104,60,19,1) 100%);
+    background: linear-gradient(to bottom, rgba(37,141,200,1) 0%,rgba(104,60,19,1) 100%);
+}
+.effect-dexter p {
+    position: absolute;
+    right: 60px;
+    bottom: 60px;
+    left: 60px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,-100px,0);
+    transform: translate3d(0,-100px,0);
+}
+	.effect-dexter:hover p {
+    /*opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);*/
+}
+.effect-dexter figcaption::after {
+    /*position: absolute;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    height: -webkit-calc(50% - 30px);
+    height: calc(50% - 30px);
+    border: 7px solid #fff;
+    content: '';
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);*/
+}
+.effect-dexter:hover figcaption::after {
+    /*-webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);*/
+}
+.effect-dexter img {
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.effect-dexter:hover img {
+     opacity: 0.5;
+}
+/**/
+/*milo*/
+/**/
+.effect-milo {
+    background: rgba(0,0,0,1);
+}
+.effect-milo img {
+    max-width: none;
+    width: -webkit-calc(100% + 60px);
+    width: calc(100% + 60px);
+    opacity: 1;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    /*-webkit-transform: translate3d(-16px,0,0) scale(1.12);
+    transform: translate3d(-16px,0,0) scale(1.12);*/
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.effect-milo:hover img {
+    opacity: 0.6;
+    /*-webkit-transform: translate3d(0,0,0) scale(1);
+    transform: translate3d(0,0,0) scale(1);*/
+}
+.effect-milo h2 {
+		position: absolute;
+		top: 0;
+		right: 0;
+		/* bottom: 0; */
+		/* padding: 1em 1.2em; */
+}
+.effect-milo p {
+    padding: 0 10px 0 0;
+    width: 50%;
+    border-right: 1px solid #fff;
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    /*-webkit-transform: translate3d(-40px,0,0);
+    transform: translate3d(-40px,0,0);*/
+}
+.effect-milo:hover p {
+    opacity: 1;
+    /*-webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);*/
+}
+/**/
+/*apollo*/
+/**/
+.effect-apollo {
+    background: rgba(0,0,0,1);
+}
+.effect-apollo img {
+    /*opacity: 0.95;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;*/
+    /*-webkit-transform: scale3d(1.05,1.05,1);
+    transform: scale3d(1.05,1.05,1);*/
+}
+.effect-apollo:hover img {
+    opacity: 0.6;
+    /*-webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);*/
+}
+.effect-apollo figcaption::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+    content: '';
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+    transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+
+}
+.effect-apollo:hover figcaption::before {
+    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+    transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+
+}
+.effect-apollo h2 {
+    text-align: left;
+}
+.effect-apollo p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 10px;
+    padding: 0 1em;
+    max-width: 150px;
+    border-right: 4px solid #fff;
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.effect-apollo:hover p {
+    opacity: 1;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
