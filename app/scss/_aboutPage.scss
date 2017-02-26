@@ -1,0 +1,191 @@
+/*-------------------------------------*/
+/*-----------------BOX-1---------------*/
+/*-------------------------------------*/
+.about_page {
+  .content {
+    .box-1 {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      .bg {
+        //background: url(../img/cases/avon_1.png) no-repeat;
+        //background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 4;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+    /*-------------------------------------*/
+    /*-----------------BOX-2---------------*/
+    /*-------------------------------------*/
+    .box-2 {
+      background: #fff;
+      position: relative;
+      margin-top: 100vh;
+      padding-top: 145px;
+      .wrapper {
+        padding-bottom: 100px;
+        h2{
+          margin-bottom: 30px;
+          font-size: 55px;
+          font-family: "Segoe UI Light";
+          color: rgb(0, 0, 0);
+          line-height: 1.09;
+        }
+        p {
+          margin-bottom: 60px;
+          font-size: 14px;
+          font-family: "Segoe UI Bold";
+          color: rgb(0, 0, 0);
+          line-height: 1.714;
+        }
+        .slider {
+          .item {
+            display: inline-block;
+            width:271px;
+
+            .wrap {
+              .img {
+                width:271px;
+                height: 271px;
+              }
+              .text {
+                margin-top: 25px;
+                h4 {
+                  margin-bottom: 5px;
+                  font-size: 22px;
+                  font-family: "Segoe UI Bold";
+                  color: rgb(0, 0, 0);
+                  text-transform: uppercase;
+                  line-height: 1;
+                }
+                p {
+                  font-size: 14px;
+                  font-family: "Segoe UI Light";
+                  color: rgb(0, 0, 0);
+                  line-height: 1.5;
+                  &.post {
+                    margin-bottom: 15px;
+                    font-family: "Segoe UI Bold";
+
+                  }
+                }
+              }
+            }
+          }
+        }
+        a.next {
+          margin-bottom: 75px;
+          display: block;
+          width:360px;
+          margin-left: auto;
+          font-size: 14px;
+          font-family: "Segoe UI Bold";
+          color: rgb(0, 0, 0);
+          text-align: right;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+    .box-3 {
+      background: #fff;
+      position: relative;
+      .wrapper {
+        h2 {
+          margin-bottom: 50px;
+          font-size: 55px;
+          font-family: "Segoe UI Light";
+          color: rgb(0, 0, 0);
+          line-height: 1.09;
+        }
+        .img {
+          display: inline-block;
+          width: 470px;
+          height: 300px;
+          &.img_1 {
+
+          }
+          &.img_2 {
+            width: 370px;
+            height: 280px;
+          }
+          &.img_3 {
+            width: 670px;
+            height: 440px;
+            margin-bottom: 150px;
+          }
+        }
+        p {
+          display: inline-block;
+          font-size: 14px;
+          font-family: "Segoe UI Light";
+          color: rgb(0, 0, 0);
+          line-height: 1.714;
+          width: 675px;
+          height: 245px;
+        }
+      }
+    }
+    .box-4 {
+      background: #fff;
+      position: relative;
+      .wrapper {
+        h2 {
+          padding-top: 140px;
+          margin-bottom: 60px;
+          font-size: 55px;
+          font-family: "Segoe UI Light";
+          color: rgb(0, 0, 0);
+          line-height: 1.09;
+          text-align: left;
+        }
+        .content {
+          padding-bottom: 145px;
+          .item {
+            margin-bottom: 30px;
+            h5 {
+              font-size: 14px;
+              font-family: "Segoe UI Bold";
+              color: rgb(0, 0, 0);
+              line-height: 1.714;
+              text-align: left;
+            }
+            p {
+              font-size: 14px;
+              font-family: "Segoe UI Light";
+              color: rgb(0, 0, 0);
+              line-height: 1.714;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+    .box-5 {
+      background: #fff;
+      position: relative;
+      .google_map {
+        width:100%;
+        height: 60vh;
+        iframe {
+          width:100%;
+          height: 100%;
+        }
+      }
+    }
+
+  }
+}
