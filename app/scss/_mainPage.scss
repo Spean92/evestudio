@@ -1,0 +1,465 @@
+
+/*-------------------------------------*/
+/*-----------------BOX-1---------------*/
+/*-------------------------------------*/
+
+.mainpage .content .box-1{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.mainpage .content .box-1 .bg{
+  background: url(../img/box-1.png) no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+}
+.mainpage .content .box-1 .video_pattern{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  background: url(../img/dot.png);
+  //background: rgba(255, 0, 89, 0.69);
+}
+.mainpage .content .box-1 video{
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 2;
+}
+.mainpage .content .box-1 .sound {
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  margin-right: -540px;
+  display: none;
+  z-index: 20;
+  cursor: pointer;
+}
+.mainpage .content .box-1 .sound .sprite{
+  background: #000000;
+  background: url(../img/sprite.png);
+  width: 30px;
+  height: 30px;
+  &.mute {
+    background-size: 357%;
+    background-position: 30px 0;
+  }
+  &.unMute {
+    background-position: 60px 0;
+    background-size: 356%;
+  }
+}
+.mainpage .content .box-1 #start {
+  position: absolute;
+  bottom: 22px;
+  right: 50%;
+  margin-right: -585px;
+  display: none;
+  z-index: 20;
+  cursor: pointer;
+}
+.mainpage .content .box-1 #start .sprite{
+  background: #000000;
+  background: url(../img/sprite.png);
+  width: 22px;
+  height: 28px;
+  &.pause {
+    background-size: 490%;
+    background-position: -24px 0;
+  }
+  &.play {
+    background-size: 454%;
+    background-position: 0 0;
+  }
+}
+.mainpage .content .box-1 .text{
+  padding-top: 29vh;
+  z-index: 52;
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+.mainpage .content .box-1 .text h1{
+  font-size: 55px;
+  width: 100%;
+  font-family: "Segoe UI Bold";
+  color: rgb(255, 255, 255);
+  line-height: 70px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.mainpage .content .box-1 .text p{
+  font-size: 21px;
+  width: 50%;
+  margin: 0 auto;
+  font-family: "Segoe UI Light";
+  color: rgb(255, 255, 255);
+  line-height: 34px;
+  text-align: center;
+}
+.mainpage .content .box-1 .text p span{
+  border: 2px white solid;
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 17px;
+  padding: 0px 10px 7px 10px;
+  font-family: "Segoe UI Bold";
+  display: inline-block;
+}
+
+/*-------------------------------------*/
+/*-----------------BOX-2---------------*/
+/*-------------------------------------*/
+.mainpage .content .box-2 {
+  background: #fff;
+  padding-bottom: 0px;
+  margin-top: 100vh;
+  position: relative;
+}
+.mainpage .content .box-2 .wrap{
+  width: 1300px;
+  margin: 0 auto;
+}
+.mainpage .content .box-2 .wrapper{
+  padding-top: 30px;
+}
+.mainpage .content .box-2 div .item.case1 {
+  height: 640px;
+  position: relative;
+  margin-top: 64px;
+  padding-top: 87px;
+}
+.mainpage .content .box-2 div .item.case2 {
+  height: 615px;
+  position: relative;
+  margin-top: 60px;
+  padding-top: 0;
+  margin-bottom: 0px;
+}
+.mainpage .content .box-2 div .item.case3 {
+  height: 575px;
+  position: relative;
+  margin-top: 60px;
+  padding-top: 0px;
+}
+.mainpage .content .box-2 div .item.case4 {
+  height: 590px;
+  position: relative;
+  margin-top: 60px;
+  padding-top: 0px;
+}
+.mainpage .content .box-2 div .item.case5 {
+  height: 590px;
+  position: relative;
+  margin-top: 60px;
+  padding-top: 0px;
+}
+.mainpage .content .box-2 div .item .left{
+  height: 100%;
+  /*margin-top: 50px;*/
+  width: 750px;
+  float: left;
+}
+.mainpage .content .box-2 div .item.case1 .left .img{
+  width: 80%;
+  max-width: 600px;
+  height: 100%;
+  background: url(../img/1.png) no-repeat;
+  background-position: 0px center;
+  background-size: contain;
+}
+.mainpage .content .box-2 div .item.case2 .left .img{
+  width: 100%;
+  height: 100%;
+  max-width: 837px;
+  max-height: 615px;
+  /* float: left; */
+  background: url(../img/2.png) no-repeat;
+  background-position: -60px center;
+}
+.mainpage .content .box-2 div .item.case3 .left .img{
+  width: 100%;
+  height: 100%;
+  max-width: 826px;
+  max-height: 575px;
+  /* float: left; */
+  background: url(../img/3.png) no-repeat;
+  background-position: 0px center;
+}
+.mainpage .content .box-2 div .item.case4 .left .img{
+  width: 100%;
+  height: 100%;
+  max-width: 837px;
+  max-height: 615px;
+  //float: left;
+  background: url(../img/4.png) no-repeat;
+  background-position: -30px center;
+}
+.mainpage .content .box-2 div .item.case5 .left .img{
+  width: 100%;
+  height: 100%;
+  max-width: 837px;
+  max-height: 545px;
+  float: left;
+  background: url(../img/5.png) no-repeat;
+  background-position: 10px center;
+  /* background-size: cover; */
+}
+.mainpage .content .box-2 div .item .right{
+  width: 490px;
+  float: left;
+  margin-left: 30px;
+  margin-top: 55px;
+}
+.mainpage .content .box-2 div .item .right{
+
+}
+.mainpage .content .box-2 div .item .right .first h2{
+  font-size: 55px;
+  font-family: "SegoeUILight";
+  color: rgb(0, 0, 0);
+  line-height: 60px;
+  margin-bottom: 20px;
+  font-weight: normal;
+  margin-top: -10px;
+}
+.mainpage .content .box-2 div .item .right .second p{
+  font-size: 15px;
+  font-family: "Segoe UI";
+  color: rgb(0, 0, 0);
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 85px;
+  width: 100%;
+}
+.mainpage .content .box-2 div .item .right .hrbold {
+  border-width: 2px;
+}
+.mainpage .content .box-2 div .item .right .third p.border{
+  display: block;
+  font-size: 22px;
+  font-family: "Segoe UI Bold";
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  line-height: 1.46;
+  text-align: left;
+  /*border: 2px solid black;*/
+  /*padding-left: 5px;*/
+  margin-bottom: 0;
+}
+.mainpage .content .box-2 div .item .right .third p:last-child{
+  font-size: 15px;
+  font-family: "Segoe UI";
+  color: rgb(0, 0, 0);
+  line-height: 1.6;
+  text-align: left;
+  /*width: 70%;*/
+  margin-bottom: 45px;
+  margin-top: 10px;
+}
+.mainpage .content .box-2 div .item .right a {
+  font-size: 15px;
+  font-family: "Segoe UI Bold";
+  color: rgb(0, 0, 0);
+  margin-top: -15px;
+  display: block;
+  transition: all .2s ease-in-out;
+}
+.mainpage .content .box-2 div .item .right a:hover {
+  opacity: 0.5;
+}
+/*-------------------------------------*/
+/*-----------------BOX-3---------------*/
+/*-------------------------------------*/
+.mainpage .content .box-3 {
+  background: #fff;
+  padding-bottom: 80px;
+  position: relative;
+}
+.mainpage .content .box-3 .header {
+  width: 810px;
+}
+.mainpage .content .box-3 .header h2{
+  font-size: 53px;
+  font-family: "Segoe UI Light";
+  color: rgb(0, 0, 0);
+  line-height: 1;
+  text-align: left;
+  margin-top: 0;
+  padding-top: 110px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.mainpage .content .box-3 .header hr{
+  border-width: 2px;
+}
+.mainpage .content .box-3 .clients {
+  width: 1000px;
+  margin: 80px auto 30px auto;
+}
+.mainpage .content .box-3 .clients_mob {
+  display: none;
+}
+
+.mainpage .content .box-3 .clients .flex{
+  margin: 100px auto 125px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 860px;
+  height:295px;
+  .lid {
+    width: 25%;
+    margin: auto;
+    a {
+      display: inline-block;
+      width: 136px;
+      height: 80px;
+      //width: 100%;
+      //height: 100%;
+      .sprite_clients {
+
+        background: url(../img/sprite_clients.png) no-repeat;
+        background-size: 283%;
+
+        &.zeppelin{
+          width: 125px;
+          height: 27px;
+          background-position: 0 0;
+        }
+        &.smartbox{
+          width: 142px;
+          height: 21px;
+          background-position: 0 320px;
+        }
+        &.lifecell{
+          width: 118px;
+          height: 37px;
+        }
+        &.syngenta{
+          width: 122px;
+          height: 36px;
+        }
+        &.kamchadal{
+          width: 92px;
+          height: 60px;
+        }
+        &.avon{
+          width: 132px;
+          height: 25px;
+        }
+        &.cersanit{
+          width: 104px;
+          height: 35px;
+        }
+        &.ukraflora{
+          width: 107px;
+          height: 19px;
+        }
+        &.texsa{
+          width: 142px;
+          height: 21px;
+        }
+        &.fiori{
+          width: 97px;
+          height: 79px;
+        }
+        &.eistroi{
+          width: 112px;
+          height: 30px;
+        }
+        &.kokl{
+          width: 63px;
+          height: 63px;
+        }
+
+      }
+    }
+  }
+
+}
+.mainpage .content .box-3 .clients .lid {
+  width: 24%;
+  padding: 40px 70px;
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  max-height: 160px;
+  overflow: hidden;
+}
+.mainpage .content .box-3 .clients .row .lid:first-child {
+  padding: 40px 74px;
+}
+.mainpage .content .box-3 .clients .row:first-child .lid:first-child {
+
+}
+.mainpage .content .box-3 .clients .row .lid:nth-child(2) {
+  padding: 40px 71px;
+
+}
+.mainpage .content .box-3 .clients .row .lid:nth-child(3) {
+  padding: 40px 75px;
+
+}
+.mainpage .content .box-3 .clients .row .lid:nth-child(4) {
+  padding: 40px 76px;
+
+}
+.mainpage .content .box-3 .clients .lid a img{
+  max-height: 70px;
+  min-height: 25px;
+  /*-webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);*/
+  /*filter: url(grayscale.svg); /* Firefox 4+ */
+  /*filter: gray;  IE 6-9 */
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+.mainpage .content .box-3 .clients .lid a img:hover{
+  cursor: pointer;
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  -o-filter: none;
+  filter: none;
+  /*filter: url(grayscale.svg); /* Firefox 4+ */
+  filter: none; /* IE 6-9 */
+}
+.mainpage .content .box-3 .clients .lid a img.noBlack:hover{
+  opacity: 0.6;
+}
+.mainpage .content .box-3 .all_clients {
+  display: block;
+  margin-left: auto;
+  margin-right: 197px;
+  text-align: left;
+  width: 270px;
+  border: none;
+  font-size: 14px;
+  font-family: "Segoe UI Bold";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.4;
+  transition: all .2s ease-in-out;
+}
+.mainpage .content .box-3 .all_clients:hover {
+  opacity: 0.5;
+}

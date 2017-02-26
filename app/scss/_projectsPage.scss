@@ -1,0 +1,222 @@
+
+/*-------------------------------------*/
+/*-----------------BOX-1---------------*/
+/*-------------------------------------*/
+
+.projects .content .box-1{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.projects .content .box-1 .bg{
+  background: url(../img/box-1.png) no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+}
+
+
+.projects .content .box-1 .text{
+  padding-top: 31vh;
+  z-index: 52;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+.projects .content .box-1 .text h1 {
+  font-size: 60px;
+  width: 100%;
+  font-family: "Segoe UI Bold";
+  color: rgb(255, 255, 255);
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*-------------------------------------*/
+/*-----------------BOX-2---------------*/
+/*-------------------------------------*/
+.projects .content .box-2 {
+  background: #fff;
+  padding-bottom: 0px;
+  margin-top: 100vh;
+  position: relative;
+}
+.projects .content .box-2 .wrapper{
+  padding-top: 64px;
+}
+.projects .content .box-2 .header {
+
+}
+.projects .content .box-2 .header h2{
+  font-size: 56px;
+  font-family: "Segoe UI Light";
+  font-weight: normal;
+  color: rgb(0, 0, 0);
+  line-height: 1.071;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.projects .content .box-2 .cases {
+  padding-bottom: 50px;
+}
+.projects .content .box-2 .cases .item {
+  width: 270px;
+  /*height: 224px;*/
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 25px;
+  margin-bottom: 44px;
+  cursor: pointer;
+  &:hover {
+    .img {
+      .effect {
+        opacity: 0.5;
+      }
+    }
+    .text {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+}
+.projects .content .box-2 .cases .item:nth-child(4n) {
+  margin-right: 0px;
+}
+.projects .content .box-2 .cases .item .img {
+  width: 270px;
+  height: 190px;
+  overflow: hidden;
+  position: relative;
+  .effect {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: #000000;
+    opacity:0;
+    z-index: 10;
+    transition: all .2s ease-in-out;
+
+  }
+}
+.projects .content .box-2 .cases .item .img img{
+  width: 100%;
+}
+.projects .content .box-2 .cases .item .text {
+  position: relative;
+  width: 100%;
+  font-size: 22px;
+  font-family: "Segoe UI Bold";
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: left;
+  margin-top: 13px;
+  &:after {
+    content: '';
+    position: absolute;
+    left:0;
+    bottom:-4px;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: all .2s ease-in-out;
+  }
+}
+
+/*-------------------------------------*/
+/*-----------------BOX-3---------------*/
+/*-------------------------------------*/
+.projects .content .box-3 {
+  background: #fff;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 140px;
+}
+.projects .content .box-3 .header {
+
+}
+.projects .content .box-3 .header h2{
+  font-size: 56px;
+  font-family: "Segoe UI Light";
+  font-weight: normal;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  margin-top: 0;
+  padding-top: 54px;
+  margin-bottom: 40px;
+}
+.projects .content .box-3 .clientsTable {
+
+}
+.projects .content .box-3 .clientsTable .clientRow {
+  width: 268px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 28px;
+}
+.projects .content .box-3 .clientsTable .clientRow:nth-child(4n) {
+  margin-right: 0px;
+}
+.projects .content .box-3 .clientsTable .clientRow ul{
+  width: 100%;
+  border-top: 2px solid black;
+}
+.projects .content .box-3 .clientsTable .clientRow ul li{
+  width: 100%;
+  border-bottom: 1px solid rgba(32, 35, 39, 0.1);
+  padding-left: 80px;
+  position: relative;
+  .logotype {
+    display: table-cell;
+    position: absolute;
+    left:10px;
+    top: 0;
+    width:60px;
+    height: 42px;
+    line-height:2.5;
+    text-align: center;
+    img{
+      vertical-align: middle;
+      width: initial;
+      max-width:60px;
+      max-height: 30px;
+    }
+  }
+
+}
+.projects .content .box-3 .clientsTable .clientRow ul li:first-child {
+  margin-top: 5px;
+}
+.projects .content .box-3 .clientsTable .clientRow ul li a{
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  font-size: 15px;
+  font-family: "Segoe UI Light";
+  color: rgb(0, 0, 0);
+  line-height: 2.8;
+  text-align: left;
+  transition: opacity .2s linear;
+  cursor: default;
+}
+.projects .content .box-3 .clientsTable .clientRow ul li a.more:after {
+  content: url("../img/arrow-right.png");
+  position: absolute;
+  right:0;
+}
+.projects .content .box-3 .clientsTable .clientRow ul li .more:hover{
+  opacity: 0.4;
+  cursor: pointer;
+}

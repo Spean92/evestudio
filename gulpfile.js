@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 var gulp = require('gulp'),
     concatCss = require('gulp-concat-css'),
@@ -69,4 +69,4 @@ gulp.task('watch',['browser-sync'], function () {
 });
 
 // default
-gulp.task('default', ['images', 'watch', 'fonts']);
+gulp.task('default', ['images','fonts', 'watch']);

@@ -1,0 +1,334 @@
+
+header {
+  height: 76px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.3);
+  transition: all .3s ease-in-out;
+  z-index: 10;
+}
+header.active {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(32, 35, 39, 0.1);
+  z-index: 50;
+}
+header.active .right div{
+  border-color: rgba(32, 35, 39, 0.1) !important;
+  color: black;
+}
+header.active .right div.bars {
+  border-color: black !important;
+}
+header.active .right div.bars1:before {
+  border-color: black !important;
+}
+header.active .right .menu nav ul li a {
+  color: black !important;
+}
+header.active .right .menu nav ul li ul li a {
+  color: rgba(255,255,255,0.8) !important;
+  transition: all .1s ease-in-out;
+}
+header.active .right .menu nav ul li ul li a:hover {
+  color: rgba(255,255,255,1) !important;
+}
+header.active .right .menu nav ul li ul {
+  background: rgba(0,0,0,0.5);
+}
+header.active .right .menu nav ul li:after {
+  background: #000000;
+}
+header.active .right .menu nav ul li ul li a:after {
+  //background: #000000;
+}
+header .left {
+  float: left;
+  margin-top: 12px;
+}
+header .left .img_logo{
+  width: 67px;
+  height: 54px;
+  overflow: hidden;
+}
+header .right {
+  float: right;
+  margin-top: 25px;
+  width: 850px;
+}
+header .right div {
+  //display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  font-family: "Segoe UI Light";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  nav {
+    > ul {
+      font-size: 0;
+      > li {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width:25%;
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top:25px;
+          height:1px;
+          background: #ffffff;
+          width: 0;
+          transition: all .3s ease-in-out;
+        }
+        ul {
+          display: none;
+          background: rgba(0,0,0, 0.3);
+          position: relative;
+          top: 27px;
+          left: -19px;
+          padding: 5px 20px 20px 20px;
+          li {
+            display: block;
+            width:100%;
+            a {
+              position: relative;
+              display: inline-block;
+              width: 100%;
+              font-size: 14px;
+              font-family: "Segoe UI Light";
+              color: rgba(255, 255, 255,0.6);
+              line-height: 2.3;
+              text-align: left;
+              &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top:32px;
+                height:1px;
+                background: rgba(255,255,255,0.3);
+                width: 100%;
+                transition: all .2s ease-in-out;
+              }
+              &:hover {
+                color: rgba(255, 255, 255,1);
+                &:after {
+                  content: "";
+                  background: rgba(255, 255, 255, 1);
+                }
+              }
+            }
+          }
+        }
+        > a {
+          display: inline-block;
+          width: 100%;
+          font-size: 14px;
+          font-family: "Segoe UI Black";
+          color: rgb(255, 255, 255);
+          text-transform: uppercase;
+          line-height: 1.72;
+          letter-spacing: 0.9px;
+          text-align: left;
+        }
+        &:hover {
+          &:after {
+            content: "";
+            width: 80%;
+          }
+          ul {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+header .right div.home {
+  text-align: left;
+  padding-right: 25px;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+header .right div.home span.pagins {
+  font-family: "Segoe UI Bold";
+}
+header .right div.bars {
+  width: 30px;
+  height: 18px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  padding-left: 25px;
+  margin-left: 25px;
+  cursor: pointer;
+  position: relative;
+}
+header .right div.bars1:before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+}
+#nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 6;
+  background: #000;
+  transition: al 0.4s;
+}
+#nav .container {
+  padding-top: 26vh;
+  padding-bottom: 165px;
+  padding-left: 0;
+  padding-right: 0;
+  height: 100vh;
+  max-width: 1300px;
+  overflow: hidden;
+  position: relative;
+}
+#nav .container>h1 {
+  font-size: 56px;
+  font-family: "Segoe UI Light";
+  color: rgb(255, 255, 255);
+  text-align: left;
+  font-weight: normal;
+  margin-top: 0;
+}
+#nav .container>.nav-list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin-top: 0;
+  counter-reset: section;
+}
+#nav .container>.nav-list>li {
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+}
+#nav .container>.nav-list>li h3 {
+  width: 90%;
+  padding-bottom: 6px;
+  border-bottom: 1px solid white;
+  margin-bottom: 15px;
+}
+#nav .container>.nav-list>li:last-child h3 {
+  width: 100%;
+}
+#nav .container>.nav-list>li:last-child ul li {
+  width: 100%;
+}
+#nav .container>.nav-list>li h3 a {
+  font-size: 17px;
+  font-family: "Segoe UI Black";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1.414;
+  text-align: left;
+  transition: all .3s ease-in-out;
+}
+#nav .container>.nav-list>li h3 a:hover {
+  opacity: 0.5;
+}
+#nav .container>.nav-list>li ul li {
+  width: 90%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+#nav .container>.nav-list>li ul li a {
+  font-size: 14px;
+  font-family: "Segoe UI Light";
+  color: rgb(255, 255, 255);
+  line-height: 32px;
+  text-align: left;
+  transition: all .3s ease-in-out;
+}
+#nav .container>.nav-list>li ul li a:hover {
+  opacity: 0.5;
+}
+#nav .foot {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  position: absolute;
+  bottom: 0;
+  height: 115px;
+  width: 100%;
+}
+#nav .foot .wrapper {
+
+}
+#nav .foot .wrapper .left{
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+  color: white;
+  padding-top: 43px;
+  font-size: 14px;
+  font-family: "Segoe UI Light";
+  color: rgb(255, 255, 255);
+}
+#nav .foot .wrapper .right{
+  display: inline-block;
+  width: 47%;
+  vertical-align: top;
+  float: right;
+}
+#nav .foot .wrapper .right div{
+  display: inline-block;
+  width: 25.7%;
+  vertical-align: top;
+  text-align: right;
+  padding-top: 44px;
+  margin-left: 40px
+}
+#nav .foot .wrapper .right div:first-child{
+  display: inline-block;
+  width: 32%;
+  vertical-align: top;
+  text-align: right;
+  padding-top: 41px;
+  margin-left: 40px;
+  margin-right: -40px;
+  z-index: 2;
+}
+#nav .foot .wrapper .right div:last-child{
+  display: inline-block;
+  width: 32%;
+  vertical-align: top;
+  text-align: right;
+  padding-top: 44px;
+  padding-top: 34px;
+  margin-left: 0;
+
+}
+#nav .foot .wrapper .right div.soc a{
+  height: 30px;
+  max-width: 30px;
+  margin: 0 3px;
+}
+#nav .foot .wrapper .right div a{
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+  font-size: 14px;
+  font-family: "Segoe UI Light";
+  color: rgb(255, 255, 255);
+  line-height: 1.571;
+  text-align: left;
+  transition: all .2s ease-in-out;
+}
+#nav .foot .wrapper .right div a:hover{
+  opacity: 0.6;
+}
+
+#nav .foot .wrapper .right div a img{
+  height: 100%;
+}

@@ -1,0 +1,93 @@
+footer {
+  position: relative;
+  background: #fff;
+}
+footer .footer {
+  padding: 55px 0;
+}
+footer .footer>div{
+  display: inline-block;
+  vertical-align: top;
+  width: 16%;
+}
+
+footer .footer div ul li a, footer .footer div ul li{
+  font-size: 14px;
+  font-family: "Segoe UI";
+  color: rgb(0, 0, 0);
+  line-height: 1.571;
+  text-align: left;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+footer .footer div ul>li:first-child {
+  font-family: "Segoe UI Black";
+  /*text-transform: uppercase;*/
+}
+footer .footer>div>ul>li>a:hover, footer .footer div a:hover li {
+  opacity: 0.5;
+}
+footer .footer div.visit {
+  transform: translateX(40px);
+}
+footer .footer div.visit p {
+  margin: 0;
+}
+footer .footer div.follow {
+  transform: translateX(130px);
+}
+footer .footer div.logo {
+  font-size: 10.698px;
+  font-family: "Segoe UI";
+  color: rgb(0, 0, 0);
+  line-height: 2.056;
+  text-align: left;
+  transform: translateX(180px);
+}
+footer .footer div.icons {
+  display: none;
+}
+div.icons {
+  display: none;
+}
+footer .footer div.logo .img_logo{
+  width: 75px;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 4px;
+}
+footer .footer div.logo .img_logo img{
+  width: 100%;
+}
+footer .footer div.top {
+  text-align: right;
+  width: 20%;
+  float: right;
+}
+footer .footer div.top .wrap{
+
+}
+footer .footer div.top .wrap a{
+  display: inline-block;
+  width: 69px;
+  height: 70px;
+  background: url(../img/sprite.png);
+  background-size: 240%;
+  background-position: -70px -76px;
+  text-align: center;
+  //-webkit-transition: all .3s linear;
+  //-moz-transition: all .3s linear;
+  //-ms-transition: all .3s linear;
+  //-o-transition: all .3s linear;
+  //transition: all .3s linear;
+}
+footer .footer div.top .wrap a:hover{
+  background-position: 1px -77px;
+
+}
+footer .footer div .copy{
+  display: none;
+}

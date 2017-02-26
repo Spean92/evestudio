@@ -94,19 +94,25 @@ $(document).ready(function() {
 		}, 800);
 		return false;
 	});
+    //плавный скролл
+    $("a[href^='#']").on("click", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 800);
+    });
 
 // OWL
-	var owl = $(".carousel");
-	owl.owlCarousel({
+    $(".owl-carousel").owlCarousel({
 		// jsonPath : 'customData.json'
-		navigation : true,
+		dots: true,
 		slideSpeed : 300,
 		mouseDrag : true,
 		startPosition : 2,
 		paginationSpeed : 400,
-		      singleItem:true,
-					loop:true,
-		      items : 1,
+		singleItem:true,
+		loop:true,
+		items : 1
 	});
 
 // black/color IMG
