@@ -159,7 +159,7 @@ header .right div.bars {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
   padding-left: 25px;
-  margin-left: 25px;
+  margin-left: auto;
   cursor: pointer;
   position: relative;
 }
@@ -182,7 +182,7 @@ header .right div.bars1:before {
   transition: al 0.4s;
 }
 #nav .container {
-  padding-top: 26vh;
+  padding-top: 23vh;
   padding-bottom: 165px;
   padding-left: 0;
   padding-right: 0;
@@ -197,7 +197,7 @@ header .right div.bars1:before {
   color: rgb(255, 255, 255);
   text-align: left;
   font-weight: normal;
-  margin-top: 0;
+  margin-bottom: 30px;
 }
 #nav .container>.nav-list {
   display: -webkit-flex;

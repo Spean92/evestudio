@@ -6,7 +6,12 @@
 a {
   text-decoration: none;
 }
-
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
 *::-webkit-input-placeholder {
   color: #666;
   opacity: 1;

@@ -109,35 +109,26 @@
 
             }
           }
-          nav {
-            margin-top: 33px;
-            margin-bottom: 70px;
-            div {
+          .paggs_buts {
+            margin-top: 30px;
+            a{
               display: inline-block;
-              width: 270px;
-
-              a {
-                display: inline-block;
-                width: 100%;
-                font-size: 14px;
-                font-family: "Segoe UI Bold";
-                color: rgb(0, 0, 0);
-                line-height: 1.714;
-                transition: all 0.2s ease-in-out;
-                &:hover {
-                  opacity: 0.5;
-                }
-              }
+              margin-bottom: 75px;
+              width:45%;
+              font-size: 14px;
+              font-family: "Segoe UI Bold";
+              color: rgb(0, 0, 0);
+              transition: all .2s ease;
               &.prev {
-                a {
-                  text-align: left;
-                }
+                text-align: left;
+                float: left;
               }
               &.next {
+                text-align: right;
                 float: right;
-                a {
-                  text-align: right;
-                }
+              }
+              &:hover {
+                opacity: 0.5;
               }
             }
           }

@@ -20,7 +20,7 @@
 	<!--<link rel="stylesheet" href="libs/countdown/jquery.countdown.css" />-->
 	<!--<link rel="stylesheet" href="css/fonts.css" />-->
 	<!-- Important Owl stylesheet -->
-	<!--<link rel="stylesheet" href="css/owl.carousel.css">-->
+	<link rel="stylesheet" href="css/owl.carousel.css">
 	<!-- Default Theme -->
 	<!--<link rel="stylesheet" href="css/owl.theme.css">-->
 	<!--<link rel="stylesheet" href="css/owl.theme.default.css">-->
@@ -87,9 +87,21 @@
 					</div>
 					<div class="right">
 						<div class="soc">
-							<a href="https://www.facebook.com/Eve.ua/" target="_blank"><div id="facebook" class="sprite"></div> </a>
-							<a href="https://www.instagram.com/evestudio_ua/" target="_blank"><div id="instagram" class="sprite"></div></a>
-							<a href="https://www.youtube.com/user/EveStudio1" target="_blank"><div id="youtube" class="sprite"></div></a>
+							<a href="https://www.facebook.com/Eve.ua/" target="_blank">
+								<!--<div id="facebook" class="sprite">-->
+								<img src="img/facebook_white.svg" alt="img">
+								<!--</div>-->
+							</a>
+							<a href="https://www.instagram.com/evestudio_ua/" target="_blank">
+								<!--<div id="instagram" class="sprite">-->
+								<img src="img/instagram_white.png" alt="img">
+								<!--</div>-->
+							</a>
+							<a href="https://www.youtube.com/user/EveStudio1" target="_blank">
+								<!--<div id="youtube" class="sprite">-->
+								<img src="img/youtube_white.svg" alt="img">
+								<!--</div>-->
+							</a>
 						</div>
 						<div class="mail">
 							<a href="mailto:studi@eve.ua">studio@eve.ua</a>
@@ -111,7 +123,7 @@
 		</nav>
 
 		<section class="box-1">
-			<div class="bg"><img src="img/uslugi_1.png" alt="">
+			<div class="bg"><img src="img/uslugi_1.png" alt="img">
 			</div>
 
 			<div class="wrapper">
@@ -140,7 +152,7 @@
 						<p>Каждая идущая в ногу со временем компания задается вопросом: как устроить свой сайт, чтобы с первых секунд просмотра он запал в память пользователей? Ведь постоянные клиенты – отличный показатель хорошего сервиса и качественно выполненной работы. Команда EveStudio это не только программисты, а дизайнеры
 							и эксперты которые знают
 							как удивить посетителя веб-страницы. Разработанные нами функционалы и дизайн сайтов отличает наших клиентов от шаблонных
-							и стандартных решений. Мы заботимся о том что бы сайт был удобным в применении для  пользователей разных гаджетов и расширял свою аудиторию. Ваши клиенты </p>
+							и стандартных решений. Мы заботимся о том что бы сайт был удобным в применении для  пользователей разных гаджетов и расширял свою аудиторию. Ваши клиенты по достоинству оценят заботу об их комфорте. </p>
 					</div>
 					<div class="cl graph">
 						<h5>Графический дизайн</h5>
@@ -189,7 +201,7 @@
 						Каждый клиент индивидуален, имеет свои потребности и возможности. Агентство EveStudio принимает как комплексные заказы, так и профильные поручения. В зависимости от поставленной задачи, мы привлекаем к реализации проекта профессионалов и экспертов в требуемой сфере, которые работают над воплощением идей заказчика.
 					</p>
 				</div>
-				<div class="slider">
+				<div class="slider owl-carousel owl-carousel-uslugi">
 					<div class="item">
 						<h5>Разработка продукта с нуля</h5>
 						<p>
@@ -198,14 +210,21 @@
 							что всегда заметит и оценит внимательный клиент.
 						</p>
 					</div>
+					<div class="item">
+						<h5>Доработка</h5>
+						<p>
+							Разработка контента с нуля – чрезвычайно кропотливый труд, ведь на нас лежит ответственность за каждую деталь, за каждый минимальный фрагмент огромной работы. Команда EveStudio не боится ответственности, а с радостью ее принимает. Работая над проектом в комплексе, мы тщательно выполняем весь технический аспект заказа: от создания бренда до стратегий его развития, от зарождения идеи до
+							ее креативного воплощения в видео или логотипе – любая сфера заказа будет выполнена ОТ и ДО. Вдобавок, мы вкладываем частичку души в проект,
+							что всегда заметит и оценит внимательный клиент.
+						</p>
+					</div>
 				</div>
-				<nav>
-					<div class="prev"><a href="#">
-						<hr>Предыдущий</a></div>
-					<div class="next"><a href="#">
-						<hr>Следующий</a></div>
-					<div class="clearfix"></div>
-				</nav>
+				<div class="paggs_buts">
+					<a class="prev" href=""><hr>Предыдущий</a>
+					<a class="next" href=""><hr>Следующий</a>
+				</div>
+				<div class="clearfix"></div>
+
 			</div>
 			<div class="right-side">
 				<div class="image"></div>
@@ -274,21 +293,8 @@
 				</div>
 			</div>
 			<div class="right">
-				<!--<div id="homeMenu" class="home" style="">-->
-				<!--<span class="pagins"> 1.0 &nbsp; </span>-->
-				<!--<span>Главное</span>-->
-				<!--</div>-->
-				<!--<div id="aboutMenu" class="home" style="display:none;">-->
-				<!--<span class="pagins"> 1.1 &nbsp; </span>-->
-				<!--<span>О Нас</span>-->
-				<!--</div>-->
-				<!--<div id="clientsMenu" class="home" style="display:none;">-->
-				<!--<span class="pagins"> 1.2 &nbsp; </span>-->
-				<!--<span>Клиенты</span>-->
-				<!--</div>-->
-				<!--<div class="bars bars1">-->
+				<div class="bars bars1 hide"></div>
 
-				<!--</div>-->
 				<div class="menu">
 					<nav>
 						<ul>
@@ -374,7 +380,7 @@
 				<div class="logo">
 					<div class="img_logo">
 						<a href="http://studio.eve.ua/">
-							<img src="img/evestudio_logo_r.svg" alt="" />
+							<img src="img/evestudio_logo_r.svg" alt="img" />
 						</a>
 					</div>
 					<span class="shit"><span class="copy">EveStudio</span>	&#169; 2009-2017</span>

@@ -15,30 +15,39 @@ $(document).ready(function() {
 
 	   var html = document.documentElement, body = document.body;
 		 if (body.scrollTop<finalPos1){
-			 $('#homeMenu').css('display','inline-block');
-			 $('#aboutMenu').css('display','none');
-			 $('#clientsMenu').css('display','none');
+			 // $('#homeMenu').css('display','inline-block');
+			 // $('#aboutMenu').css('display','none');
+			 // $('#clientsMenu').css('display','none');
 			 $('header').removeClass('active');
-			 $('header').css('background', 'rgba(0, 0, 0, 0.3)');
+			 $('header').css('background', 'rgba(0, 0, 0, 0.5)');
 			 $('header #logo').attr('src', 'img/evestudio_logo_r_whire.svg');
-		 } else if (body.scrollTop>finalPos1 && body.scrollTop<pos1) {
+			 $('.bars.bars1').addClass('hide').removeClass('show');
+             $('.menu').addClass('show').removeClass('hide');
+
+         } else if (body.scrollTop>finalPos1 && body.scrollTop<pos1) {
 			 $('header').addClass('active');
 			 $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
 			 $('header.active').css('background', 'rgba(255, 255, 255, 1)');
-		 }else if(body.scrollTop>finalPos1 && body.scrollTop<finalPos2) {
-			 $('#homeMenu').css('display','none');
-			 $('#aboutMenu').css('display','inline-block');
-			 $('#clientsMenu').css('display','none');
+             $('.bars.bars1').addClass('show').removeClass('hide');
+			 $('.menu').addClass('hide').removeClass('show');
+
+         }else if(body.scrollTop>finalPos1 && body.scrollTop<finalPos2) {
+			 // $('#homeMenu').css('display','none');
+			 // $('#aboutMenu').css('display','inline-block');
+			 // $('#clientsMenu').css('display','none');
 			 $('header').addClass('active');
 			 $('header.active').css('background', 'rgba(255, 255, 255, 0.7)');
 			 $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
+             $('.bars.bars1').addClass('show').removeClass('hide');
+             $('.menu').addClass('hide').removeClass('show');
 	   } else if (body.scrollTop>finalPos2) {
-			 $('#homeMenu').css('display','none');
-			 $('#aboutMenu').css('display','none');
-			 $('#clientsMenu').css('display','inline-block');
+			 // $('#homeMenu').css('display','none');
+			 // $('#aboutMenu').css('display','none');
+			 // $('#clientsMenu').css('display','inline-block');
 			 $('header').addClass('active');
 			 $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
-
+             $('.bars.bars1').addClass('show').removeClass('hide');
+             $('.menu').addClass('hide').removeClass('show');
 		 }
 		//  console.log(body.scrollTop);
   };
@@ -87,14 +96,14 @@ $(document).ready(function() {
 
 	});
 
-	//Кнопка "Наверх"
+//Кнопка "Наверх"
 	$("#top").click(function () {
 		$("body, html").animate({
 			scrollTop: 1
 		}, 800);
 		return false;
 	});
-    //плавный скролл
+//плавный скролл
     $("a[href^='#']").on("click", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
@@ -103,8 +112,7 @@ $(document).ready(function() {
     });
 
 // OWL
-    $(".owl-carousel").owlCarousel({
-		// jsonPath : 'customData.json'
+    $(".owl-carousel-case").owlCarousel({
 		dots: true,
 		slideSpeed : 300,
 		mouseDrag : true,
@@ -115,6 +123,62 @@ $(document).ready(function() {
 		items : 1
 	});
 
+//OWL-uslugi
+    $(".owl-carousel-uslugi").owlCarousel({
+        dots: false,
+		nav: false,
+        slideSpeed : 300,
+        mouseDrag : true,
+        startPosition : 2,
+        paginationSpeed : 400,
+        singleItem:true,
+        loop:true,
+        items : 1
+    });
+//OWL Buts
+    // Go to the next item
+    $('.paggs_buts .next').click(function(e) {
+        e.preventDefault();
+        $(".owl-carousel-uslugi").trigger('next.owl.carousel');
+    });
+// Go to the previous item
+    $('.paggs_buts .prev').click(function(e) {
+        e.preventDefault();
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        $(".owl-carousel-uslugi").trigger('prev.owl.carousel', [300]);
+    });
+// OWL-about
+    $(".owl-carousel-about").owlCarousel({
+        dots: false,
+        nav: false,
+        slideSpeed : 300,
+        mouseDrag : true,
+        startPosition : 2,
+        paginationSpeed : 400,
+        singleItem:false,
+        loop:true,
+        items : 4
+    });
+//OWL Buts
+    // Go to the next item
+    $('.paggs_buts .next').click(function(e) {
+        e.preventDefault();
+        $(".owl-carousel-about").trigger('next.owl.carousel');
+    });
+// Go to the previous item
+    $('.paggs_buts .prev').click(function(e) {
+        e.preventDefault();
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        $(".owl-carousel-about").trigger('prev.owl.carousel', [300]);
+    });
+
+
+//Map's on click
+    $('#box-5 .google_map').on('click', function () {
+        $(this).find("iframe").css("pointer-events", "auto");
+    });
 // black/color IMG
 	$('.lid a img').hover(function() {
 	 var source =	$(this).attr('src');
