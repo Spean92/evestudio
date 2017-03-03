@@ -1,5 +1,18 @@
 $(document).ready(function() {
 
+	// test вылет
+
+	$('.switcher p').on('click', function () {
+        var sibs = $(this).siblings('.switcher p');
+        $('.switcher p').not(sibs).addClass('active');
+        sibs.removeClass('active');
+        var ident = $(this).attr('value');
+        console.log(ident);
+        $('.mainpage .content .box-2 div .item .left').removeClass('var1 var2 var3');
+		$('.mainpage .content .box-2 div .item .left').addClass('var'+ ident);
+    });
+
+
 // Цвет полоски меню
 	var box1 = $('.box-1').height();
 	var box2 = $('.box-2>div').height()

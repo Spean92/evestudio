@@ -61,6 +61,21 @@
               color: rgb(0, 0, 0);
               line-height: 1.5;
             }
+            &.video {
+              max-width:225px;
+            }
+            &.web {
+
+            }
+            &.graph {
+             max-width:240px;
+            }
+            &.brend {
+              width:205px;
+            }
+            &.market {
+              width:190px;
+            }
           }
         }
       }

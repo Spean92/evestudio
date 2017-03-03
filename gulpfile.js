@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 var gulp = require('gulp'),
     concatCss = require('gulp-concat-css'),
@@ -60,6 +60,11 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('dest/fonts'));
 });
 
+//video
+gulp.task('video', function() {
+  return gulp.src('app/video/*')
+    .pipe(gulp.dest('dest/video'));
+});
 // watcher
 gulp.task('watch',['browser-sync'], function () {
     gulp.watch('app/scss/**/*', ['scss'])
@@ -69,4 +74,4 @@ gulp.task('watch',['browser-sync'], function () {
 });
 
 // default
-gulp.task('default', ['images','fonts', 'watch']);
+gulp.task('default', ['video', 'images','fonts', 'scripts', 'scss', 'html']);
