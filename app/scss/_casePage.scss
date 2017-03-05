@@ -158,7 +158,7 @@
           background: #fff;
           position: relative;
           padding-top: 0;
-          margin-top: 130px;
+          margin-top: 113px;
           padding-bottom: 140px;
           .lists {
             ul {
@@ -197,6 +197,42 @@
                 float: right;
                 width:36.25%;
               }
+            }
+          }
+        }
+      }
+      .siblingsCase {
+        a {
+          display: inline-block;
+          margin-bottom: 75px;
+          width:360px;
+          font-size: 14px;
+          font-family: "Segoe UI Bold";
+          color: rgb(0, 0, 0);
+          transition: all .2s ease;
+          position: relative;
+          &:after {
+            content: '';
+            position: absolute;
+            left:0;
+            bottom:-4px;
+            width: 0;
+            height: 1px;
+            background: #000;
+            transition: all .2s ease-in-out;
+          }
+          &.prev {
+            text-align: left;
+            float: left;
+          }
+          &.next {
+            text-align: right;
+            float: right;
+          }
+          &:hover {
+            opacity: 0.5;
+            &:after {
+              width:100%;
             }
           }
         }

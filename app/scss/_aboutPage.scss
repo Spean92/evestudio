@@ -43,7 +43,7 @@
         }
         p {
           margin-bottom: 60px;
-          font-size: 14px;
+          font-size: 15px;
           font-family: "Segoe UI Bold";
           color: rgb(0, 0, 0);
           line-height: 1.714;
@@ -93,6 +93,17 @@
             font-family: "Segoe UI Bold";
             color: rgb(0, 0, 0);
             transition: all .2s ease;
+            position: relative;
+            &:after {
+              content: '';
+              position: absolute;
+              left:0;
+              bottom:-4px;
+              width: 0;
+              height: 1px;
+              background: #000;
+              transition: all .2s ease-in-out;
+            }
             &.prev {
               text-align: left;
               float: left;
@@ -103,6 +114,9 @@
             }
             &:hover {
               opacity: 0.5;
+              &:after {
+                width:100%;
+              }
             }
           }
         }

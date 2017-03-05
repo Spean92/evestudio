@@ -189,15 +189,7 @@
   width: 750px;
   float: left;
   position: relative;
-  &.var1 {
-    left: 0;
-  }
-  &.var2 {
-    left: -10vw;
-  }
-  &.var3 {
-    left: -20vw;
-  }
+  left: -10vw;
 }
 .mainpage .content .box-2 div .item.case1 .left .img{
   width: 100%;
@@ -303,8 +295,27 @@
   margin-top: -15px;
   display: block;
   transition: all .2s ease-in-out;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left:0;
+    bottom:-4px;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: all .2s ease-in-out;
+  }
+}
+.mainpage .content .box-2 div .item.case5 .right a {
+  font-size: 15px;
+  font-family: "Segoe UI Black";
+
 }
 .mainpage .content .box-2 div .item .right a:hover {
+  &:after {
+    width: 100%;
+  }
   opacity: 0.5;
 }
 /*-------------------------------------*/
