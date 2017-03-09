@@ -497,7 +497,21 @@
   font-weight: bold;
   line-height: 1.4;
   transition: all .2s ease-in-out;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left:0;
+    bottom:-4px;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: all .2s ease-in-out;
+  }
 }
 .mainpage .content .box-3 .all_clients:hover {
   opacity: 0.5;
+  &:after {
+    width:100%;
+  }
 }

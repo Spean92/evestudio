@@ -192,5 +192,8 @@ $(document).ready(function() {
 		var hu = $(this).attr('src');
 	});
 
+	//Wow js
+    var wow = new WOW();
+    wow.init();
 
 });

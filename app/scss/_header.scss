@@ -244,7 +244,17 @@ header .right div.bars1:before {
 }
 #nav .container>.nav-list>li ul li {
   width: 90%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left:0;
+    bottom:-4px;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: all .2s ease-in-out;
+  }
 
 }
 #nav .container>.nav-list>li ul li a {
@@ -255,8 +265,13 @@ header .right div.bars1:before {
   text-align: left;
   transition: all .3s ease-in-out;
 }
-#nav .container>.nav-list>li ul li a:hover {
-  opacity: 0.5;
+#nav .container>.nav-list>li ul li:hover {
+  &:after {
+    width: 100%;
+
+  }
+  //opacity: 0.5;
+
 }
 #nav .foot {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
