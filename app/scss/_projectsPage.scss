@@ -22,12 +22,12 @@
 
 
 .projects .content .box-1 .text{
-  padding-top: 31vh;
+  padding-top: 35vh;
   z-index: 52;
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  text-transform: uppercase;
+  //text-transform: uppercase;
 }
 .projects .content .box-1 .text h1 {
   font-size: 55px;
@@ -175,12 +175,13 @@
 .projects .content .box-3 .clientsTable .clientRow ul li{
   width: 100%;
   border-bottom: 1px solid rgba(32, 35, 39, 0.1);
-  padding-left: 80px;
+  padding-left: 10px;
   position: relative;
   .logotype {
     display: table-cell;
     position: absolute;
-    left:10px;
+    //left:10px;
+    right:20px;
     top: 0;
     width:60px;
     height: 42px;
@@ -214,6 +215,8 @@
   content: url("../img/arrow-right.png");
   position: absolute;
   right:0;
+  top:50%;
+  margin-top: -18px;
 }
 .projects .content .box-3 .clientsTable .clientRow ul li .more:hover{
   opacity: 0.4;

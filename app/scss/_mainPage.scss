@@ -55,8 +55,8 @@
 }
 .mainpage .content .box-1 .sound {
   position: absolute;
-  bottom: 20px;
-  right: 50%;
+  bottom: 50px;
+  right: 43%;
   margin-right: -540px;
   display: none;
   z-index: 20;
@@ -69,7 +69,7 @@
   height: 30px;
   &.mute {
     background-size: 357%;
-    background-position: 30px 0;
+    background-position: 31px 0;
   }
   &.unMute {
     background-position: 60px 0;
@@ -78,8 +78,8 @@
 }
 .mainpage .content .box-1 #start {
   position: absolute;
-  bottom: 22px;
-  right: 50%;
+  bottom: 51px;
+  right: 43%;
   margin-right: -585px;
   display: none;
   z-index: 20;
@@ -237,13 +237,13 @@
   /* background-size: cover; */
 }
 .mainpage .content .box-2 div .item .right{
-  width: 490px;
+  width: 452px;
   float: left;
   margin-left: 30px;
   margin-top: 55px;
 }
 .mainpage .content .box-2 div .item .right{
-
+overflow: hidden;
 }
 .mainpage .content .box-2 div .item .right .first h2{
   font-size: 55px;
@@ -296,6 +296,10 @@
   display: block;
   transition: all .2s ease-in-out;
   position: relative;
+  overflow: hidden;
+  text-align: right;
+  margin-bottom: 5px;
+
   &:after {
     content: '';
     position: absolute;
@@ -314,7 +318,7 @@
 }
 .mainpage .content .box-2 div .item .right a:hover {
   &:after {
-    width: 100%;
+    //width: 100%;
   }
   opacity: 0.5;
 }
@@ -487,17 +491,19 @@
 .mainpage .content .box-3 .all_clients {
   display: block;
   margin-left: auto;
-  margin-right: 197px;
-  text-align: left;
+  text-align: right;
+  margin-right: 5px;
+  //text-align: left;
   width: 270px;
   border: none;
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Segoe UI Bold";
   color: rgb(0, 0, 0);
   font-weight: bold;
   line-height: 1.4;
   transition: all .2s ease-in-out;
   position: relative;
+  overflow: hidden;
   &:after {
     content: '';
     position: absolute;

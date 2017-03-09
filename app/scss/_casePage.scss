@@ -171,7 +171,8 @@
                 padding: 10px 0;
                 border-bottom: 1px solid black;
                 &:first-child {
-                  border-top:2px solid black;
+                  border-top:none;
+                  border-bottom: none;
                   font-size: 22px;
                   font-family: "Segoe UI Bold";
 
@@ -203,10 +204,10 @@
       }
       .siblingsCase {
         a {
-          display: inline-block;
+          display: inline;
           margin-bottom: 75px;
-          width:360px;
-          font-size: 14px;
+          //width:130px;
+          font-size: 15px;
           font-family: "Segoe UI Bold";
           color: rgb(0, 0, 0);
           transition: all .2s ease;
