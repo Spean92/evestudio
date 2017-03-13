@@ -42,12 +42,13 @@
         }
         .flex {
           //display: flex;
-          //justify-content: space-between;
+          //justify-content: flex-end;
           margin-bottom: 70px;
           .cl {
-            max-width:215px;
+            border-top:1px solid black;
+            width:270px;
+            margin: 0 15px;
             h5 {
-              border-top:1px solid black;
               padding-top: 20px;
               max-width: 185px;
               font-size: 22px;
@@ -57,51 +58,77 @@
               margin-bottom: 20px;
             }
             p {
-              font-size: 14px;
-              font-family: "Segoe UI Light";
+              font-size: 15px;
+              font-family: "Segoe UI";
               color: rgb(0, 0, 0);
               line-height: 1.5;
             }
-            &.video {
-              max-width:225px;
-            }
-            &.web {
 
-            }
-            &.graph {
-             max-width:240px;
-            }
-            &.brend {
-              width:205px;
-            }
-            &.market {
-              width:190px;
+           // &.video {
+           //   p {
+           //     max-width:225px;
+           //   }
+           //
+           // }
+           // &.web {
+           //
+           // }
+           // &.graph {
+           //   p {
+           //     max-width:240px;
+           //
+           //   }
+           // }
+           // &.brend {
+           //   p {
+           //     width:205px;
+           //
+           //   }
+           // }
+           // &.market {
+           //p {
+           //  width:190px;
+           //
+           //}
+           // }
+          }
+        }
+        .columns {
+          ul {
+            width:270px;
+            margin: 0 15px;
+            li {
+              border-top: 1px solid rgba(32,35,39,.1);
+
+              font-size: 15px;
+              font-family: "Segoe UI";
+              color: rgb(0, 0, 0);
+              padding: 12px 0;
+              &:last-child {
+                border-bottom: 1px solid rgba(32,35,39,.1);
+
+              }
             }
           }
         }
+
         .paggs_buts {
           margin-top: 30px;
-          margin-bottom: 170px;
+          padding-bottom: 110px;
           //background: #fff;
           a{
             display: inline-block;
             margin-bottom: 75px;
             //background: #fff;
             position: relative;
-            width:45%;
-            font-size: 14px;
+            width:270px;
+            overflow: hidden;
+            font-size: 15px;
             font-family: "Segoe UI Bold";
             color: rgb(0, 0, 0);
             transition: all .2s ease;
-            &:after {
-              content: '';
-              position: absolute;
-              left:0;
-              bottom:-4px;
-              width: 0;
-              height: 1px;
-              background: #000;
-              transition: all .2s ease-in-out;
+            hr {
+              margin-top: 5px;
             }
             &.prev {
               text-align: left;
@@ -113,9 +140,6 @@
             }
             &:hover {
               opacity: 0.5;
-              &:after {
-                width: 100%;
-              }
             }
           }
         }
@@ -140,8 +164,8 @@
             p {
               margin-bottom: 70px;
               display: inline-block;
-              font-size: 14px;
-              font-family: "Segoe UI Light";
+              font-size: 15px;
+              font-family: "Segoe UI";
               color: rgb(0, 0, 0);
               line-height: 1.714;
             }
@@ -158,33 +182,28 @@
             }
             p {
               display: inline-block;
-              font-size: 14px;
-              font-family: "Segoe UI Light";
+              font-size: 15px;
+              font-family: "Segoe UI";
               color: rgb(0, 0, 0);
               line-height: 1.714;
 
             }
+
           }
           .paggs_buts {
             margin-top: 30px;
             a{
               display: inline-block;
               margin-bottom: 75px;
-              width:45%;
-              font-size: 14px;
+              width:270px;
+              font-size: 15px;
+              overflow: hidden;
               font-family: "Segoe UI Bold";
               color: rgb(0, 0, 0);
               transition: all .2s ease;
               position: relative;
-              &:after {
-                content: '';
-                position: absolute;
-                left:0;
-                bottom:-4px;
-                width: 0;
-                height: 1px;
-                background: #000;
-                transition: all .2s ease-in-out;
+              hr {
+                margin-top: 5px;
               }
               &.prev {
                 text-align: left;
@@ -196,9 +215,7 @@
               }
               &:hover {
                 opacity: 0.5;
-                &:after {
-                  width:100%;
-                }
+
               }
             }
           }
@@ -247,8 +264,8 @@
             }
             p {
               margin-bottom: 68px;
-              font-size: 14px;
-              font-family: "Segoe UI Light";
+              font-size: 15px;
+              font-family: "Segoe UI";
               color: rgb(0, 0, 0);
               line-height: 1.8;
             }

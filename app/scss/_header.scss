@@ -65,7 +65,7 @@ header .right div {
   color: rgb(255, 255, 255);
   line-height: 1.2;
   nav {
-    margin-right: 11%;
+    margin-right: 7%;
 
     > ul {
       font-size: 0;
@@ -158,22 +158,51 @@ header .right div.home span.pagins {
 }
 header .right div.bars {
   top:5px;
-  width: 30px;
+  width: 40px;
   height: 15px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  //border-top: 2px solid white;
+  //border-bottom: 2px solid white;
   padding-left: 25px;
   margin-left: auto;
   cursor: pointer;
   position: relative;
+  &.act {
+    &:before {
+      width: 23px;
+      border-color: white;
+      transform: rotate(45deg) translate(0,.24em);
+      transform-origin: 25% 50%;
+      transition: all 250ms linear;
+    }
+    &:after {
+      width: 23px;
+
+      border-color: white;
+      transform: rotate(-45deg) translate(0,-.24em);
+      transform-origin: 25% 50%;
+      transition: all 250ms linear;
+    }
+  }
 }
-header .right div.bars1:before {
+header .right div.bars:before {
   content: "";
   position: absolute;
-  top: 45%;
+  top: 0;
   left: 0;
   width: 100%;
-  //border-bottom: 2px solid #fff;
+  border-top: 2px solid black;
+  transition: all 250ms linear;
+
+}
+header .right div.bars:after {
+  content: "";
+  position: absolute;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid black;
+  transition: all 250ms linear;
+
 }
 #nav {
   position: fixed;
@@ -183,7 +212,7 @@ header .right div.bars1:before {
   bottom: 0;
   z-index: 6;
   background: #000;
-  transition: al 0.4s;
+  transition: all 0.4s;
 }
 #nav .container {
   padding-top: 23vh;

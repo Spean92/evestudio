@@ -66,13 +66,17 @@
 }
 .projects .content .box-2 .cases {
   padding-bottom: 30px;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .projects .content .box-2 .cases .item {
   width: 270px;
   /*height: 224px;*/
   display: inline-block;
   vertical-align: top;
-  margin-right: 25px;
+  //margin-right: 25px;
   margin-bottom: 44px;
   cursor: pointer;
   &:hover {
@@ -106,7 +110,7 @@
     background: #000000;
     opacity:0;
     z-index: 10;
-    transition: all .2s ease-in-out;
+    transition: all .5s ease-in-out;
 
   }
 }
@@ -131,7 +135,7 @@
     width: 0;
     height: 1px;
     background: #000;
-    transition: all .2s ease-in-out;
+    transition: all .5s ease-in-out;
   }
 }
 
@@ -157,10 +161,11 @@
   margin-bottom: 40px;
 }
 .projects .content .box-3 .clientsTable {
-
+  display: flex;
+  justify-content: space-between;
 }
 .projects .content .box-3 .clientsTable .clientRow {
-  width: 268px;
+  width: 270px;
   display: inline-block;
   vertical-align: top;
   margin-right: 28px;
@@ -170,13 +175,16 @@
 }
 .projects .content .box-3 .clientsTable .clientRow ul{
   width: 100%;
-  border-top: 2px solid black;
+  border-top: 1px solid rgba(32, 35, 39, 0.1);
 }
 .projects .content .box-3 .clientsTable .clientRow ul li{
   width: 100%;
   border-bottom: 1px solid rgba(32, 35, 39, 0.1);
   padding-left: 10px;
   position: relative;
+  transition: opacity .5s linear;
+
+
   .logotype {
     display: table-cell;
     position: absolute;
@@ -184,8 +192,8 @@
     right:20px;
     top: 0;
     width:60px;
-    height: 42px;
-    line-height:2.5;
+    height: 40px;
+    line-height:2.2;
     text-align: center;
     img{
       vertical-align: middle;
@@ -204,21 +212,38 @@
   width: 100%;
   position: relative;
   font-size: 15px;
-  font-family: "Segoe UI Light";
+  font-family: "Segoe UI";
   color: rgb(0, 0, 0);
-  line-height: 2.8;
+  line-height: 2.65;
   text-align: left;
   transition: opacity .2s linear;
   cursor: default;
 }
-.projects .content .box-3 .clientsTable .clientRow ul li a.more:after {
+.projects .content .box-3 .clientsTable .clientRow ul li.more:after {
   content: url("../img/arrow-right.png");
   position: absolute;
   right:0;
   top:50%;
-  margin-top: -18px;
+  margin-top: -9.5px;
+
 }
-.projects .content .box-3 .clientsTable .clientRow ul li .more:hover{
-  opacity: 0.4;
-  cursor: pointer;
+.projects .content .box-3 .clientsTable .clientRow ul li.more:before {
+  content: "";
+  position: absolute;
+  bottom:0;
+  left:0;
+  width:0;
+  height: 1px;
+  background-color: black;
+  transition: width .5s linear;
+
+}
+.projects .content .box-3 .clientsTable .clientRow ul li.more:hover {
+  a {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+  &:before {
+  width: 100%;
+  }
 }

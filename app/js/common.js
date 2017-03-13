@@ -24,6 +24,7 @@ $(document).ready(function() {
 			 $('header #logo').attr('src', 'img/evestudio_logo_r_whire.svg');
 			 $('.bars.bars1').addClass('hide').removeClass('show');
              $('.menu').addClass('show').removeClass('hide');
+             $('.menu nav ul li a').css({'visibility':'visible', 'animation-name':'fadeInDown'});
 
          } else if (body.scrollTop>finalPos1 && body.scrollTop<pos1) {
 			 $('header').addClass('active');
@@ -60,9 +61,10 @@ $(document).ready(function() {
 			// $('#box-2, #box-3, footer').fadeOut();
 			$('body').css("overflow", "hidden");
 			$('main nav.nav').fadeIn(300);
-			$('header .right div.bars').css('border', 'none');
-			$('header .right div.bars::before').css('border', 'none');
-			$('header .right div.bars').css('background', 'url(img/close.svg) no-repeat center');
+            $('header .right div.bars').addClass("act");
+			// $('header .right div.bars').css('border', 'none');
+			// $('header .right div.bars::before').css('border', 'none');
+			// $('header .right div.bars').css('background', 'url(img/close.svg) no-repeat center');
 			$('header .right div.bars').removeClass('bars1');
 			$('#aboutMenu').css('display','none');
 			$('#clientsMenu').css('display','none');
@@ -70,14 +72,18 @@ $(document).ready(function() {
 			$('header').removeClass('active');
 			$('header').css('background', 'rgba(0, 0, 0, 0.4)');
 			$('header #logo').attr('src', 'img/evestudio_logo_r_whire.svg');
+			$(".b24-widget-button-position-bottom-middle.b24-widget-button-wrapper").hide();
 			menu = 1;
 		} else {
 			$('main nav.nav').fadeOut(300);
 			$('body').css("overflow", "auto");
 			// $('#box-2, #box-3, footer').fadeIn();
-			$('header .right div.bars').css({'border-top': '2px solid white', 'border-bottom': '2px solid white'});
-			$('header .right div.bars').css('background', 'none');
+            $('header .right div.bars').removeClass("act");
+
+            // $('header .right div.bars').css({'border-top': '2px solid white', 'border-bottom': '2px solid white'});
+			// $('header .right div.bars').css('background', 'none');
 			$('header .right div.bars').addClass('bars1');
+            $(".b24-widget-button-position-bottom-middle.b24-widget-button-wrapper").fadeIn(1000);
 
 			menu = 0;
 		}
@@ -117,7 +123,7 @@ $(document).ready(function() {
 		dots: true,
 		slideSpeed : 300,
 		mouseDrag : true,
-		startPosition : 2,
+		startPosition : 1,
 		paginationSpeed : 400,
 		singleItem:true,
 		loop:true,

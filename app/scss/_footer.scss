@@ -8,7 +8,7 @@ footer .footer {
 footer .footer>div{
   display: inline-block;
   vertical-align: top;
-  width: 16%;
+  width: 195px;
 }
 
 footer .footer div ul li a, footer .footer div ul li{
@@ -31,13 +31,13 @@ footer .footer>div>ul>li>a:hover, footer .footer div a:hover li {
   opacity: 0.5;
 }
 footer .footer div.visit {
-  transform: translateX(110px);
+  transform: translateX(0px);
 }
 footer .footer div.visit p {
   margin: 0;
 }
 footer .footer div.follow {
-  transform: translateX(240px);
+  transform: translateX(0px);
 }
 footer .footer div.logo {
   font-size: 10.698px;
@@ -45,7 +45,7 @@ footer .footer div.logo {
   color: rgb(0, 0, 0);
   line-height: 2.056;
   text-align: left;
-  transform: translateX(340px);
+  transform: translateX(330px);
 }
 footer .footer div.icons {
   display: none;
@@ -64,7 +64,7 @@ footer .footer div.logo .img_logo img{
 }
 footer .footer div.top {
   text-align: right;
-  width: 20%;
+  width: 195px;
   float: right;
 }
 footer .footer div.top .wrap{
