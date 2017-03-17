@@ -110,7 +110,8 @@
           .slider {
             margin-top: 30px;
             margin-bottom: 30px;
-            .items {
+            .item {
+              max-height:560px;
               img {
                 width:100%;
               }
@@ -188,24 +189,30 @@
           margin-bottom: 30px;
           .gallery_full {
 
-            .gall {
-              display: inline-block;
+            .gall.item_left {
               vertical-align: top;
-              &.item_left {
+              height: 100%;
+             > img {
+                display: inline-block;
                 float: left;
                 width:63.6%;
               }
-              &.item_right {
-                max-height: 89vh;
-                overflow: hidden;
+              .item_right {
+                display: inline-block;
                 float: right;
+                height: 100%;
+                overflow: hidden;
                 width:36.25%;
+                img {
+
+                }
               }
             }
           }
         }
       }
       .siblingsCase {
+        margin-top: 30px;
         a {
           display: inline-block;
           margin-bottom: 75px;

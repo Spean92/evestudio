@@ -55,7 +55,7 @@
 }
 .mainpage .content .box-1 .sound {
   position: absolute;
-  bottom: 50px;
+  bottom: 65px;
   right: 50%;
   margin-right: -540px;
   display: none;
@@ -78,7 +78,7 @@
 }
 .mainpage .content .box-1 #start {
   position: absolute;
-  bottom: 51px;
+  bottom: 67px;
   right: 50%;
   margin-right: -585px;
   display: none;
@@ -196,7 +196,7 @@
   //max-width: 600px;
   height: 100%;
   background: url(../img/1.png) no-repeat;
-  background-position: 0px center;
+  background-position: right center;
   background-size: contain;
 }
 .mainpage .content .box-2 div .item.case2 .left .img{
@@ -206,7 +206,7 @@
   max-height: 615px;
   /* float: left; */
   background: url(../img/2.png) no-repeat;
-  background-position: -60px center;
+  background-position: right center;
 }
 .mainpage .content .box-2 div .item.case3 .left .img{
   width: 100%;
@@ -215,7 +215,7 @@
   max-height: 575px;
   /* float: left; */
   background: url(../img/3.png) no-repeat;
-  background-position: 0px center;
+  background-position: right center;
 }
 .mainpage .content .box-2 div .item.case4 .left .img{
   width: 100%;
@@ -224,7 +224,7 @@
   max-height: 615px;
   //float: left;
   background: url(../img/4.png) no-repeat;
-  background-position: -30px center;
+  background-position: right center;
 }
 .mainpage .content .box-2 div .item.case5 .left .img{
   width: 100%;
@@ -233,7 +233,7 @@
   max-height: 545px;
   float: left;
   background: url(../img/5.png) no-repeat;
-  background-position: 10px center;
+  background-position: right center;
   /* background-size: cover; */
 }
 .mainpage .content .box-2 div .item .right{

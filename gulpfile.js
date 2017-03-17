@@ -69,7 +69,9 @@ gulp.task('video', function() {
 gulp.task('watch',['browser-sync'], function () {
     gulp.watch('app/scss/**/*', ['scss'])
     gulp.watch('app/js/*', ['scripts'])
-    gulp.watch('app/*.html', ['html']);
+    gulp.watch('app/*.html', ['html'])
+    gulp.watch('app/img/**/*', ['images'])
+    gulp.watch('app/fonts/**/*', ['fonts']);
 
 });
 

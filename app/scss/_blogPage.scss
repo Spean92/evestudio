@@ -1,0 +1,138 @@
+/*-------------------------------------*/
+/*-----------------BOX-1---------------*/
+/*-------------------------------------*/
+.blog_page {
+  .content {
+    .box-1 {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      .bg {
+        //background: url(../img/cases/avon_1.png) no-repeat;
+        //background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 4;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+      .text{
+        padding-top: 36vh;
+        z-index: 52;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        text-transform: uppercase;
+        h1 {
+          font-size: 55px;
+          width: 100%;
+          font-family: "Segoe UI Bold";
+          color: rgb(255, 255, 255);
+          line-height: 70px;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+      }
+
+    }
+    /*-------------------------------------*/
+    /*-----------------BOX-2---------------*/
+    /*-------------------------------------*/
+    .box-2 {
+      background: #fff;
+      position: relative;
+      margin-top: 100vh;
+      padding-top: 65px;
+      .wrapper {
+        padding-bottom: 70px;
+        font-size: 0;
+
+        .left_side {
+          display: inline-block;
+          vertical-align: top;
+          width: 890px;
+          margin-right: 20px;
+          h2{
+            margin-bottom: 30px;
+            font-size: 55px;
+            font-family: "Segoe UI Light";
+            color: rgb(0, 0, 0);
+            line-height: 1.09;
+          }
+          > p {
+            font-size: 15px;
+            font-family: "Segoe UI";
+            color: rgb(0, 0, 0);
+            line-height: 1.714;
+            margin-bottom: 40px;
+          }
+          .flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .item-flex {
+              display: inline-block;
+              width:270px;
+              border-top:1px solid black;
+              padding-top: 20px;
+              transition: all .3s ease;
+              h4 {
+                margin-bottom: 5px;
+                font-size: 22px;
+                font-family: "Segoe UI Bold";
+                color: rgb(0, 0, 0);
+                text-transform: uppercase;
+                line-height: 1;
+              }
+              p {
+                font-size: 15px;
+                font-family: "Segoe UI";
+                color: rgb(0, 0, 0);
+                line-height: 1.5;
+                margin-bottom: 60px;
+
+              }
+              &:hover {
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+        .right_side {
+          display: inline-block;
+          vertical-align: top;
+          width: 270px;
+          margin-left: 20px;
+          ul {
+            margin:13px 0;
+            li {
+              a {
+                color: #000;
+              }
+              font-size: 15px;
+              font-family: "Segoe UI";
+              text-align: left;
+              padding: 11.5px 0;
+              border-bottom: 1px solid black;
+              transition: all .3s ease;
+              &:first-child {
+                border-top: 1px solid black;
+              }
+              &:hover {
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

@@ -168,18 +168,18 @@ header .right div.bars {
   position: relative;
   &.act {
     &:before {
-      width: 23px;
+      //width: 23px;
       border-color: white;
       transform: rotate(45deg) translate(0,.24em);
-      transform-origin: 25% 50%;
+      transform-origin: 35% 110%;
       transition: all 250ms linear;
     }
     &:after {
-      width: 23px;
+      //width: 23px;
 
       border-color: white;
       transform: rotate(-45deg) translate(0,-.24em);
-      transform-origin: 25% 50%;
+      transform-origin: 40% -10%;
       transition: all 250ms linear;
     }
   }

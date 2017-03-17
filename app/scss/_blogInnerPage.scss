@@ -1,0 +1,131 @@
+.blogInner_page {
+  .content {
+    background: #fff;
+    /*-------------------------------------*/
+    /*-----------------BOX-2---------------*/
+    /*-------------------------------------*/
+    .box-2 {
+      background: #fff;
+      position: relative;
+      margin-top: 50px;
+      padding-top: 65px;
+      .wrapper {
+        padding-bottom: 70px;
+        font-size: 0;
+        .left_side {
+          display: inline-block;
+          vertical-align: top;
+          width: 890px;
+          margin-right: 20px;
+          h1 {
+            font-size: 55px;
+            font-family: "Segoe UI Light";
+            color: rgb(0, 0, 0);
+            line-height: 1.09;
+            text-align: left;
+          }
+          h2 {
+            margin-bottom: 30px;
+            font-size: 40px;
+            font-family: "Segoe UI Light";
+            color: rgb(0, 0, 0);
+            line-height: 1.25;
+            text-align: left;
+          }
+          .big_img {
+            width: 100%;
+            margin: 30px 0;
+
+            img {
+              width:100%;
+            }
+          }
+          p {
+            font-size: 15px;
+            font-family: "Segoe UI";
+            color: rgb(0, 0, 0);
+            line-height: 1.714;
+            text-align: left;
+            margin: 30px 0;
+          }
+          .links {
+
+            a {
+              display: inline-block;
+              font-size: 15px;
+              font-family: "Segoe UI Bold";
+              color: rgb(0, 0, 0);
+              line-height: 1.714;
+              text-align: left;
+              transition: all .3s ease;
+              &:hover {
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+        .right_side {
+          display: inline-block;
+          vertical-align: top;
+          width: 270px;
+          margin-left: 20px;
+          ul {
+            margin:13px 0;
+            li {
+              font-size: 15px;
+              font-family: "Segoe UI";
+              text-align: left;
+              padding: 11.5px 0;
+              border-top: 1px solid black;
+              transition: all .3s ease;
+
+              a {
+                color: #000;
+                h4 {
+                  font-size: 22px;
+                  font-family: "Segoe UI Bold";
+                }
+                p {
+                  line-height:1.2;
+                  margin: 10px 0;
+                }
+
+              }
+              &:hover {
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+      }
+    }
+    .paggs_buts {
+      a{
+        display: inline-block;
+        padding-bottom: 75px;
+        width:270px;
+        font-size: 15px;
+        font-family: "Segoe UI Bold";
+        color: rgb(0, 0, 0);
+        transition: all .2s ease;
+        position: relative;
+        overflow: hidden;
+        hr {
+          margin-top: 5px;
+        }
+        &.prev {
+          text-align: left;
+          float: left;
+        }
+        &.next {
+          text-align: right;
+          float: right;
+        }
+        &:hover {
+          opacity: 0.5;
+
+        }
+      }
+    }
+  }
+}
