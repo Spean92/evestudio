@@ -12,47 +12,57 @@ $(document).ready(function() {
 	var finalPos2 = pos2 + -'15';
 	var finalPos3 = pos3;
 
-	window.onscroll = function(){
 
-	   var html = document.documentElement, body = document.body;
-		 if (body.scrollTop<finalPos1){
-			 // $('#homeMenu').css('display','inline-block');
-			 // $('#aboutMenu').css('display','none');
-			 // $('#clientsMenu').css('display','none');
-			 $('header').removeClass('active');
-			 $('header').css('background', 'rgba(0, 0, 0, 0.5)');
-			 $('header #logo').attr('src', 'img/evestudio_logo_r_whire.svg');
-			 $('.bars.bars1').addClass('hide').removeClass('show');
-             $('.menu').addClass('show').removeClass('hide');
-             $('.menu nav ul li a').css({'visibility':'visible', 'animation-name':'fadeInDown'});
+    function header() {
+        var html = document.documentElement, body = document.body;
+        if (body.scrollTop<finalPos1){
+            // $('#homeMenu').css('display','inline-block');
+            // $('#aboutMenu').css('display','none');
+            // $('#clientsMenu').css('display','none');
+            $('header').removeClass('active');
+            $('header').css('background', 'rgba(0, 0, 0, 0.5)');
+            $('header #logo').attr('src', 'img/evestudio_logo_r_whire.svg');
+            $('.bars.bars1').addClass('hide').removeClass('show');
+            $('.menu').addClass('show').removeClass('hide');
+            $('.menu nav ul li a').removeClass('wow fadeInDown');
+            $('.menu nav ul li a').css('visibility','visible');
 
-         } else if (body.scrollTop>finalPos1 && body.scrollTop<pos1) {
-			 $('header').addClass('active');
-			 $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
-			 $('header.active').css('background', 'rgba(255, 255, 255, 1)');
-             $('.bars.bars1').addClass('show').removeClass('hide');
-			 $('.menu').addClass('hide').removeClass('show');
+        } else if (body.scrollTop>finalPos1 && body.scrollTop<pos1) {
+            $('header').addClass('active');
+            $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
+            $('header.active').css('background', 'rgba(255, 255, 255, 1)');
+            $('.bars.bars1').addClass('show').removeClass('hide');
+            $('.menu').addClass('hide').removeClass('show');
+            $('.menu nav ul li a').removeClass('wow fadeInDown');
 
-         }else if(body.scrollTop>finalPos1 && body.scrollTop<finalPos2) {
-			 // $('#homeMenu').css('display','none');
-			 // $('#aboutMenu').css('display','inline-block');
-			 // $('#clientsMenu').css('display','none');
-			 $('header').addClass('active');
-			 $('header.active').css('background', 'rgba(255, 255, 255, 0.7)');
-			 $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
-             $('.bars.bars1').addClass('show').removeClass('hide');
-             $('.menu').addClass('hide').removeClass('show');
-	   } else if (body.scrollTop>finalPos2) {
-			 // $('#homeMenu').css('display','none');
-			 // $('#aboutMenu').css('display','none');
-			 // $('#clientsMenu').css('display','inline-block');
-			 $('header').addClass('active');
-			 $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
-             $('.bars.bars1').addClass('show').removeClass('hide');
-             $('.menu').addClass('hide').removeClass('show');
-		 }
-		//  console.log(body.scrollTop);
-  };
+
+        }else if(body.scrollTop>finalPos1 && body.scrollTop<finalPos2) {
+            // $('#homeMenu').css('display','none');
+            // $('#aboutMenu').css('display','inline-block');
+            // $('#clientsMenu').css('display','none');
+            $('header').addClass('active');
+            $('header.active').css('background', 'rgba(255, 255, 255, 0.7)');
+            $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
+            $('.bars.bars1').addClass('show').removeClass('hide');
+            $('.menu').addClass('hide').removeClass('show');
+            $('.menu nav ul li a').removeClass('wow fadeInDown');
+
+
+        } else if (body.scrollTop>finalPos2) {
+            // $('#homeMenu').css('display','none');
+            // $('#aboutMenu').css('display','none');
+            // $('#clientsMenu').css('display','inline-block');
+            $('header').addClass('active');
+            $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
+            $('.bars.bars1').addClass('show').removeClass('hide');
+            $('.menu').addClass('hide').removeClass('show');
+            $('.menu nav ul li a').removeClass('wow fadeInDown');
+        }
+        //  console.log(body.scrollTop);
+    }
+	// 	window.onscroll = function(){
+  //
+  // };
 
 // Меню
 	var menu = 0;
@@ -91,13 +101,14 @@ $(document).ready(function() {
 	$('.nav .container a').click(function(){
 		$('main nav.nav').fadeOut(300);
 		$('body').css("overflow", "auto");
-		$('header').addClass('active');
+		// $('header').addClass('active');
 		$('header.active').css('background', 'rgba(255, 255, 255, 0.7)');
 		// $('#box-2, #box-3').fadeIn();
 		// $('#box-2, #box-3, footer').fadeIn();
-		$('header .right div.bars').css({'border-top': '2px solid white', 'border-bottom': '2px solid white'});
-		$('header .right div.bars').css('background', 'none');
-		$('header .right div.bars').addClass('bars1');
+		// $('header .right div.bars').css({'border-top': '2px solid white', 'border-bottom': '2px solid white'});
+		// $('header .right div.bars').css('background', 'none');
+		$('header .right div.bars').removeClass('act');
+        $('header .right div.bars').addClass('bars1');
 
 		menu = 0;
 
@@ -197,9 +208,25 @@ $(document).ready(function() {
 		$(this).attr('src', source.slice(0, -4)+'_black.svg');
 		var hu = $(this).attr('src');
 	});
+// case bottom img height
+    function someHeight() {
+        $('.case .gallery_full .gall.item_left').height($('.case .gallery_full .gall.item_left > img').height());
+    }someHeight();
 
 	//Wow js
     var wow = new WOW();
     wow.init();
 
+
+    //MEDIA things
+    if ($(window).width()>1023) {
+        $(window).on('scroll', header);
+    } else {
+        $('header').addClass('active');
+        $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
+        $('header.active').css('background', 'rgba(255, 255, 255, 1)');
+        $('.bars.bars1').addClass('show').removeClass('hide');
+        $('.menu').addClass('hide').removeClass('show');
+        $('.menu nav ul li a').removeClass('wow fadeInDown');
+    }
 });

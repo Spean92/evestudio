@@ -82,7 +82,7 @@ header .right div {
           height:1px;
           background: #ffffff;
           width: 0;
-          transition: all .3s ease-in-out;
+          transition: all .4s ease-in-out;
         }
         ul {
           display: none;
@@ -111,7 +111,7 @@ header .right div {
                 height:1px;
                 background: rgba(255,255,255,0.3);
                 width: 0;
-                transition: all .2s ease-in-out;
+                transition: all .4s ease-in-out;
               }
               &:hover {
                 color: rgba(255, 255, 255,1);
@@ -283,7 +283,7 @@ header .right div.bars:after {
     width: 0;
     height: 1px;
     background: #fff;
-    transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out;
   }
 
 }
