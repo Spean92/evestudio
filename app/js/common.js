@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 // Цвет полоски меню
 	var box1 = $('.box-1').height();
-	var box2 = $('.box-2>div').height()
+	var box2 = $('.box-2>div').height();
 	var box3 = $('.box-3').height();
 	var pos1 = box1;
 	var pos2 = pos1 + box2;
@@ -89,7 +89,8 @@ $(document).ready(function() {
 			$('body').css("overflow", "auto");
 			// $('#box-2, #box-3, footer').fadeIn();
             $('header .right div.bars').removeClass("act");
-
+            $('header').css('background', 'rgb(255, 255, 255)');
+            $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
             // $('header .right div.bars').css({'border-top': '2px solid white', 'border-bottom': '2px solid white'});
 			// $('header .right div.bars').css('background', 'none');
 			$('header .right div.bars').addClass('bars1');
@@ -98,7 +99,7 @@ $(document).ready(function() {
 			menu = 0;
 		}
 	});
-	$('.nav .container a').click(function(){
+	$('.nav .container a').on('click', function(){
 		$('main nav.nav').fadeOut(300);
 		$('body').css("overflow", "auto");
 		// $('header').addClass('active');
@@ -109,6 +110,9 @@ $(document).ready(function() {
 		// $('header .right div.bars').css('background', 'none');
 		$('header .right div.bars').removeClass('act');
         $('header .right div.bars').addClass('bars1');
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top - 65}, 800);
 
 		menu = 0;
 
@@ -126,7 +130,7 @@ $(document).ready(function() {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 800);
+        $('body,html').animate({scrollTop: top - 65}, 800);
     });
 
 // OWL
@@ -138,9 +142,10 @@ $(document).ready(function() {
 		paginationSpeed : 400,
 		singleItem:true,
 		loop:true,
-		items : 1
+		items : 1,
+        autoplay: true,
+        autoplayTimeout : 3000
 	});
-
 //OWL-uslugi
     $(".owl-carousel-uslugi").owlCarousel({
         dots: false,
@@ -167,17 +172,44 @@ $(document).ready(function() {
         $(".owl-carousel-uslugi").trigger('prev.owl.carousel', [300]);
     });
 // OWL-about
-    $(".owl-carousel-about").owlCarousel({
-        dots: false,
-        nav: false,
-        slideSpeed : 300,
-        mouseDrag : true,
-        startPosition : 2,
-        paginationSpeed : 400,
-        singleItem:false,
-        loop:true,
-        items : 4
-    });
+    if ($(window).width()>1023) {
+        $(".owl-carousel-about").owlCarousel({
+            dots: false,
+            nav: false,
+            slideSpeed : 300,
+            mouseDrag : true,
+            startPosition : 2,
+            paginationSpeed : 400,
+            singleItem:false,
+            loop:true,
+            items : 4
+        });
+    } else if (($(window).width()>723) && ($(window).width()<1024)) {
+        $(".owl-carousel-about").owlCarousel({
+            dots: false,
+            nav: false,
+            slideSpeed : 300,
+            mouseDrag : true,
+            startPosition : 2,
+            paginationSpeed : 400,
+            singleItem:false,
+            loop:true,
+            items : 2
+        });
+    } else if ($(window).width()<724) {
+        $(".owl-carousel-about").owlCarousel({
+            dots: false,
+            nav: false,
+            slideSpeed : 300,
+            mouseDrag : true,
+            startPosition : 2,
+            paginationSpeed : 400,
+            singleItem:false,
+            loop:true,
+            items : 1
+        });
+    }
+
 //OWL Buts
     // Go to the next item
     $('.paggs_buts .next').click(function(e) {
@@ -211,15 +243,16 @@ $(document).ready(function() {
 // case bottom img height
     function someHeight() {
         $('.case .gallery_full .gall.item_left').height($('.case .gallery_full .gall.item_left > img').height());
-    }someHeight();
-
+    };
+    $(window).on('load', someHeight);
+    $(window).on('resize', someHeight);
 	//Wow js
     var wow = new WOW();
     wow.init();
 
 
     //MEDIA things
-    if ($(window).width()>1023) {
+    if (($(window).width()>1023) && ($('.main-wrapper').hasClass('blogInner_page') == false)) {
         $(window).on('scroll', header);
     } else {
         $('header').addClass('active');
@@ -229,4 +262,5 @@ $(document).ready(function() {
         $('.menu').addClass('hide').removeClass('show');
         $('.menu nav ul li a').removeClass('wow fadeInDown');
     }
+
 });

@@ -1,0 +1,64 @@
+@media only screen and (min-width : 1600px) {
+
+}
+@media only screen and (min-width : 1024px) and (max-width : 1199px) {
+
+}
+@media only screen and (min-width : 940px) and (max-width : 1023px) {
+
+  .about_page .content .box-3 .wrapper .left {
+    max-width: 100%;
+    width: 100%;
+    .img {
+      width: 100%;
+      max-width: 100% !important;
+
+    }
+  }
+  .about_page .content .box-3 .wrapper .right {
+    max-width: 100%;
+    width: 100%;
+    p {
+      height: auto;
+      margin: 30px 0;
+    }
+    .img {
+      width: 100%;
+      max-width: 100% !important;
+
+    }
+  }
+}
+@media only screen and (min-width : 724px) and (max-width : 939px) {
+  .about_page .content .box-3 .wrapper .left {
+    max-width: 100%;
+    width: 100%;
+    .img {
+      width: 100%;
+      max-width: 100% !important;
+
+    }
+  }
+  .about_page .content .box-3 .wrapper .right {
+    max-width: 100%;
+    width: 100%;
+    p {
+      height: auto;
+      margin: 30px 0;
+    }
+    .img {
+      width: 100%;
+      max-width: 100% !important;
+
+    }
+  }
+}
+@media only screen and (min-width : 480px) and (max-width : 723px) {
+
+}
+@media only all and (max-width : 479px) {
+  .about_page .content .box-2 .wrapper .paggs_buts {
+     margin-left: 0px;
+     margin-right: 0px;
+  }
+}

@@ -1,0 +1,79 @@
+@media only screen and (min-width : 1600px) {
+
+}
+@media only screen and (min-width : 1024px) and (max-width : 1199px) {
+  .case .content .case_wrapper .left_case_wrapper {
+    width: 900px;
+  }
+  .case .content .case_wrapper .left_case_wrapper .box-2 {
+    width: 900px;
+  }
+}
+@media only screen and (min-width : 940px) and (max-width : 1023px) {
+  .case .content .case_wrapper .left_case_wrapper {
+    width: 900px;
+  }
+  .case .content .case_wrapper .left_case_wrapper .box-2 {
+    width: 900px;
+  }
+
+}
+@media only screen and (min-width : 724px) and (max-width : 939px) {
+  .case .content .case_wrapper .left_case_wrapper {
+    width: 100%;
+  }
+  .case .content .case_wrapper .left_case_wrapper .box-2 {
+    width: 100%;
+  }
+  .case .content .case_wrapper .wrapper.passive .left_case_wrapper .box-4 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width : 480px) and (max-width : 723px) {
+  .case .content .case_wrapper .left_case_wrapper {
+    width: 100%;
+  }
+  .case .content .case_wrapper .wrapper.passive .left_case_wrapper {
+    margin-top: 0;
+
+  }
+  .case .content .case_wrapper .left_case_wrapper .box-2 {
+    width: 100%;
+  }
+  .case .content .case_wrapper .left_case_wrapper .box-2 h4 {
+    font-size: 40px;
+  }
+  .case .content .case_wrapper .wrapper.passive .left_case_wrapper .box-4 {
+    width: 100%;
+  }
+  .case .content .case_wrapper .right_case_wrapper {
+    width: 100%;
+  }
+  .case .content .case_wrapper .right_case_wrapper .box-5 {
+    padding-bottom: 40px;
+  }
+}
+@media only all and (max-width : 479px) {
+  .case .content .case_wrapper .left_case_wrapper {
+    width: 100%;
+  }
+  .case .content .case_wrapper .wrapper.passive .left_case_wrapper {
+    margin-top: 0;
+
+  }
+  .case .content .case_wrapper .left_case_wrapper .box-2 {
+    width: 100%;
+  }
+  .case .content .case_wrapper .left_case_wrapper .box-2 h4 {
+    font-size: 40px;
+  }
+  .case .content .case_wrapper .wrapper.passive .left_case_wrapper .box-4 {
+    width: 100%;
+  }
+  .case .content .case_wrapper .right_case_wrapper {
+    width: 100%;
+  }
+  .case .content .case_wrapper .right_case_wrapper .box-5 {
+    padding-bottom: 40px;
+  }
+}

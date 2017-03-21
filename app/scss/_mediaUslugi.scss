@@ -1,0 +1,85 @@
+@media only screen and (min-width : 1600px) {
+
+}
+@media only screen and (min-width : 1024px) and (max-width : 1199px) {
+  .uslugi_page .content .box-2 .wrapper {
+    width: 1000px;
+  }
+  .uslugi_page .content .box-2 .wrapper .flex .cl {
+    border-top: 1px solid #000;
+    width: 220px;
+    margin: 0 20px;
+  }
+  .uslugi_page .content .box-4 .wrapper .experts.flex .fl1 {
+    max-width: 48%;
+  }
+}
+@media only screen and (min-width : 940px) and (max-width : 1023px) {
+  .uslugi_page .content .box-2 .wrapper {
+    width: 920px;
+  }
+  .uslugi_page .content .box-2 .wrapper .flex .cl {
+    border-top: 1px solid #000;
+    width: 48%;
+    margin: 0 20px;
+  }
+  .uslugi_page .content .box-4 .wrapper .experts.flex .fl1 {
+    max-width: 48%;
+  }
+
+}
+@media only screen and (min-width : 724px) and (max-width : 939px) {
+  .uslugi_page .content .box-2 .wrapper {
+    width: 704px;
+  }
+  .uslugi_page .content .box-3 .wrapper .right-side {
+    right: calc(50% - 990px);
+  }
+  .uslugi_page .content .box-4 .wrapper .experts.flex .fl1 {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width : 480px) and (max-width : 723px) {
+  .uslugi_page .content .box-2 .wrapper {
+    width: 460px;
+  }
+  .uslugi_page .content .box-2 .wrapper .paggs_buts {
+    padding-bottom: 180px;
+  }
+  .uslugi_page .content .box-2 .wrapper .paggs_buts a.next {
+    margin-bottom: 0;
+  }
+  .uslugi_page .content .box-3 .wrapper .right-side {
+    top: 240px;
+    right: calc(50% - 1020px);
+  }
+}
+@media only all and (max-width : 479px) {
+  .uslugi_page .content .box-2 .wrapper {
+    width: 300px;
+  }
+  .uslugi_page .content .box-2 .wrapper h2 {
+    font-size: 40px;
+  }
+  .uslugi_page .content .box-2 .wrapper .paggs_buts {
+    margin: 0;
+    padding-bottom: 180px;
+  }
+  .uslugi_page .content .box-2 .wrapper .paggs_buts a.next {
+    margin-bottom: 0;
+  }
+  .uslugi_page .content .box-3 .wrapper .left-side .top-text h2 {
+    font-size: 40px;
+  }
+  .uslugi_page .content .box-3 .wrapper .paggs_buts {
+    margin: 0;
+    padding-bottom: 180px;
+  }
+  .uslugi_page .content .box-3 .wrapper .right-side {
+    display: none;
+  }
+  .uslugi_page .content .box-4 .wrapper h2 {
+    font-size: 40px;
+  }
+
+}

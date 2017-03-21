@@ -1,0 +1,172 @@
+@media only screen and (min-width : 1600px) {
+
+}
+@media only screen and (min-width : 1024px) and (max-width : 1199px) {
+  /**/
+  /*PROJECTS PAGE*/
+  /**/
+  .projects .content .box-1 .text{
+    width: 100%;
+  }
+  .projects .content .box-2 .cases {
+    max-width: 1024px;
+  }
+  .projects .content .box-2 .cases .item {
+    width: 23%;
+    margin-right: 2%;
+  }
+  .projects .content .box-2 .cases .item .img {
+    width: auto;
+    height: auto;
+  }
+  .projects .content .box-3 .clientsTable .clientRow {
+    width: 23%;
+    margin-right: 2.2%;
+  }
+}
+@media only screen and (min-width : 940px) and (max-width : 1023px) {
+
+
+  /**/
+  /*PROJECTS PAGE*/
+  /**/
+  .projects .wrapper {
+    width: 940px;
+    padding: 0 0px;
+  }
+  .projects .content .box-2 .cases {
+    max-width: 940px;
+  }
+  .projects .content .box-2 .cases .item {
+    width: 23%;
+    margin-right: 2%;
+  }
+  .projects .content .box-2 .cases .item .img {
+    width: auto;
+    height: auto;
+  }
+  .projects .content .box-2 .cases .item .text {
+    letter-spacing: -0.5px;
+  }
+  .projects .content .box-3 .clientsTable .clientRow {
+    width: 48.5%;
+    margin-right: 2.4%;
+  }
+  .projects .content .box-3 .clientsTable .clientRow:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width : 724px) and (max-width : 939px) {
+
+  /**/
+  /*PROJECTS PAGE*/
+  /**/
+  .projects .wrapper {
+    width: 724px;
+    padding: 0 0px;
+  }
+  .projects .content .box-2 .cases {
+    max-width: 724px;
+  }
+  .projects .content .box-2 .cases .item {
+    width: 48%;
+    margin-right: 2%;
+  }
+  .projects .content .box-2 .cases .item:nth-child(2n) {
+    width: 48%;
+    margin-right: 0;
+  }
+  .projects .content .box-2 .cases .item .img {
+    width: auto;
+    height: auto;
+  }
+  .projects .content .box-2 .cases .item .text {
+    letter-spacing: -0.5px;
+  }
+  .projects .content .box-3 .clientsTable {
+    flex-wrap: wrap;
+  }
+  .projects .content .box-3 .clientsTable .clientRow {
+    width: 50%;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width : 480px) and (max-width : 723px) {
+
+  /**/
+  /*PROJECTS PAGE*/
+  /**/
+  .projects .wrapper {
+    width: 480px;
+    padding: 0 0px;
+  }
+  .projects .content .box-2 .cases {
+    max-width: 480px;
+  }
+  .projects .content .box-2 .cases .item {
+    width: 48%;
+    margin-right: 2%;
+  }
+  .projects .content .box-2 .cases .item:nth-child(2n) {
+    width: 48%;
+    margin-right: 0;
+  }
+  .projects .content .box-2 .cases .item .img {
+    width: auto;
+    height: auto;
+  }
+  .projects .content .box-2 .cases .item .text {
+    letter-spacing: -0.5px;
+  }
+  .projects .content .box-3 .clientsTable {
+    flex-wrap: wrap;
+  }
+  .projects .content .box-3 .clientsTable .clientRow {
+    width: 48.5%;
+    margin-right: 2.4%;
+  }
+  .projects .content .box-3 .clientsTable .clientRow:nth-child(2n) {
+    margin-right: 0;
+  }
+  .projects .content .box-3 .clientsTable .clientRow {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media only all and (max-width : 479px) {
+
+  /**/
+  /*Projects*/
+  /**/
+  .projects .content .box-2 .cases {
+    padding-bottom: 15px;
+    max-width: 290px;
+  }
+  .projects .content .box-2 .cases .item {
+    max-width: 290px;
+    width: 100%;
+    margin-right: 0;
+  }
+  .projects .content .box-2 .cases .item:nth-child(2n) {
+    width: 100%;
+    margin-right: 0;
+  }
+  .projects .content .box-2 .cases .item .img {
+    width: auto;
+    height: auto;
+  }
+  .projects .content .box-2 .cases .item .text {
+    letter-spacing: -0.5px;
+    font-size: 19px;
+  }
+  .projects .content .box-3 .clientsTable {
+    flex-wrap: wrap;
+  }
+  .projects .content .box-3 .clientsTable .clientRow {
+    width: 290px;
+    margin-right: 0;
+  }
+  .projects .content .box-3 .header h2 {
+    line-height: 1;
+  }
+}
