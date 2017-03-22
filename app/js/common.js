@@ -11,10 +11,10 @@ $(document).ready(function() {
 	var finalPos1 = pos1 + -'77';
 	var finalPos2 = pos2 + -'15';
 	var finalPos3 = pos3;
+    var html = document.documentElement, body = document.body;
 
 
     function header() {
-        var html = document.documentElement, body = document.body;
         if (body.scrollTop<finalPos1){
             // $('#homeMenu').css('display','inline-block');
             // $('#aboutMenu').css('display','none');
@@ -63,6 +63,41 @@ $(document).ready(function() {
 	// 	window.onscroll = function(){
   //
   // };
+  //  Inner blog menu
+    $(window).on('load', function() {
+        if  ($('.main-wrapper').hasClass('blogInner_page') == true) {
+
+            $('header').removeClass('active');
+            $('header').css('background', 'rgba(255, 255, 255, 1)');
+            $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
+            $('.bars.bars1').addClass('hide').removeClass('show');
+            $('.menu').addClass('show').removeClass('hide');
+            $('.menu nav ul li a').removeClass('wow fadeInDown');
+            $('.menu nav ul li a').css('visibility','visible');
+            $('header .right div nav>ul>li>a').css('color', '#000');
+            $(window).on('scroll', function() {
+                if (body.scrollTop<90){
+                    $('header').removeClass('active');
+                    $('header').css('background', 'rgba(255, 255, 255, 1)');
+                    $('.bars.bars1').addClass('hide').removeClass('show');
+                    $('.menu').addClass('show').removeClass('hide');
+                    $('.menu nav ul li a').removeClass('wow fadeInDown');
+                    $('.menu nav ul li a').css('visibility','visible');
+                    $('header .right div nav>ul>li>a').css('color', '#000');
+                } else {
+                    $('header').addClass('active');
+                    $('header.active').css('background', 'rgba(255, 255, 255, 0.8)');
+                    $('.bars.bars1').addClass('show').removeClass('hide');
+                    $('.menu').addClass('hide').removeClass('show');
+                    $('.menu nav ul li a').removeClass('wow fadeInDown');
+                }
+            });
+
+        } else {
+
+        }
+    });
+
 
 // Меню
 	var menu = 0;
