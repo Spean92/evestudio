@@ -2,6 +2,20 @@
 /*-----------------BOX-1---------------*/
 /*-------------------------------------*/
 .blog_page {
+  .switcher {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 5555;
+    p {
+      margin: 5px auto;
+      text-decoration: underline;
+      cursor: pointer;
+      &.active {
+        color: red;
+      }
+    }
+  }
   .content {
     .box-1 {
       height: 100vh;
@@ -59,20 +73,38 @@
           vertical-align: top;
           width: 890px;
           margin-right: 20px;
-          h2{
-            margin-bottom: 30px;
-            font-size: 55px;
-            font-family: "Segoe UI Light";
-            color: rgb(0, 0, 0);
-            line-height: 1.09;
+          > a {
+            transition: all .3s ease;
+            h2{
+              margin-bottom: 30px;
+              font-size: 55px;
+              font-family: "Segoe UI Light";
+              color: rgb(0, 0, 0);
+              line-height: 1.09;
+              transition: all .3s ease;
+
+            }
+            p {
+              font-size: 15px;
+              font-family: "Segoe UI";
+              color: rgb(0, 0, 0);
+              line-height: 1.714;
+              margin-bottom: 40px;
+              transition: all .3s ease;
+
+            }
+            &:hover {
+              h2{
+                opacity:0.5;
+              }
+              p {
+                opacity:0.5;
+              }
+
+            }
+
           }
-          > p {
-            font-size: 15px;
-            font-family: "Segoe UI";
-            color: rgb(0, 0, 0);
-            line-height: 1.714;
-            margin-bottom: 40px;
-          }
+
           .flex {
             display: flex;
             justify-content: space-between;
@@ -83,25 +115,35 @@
               border-top:1px solid black;
               padding-top: 20px;
               transition: all .3s ease;
-              h4 {
-                margin-bottom: 5px;
-                font-size: 22px;
-                font-family: "Segoe UI Bold";
-                color: rgb(0, 0, 0);
-                text-transform: uppercase;
-                line-height: 1;
-              }
-              p {
-                font-size: 15px;
-                font-family: "Segoe UI";
-                color: rgb(0, 0, 0);
-                line-height: 1.5;
-                margin-bottom: 60px;
+              a {
+                h4 {
+                  margin-bottom: 5px;
+                  font-size: 22px;
+                  font-family: "Segoe UI Bold";
+                  color: rgb(0, 0, 0);
+                  text-transform: uppercase;
+                  line-height: 1;
+                  transition: all .3s ease;
 
+                }
+                p {
+                  font-size: 15px;
+                  font-family: "Segoe UI";
+                  color: rgb(0, 0, 0);
+                  line-height: 1.5;
+                  margin-bottom: 60px;
+                  transition: all .3s ease;
+
+                }
+                &:hover {
+                  h4,p {
+                    opacity: 0.5;
+                  }
+
+                }
               }
-              &:hover {
-                opacity: 0.5;
-              }
+
+
             }
           }
         }

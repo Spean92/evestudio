@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!-->
 <html lang="ru">
-<!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
 	<title>Блог</title>
@@ -12,23 +7,7 @@
 	<meta name="keywords" content="" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!--<link rel="shortcut icon" href="favicon.png" />-->
-	<!--<link rel="stylesheet" href="css/bootstrap-grid-3.3.1.min.css" />-->
-	<!--<link rel="stylesheet" href="css/font-awesome-4.2.0/css/font-awesome.min.css" />-->
-	<!--<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />-->
-	<!--<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css" />-->
-	<!--<link rel="stylesheet" href="libs/countdown/jquery.countdown.css" />-->
-	<!--<link rel="stylesheet" href="css/fonts.css" />-->
-	<!-- Important Owl stylesheet -->
-	<!--<link rel="stylesheet" href="css/owl.carousel.css">-->
-	<!-- Default Theme -->
-	<!--<link rel="stylesheet" href="css/owl.theme.css">-->
-	<!--<link rel="stylesheet" href="css/owl.theme.default.css">-->
-	<!--<link rel="stylesheet" href="css/fontello.css">-->
 	<link rel="stylesheet" href="css/main.css" />
-	<!-- <link rel="stylesheet" href="css/mainfrom.css" /> -->
-
-
 	<link rel="stylesheet" href="css/media.css" />
 </head>
 <body>
@@ -38,7 +17,11 @@
 <div class="main-wrapper blog_page">
 
 	<!-- BEGIN CONTENT -->
-
+	<div class="switcher">
+		<p id="var1" class="active" value="1">Вариант 1</p>
+		<p id="var2" value="2">Вариант 2</p>
+		<p id="var3" value="3">Вариант 3</p>
+	</div>
 	<main class="content">
 		<nav class="nav nav-open" id="nav" style="display:none;">
 			<div class="container">
@@ -72,10 +55,10 @@
 						</section>
 					</li>
 					<li id="menu-item-286" class="">
-						<section class="nav-page list-default"><h3 class="list-header"><a href="blog.html">4.0 Блог</a></h3>
-							<ul class="js-cascade js-cascade--y js-round-height" data-target-selector="li">
-								<li id="menu-item-290" class=""><a href="blogInner.html">4.1 &nbsp; Популярные посты</a></li>
-							</ul>
+						<section class="nav-page list-default"><h3 class="list-header"><a href="#">4.0 Блог</a></h3>
+							<!--<ul class="js-cascade js-cascade&#45;&#45;y js-round-height" data-target-selector="li">-->
+								<!--<li id="menu-item-290" class=""><a href="blogInner.html">4.1 &nbsp; Популярные посты</a></li>-->
+							<!--</ul>-->
 						</section>
 					</li>
 				</ul>
@@ -88,19 +71,13 @@
 					<div class="right">
 						<div class="soc">
 							<a href="https://www.facebook.com/Eve.ua/" target="_blank">
-								<!--<div id="facebook" class="sprite">-->
 								<img src="img/facebook_white.svg" alt="img">
-								<!--</div>-->
 							</a>
 							<a href="https://www.instagram.com/evestudio_ua/" target="_blank">
-								<!--<div id="instagram" class="sprite">-->
 								<img src="img/instagram_white.png" alt="img">
-								<!--</div>-->
 							</a>
 							<a href="https://www.youtube.com/user/EveStudio1" target="_blank">
-								<!--<div id="youtube" class="sprite">-->
 								<img src="img/youtube_white.svg" alt="img">
-								<!--</div>-->
 							</a>
 						</div>
 						<div class="mail">
@@ -127,7 +104,7 @@
 			</div>
 			<div class="wrapper">
 				<div class="text">
-					<h1>Блог</h1>
+					<h1>Делимся с вами своими идеями</h1>
 				</div>
 			</div>
 		</section>
@@ -136,49 +113,41 @@
 
 			<div class="wrapper">
 				<div class="left_side">
-					<h2>Видеопродакшен</h2>
-					<p>This is a bad story, but a really long time ago I read an article about a group of scientists and architects that tried to build a factory as efficient as a liver and failed. I don’t remember the details, but the reason…</p>
+					<a href="blogInner.html">
+						<h2>О том, как быть в “теме”</h2>
+						<p>Лайфхак №1 – тебе никто ничего не должен. А тем более на работе и тем более научить</p>
+					</a>
 					<div class="flex">
 						<div class="item-flex">
-							<a href="blogInner.html">
-								<h4>Collaboration with Mic.com</h4>
-								<p>Mic.com approached us because they were building a website to...</p>
+							<a href="blogInner2.html">
+								<h4>Что такое Big Data и какое будущее ему предстоит ?</h4>
+								<p>
+									Представьте себе технологию которая сможет со...
+								</p>
 							</a>
 						</div>
 						<div class="item-flex">
-							<a href="blogInner.html">
-								<h4>Collaboration with Mic.com</h4>
-								<p>Mic.com approached us because they were building a website to...</p>
+							<a href="blogInner3.html">
+								<h4>MERHABA ИЛИ КАК Я ВПЕРВЫЕ ПОБЫВАЛА В ТУРЦИИ!</h4>
+								<p>
+									До того, как я побывала в этой загадочной стране, я никак не могла понять зачем...
+								</p>
 							</a>
 						</div>
 						<div class="item-flex">
-							<a href="blogInner.html">
-								<h4>Collaboration with Mic.com</h4>
-								<p>Mic.com approached us because they were building a website to...</p>
+							<a href="blogInner4.html">
+								<h4>Путешествие в запретную зону</h4>
+								<p>
+									Одна из самых ужасных техногенных катастроф, известное и жуткое место на земле...
+								</p>
 							</a>
 						</div>
 						<div class="item-flex">
-							<a href="blogInner.html">
-								<h4>Collaboration with Mic.com</h4>
-								<p>Mic.com approached us because they were building a website to...</p>
-							</a>
-						</div>
-						<div class="item-flex">
-							<a href="blogInner.html">
-								<h4>Collaboration with Mic.com</h4>
-								<p>Mic.com approached us because they were building a website to...</p>
-							</a>
-						</div>
-						<div class="item-flex">
-							<a href="blogInner.html">
-								<h4>Collaboration with Mic.com</h4>
-								<p>Mic.com approached us because they were building a website to...</p>
-							</a>
-						</div>
-						<div class="item-flex">
-							<a href="blogInner.html">
-								<h4>Collaboration with Mic.com</h4>
-								<p>Mic.com approached us because they were building a website to...</p>
+							<a href="blogInner5.html">
+								<h4>Доходность Биткоина превысила показатели лидеров IT индустрии в несколько раз.</h4>
+								<p>
+									С 2012 года годовая доходность биткоина на 800% превысила аналогичные показатели...
+								</p>
 							</a>
 						</div>
 					</div>
@@ -242,10 +211,10 @@
 									<li><a href="about.html#box-5">3.4&nbsp;&nbsp;Контакты</a></li>
 								</ul>
 							</li>
-							<li><a href="blog.html" class="wow fadeInDown" data-wow-delay=".8s">4.0&nbsp;&nbsp;Блог</a>
-								<ul>
-									<li><a href="blogInner.html">4.1&nbsp;&nbsp;Популярные посты</a></li>
-								</ul>
+							<li><a href="#" class="wow fadeInDown" data-wow-delay=".8s">4.0&nbsp;&nbsp;Блог</a>
+								<!--<ul>-->
+									<!--<li><a href="blogInner.html">4.1&nbsp;&nbsp;Популярные посты</a></li>-->
+								<!--</ul>-->
 							</li>
 						</ul>
 					</nav>
@@ -334,15 +303,6 @@
 <script src="js/respond/respond.min.js"></script>
 <![endif]-->
 <script src="js/jquery.min1.12.4.js"></script>
-<!--<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>-->
-<!--<script src="libs/fancybox/jquery.fancybox.pack.js"></script>-->
-<!--<script src="libs/waypoints/waypoints-1.6.2.min.js"></script>-->
-<!--<script src="libs/scrollto/jquery.scrollTo.min.js"></script>-->
-<!--<script src="libs/owl-carousel/owl.carousel.min.js"></script>-->
-<!--<script src="libs/countdown/jquery.plugin.js"></script>-->
-<!--<script src="libs/countdown/jquery.countdown.min.js"></script>-->
-<!--<script src="libs/countdown/jquery.countdown-ru.js"></script>-->
-<!--<script src="libs/landing-nav/navigation.js"></script>-->
 <script src="js/owl.carousel.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/common.js"></script>
