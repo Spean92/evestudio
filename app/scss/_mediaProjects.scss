@@ -71,6 +71,9 @@
   .projects .content .box-2 .cases .item {
     width: 48%;
     margin-right: 2%;
+    &:after {
+      content: none;
+    }
   }
   .projects .content .box-2 .cases .item:nth-child(2n) {
     width: 48%;
@@ -82,6 +85,7 @@
   }
   .projects .content .box-2 .cases .item .text {
     letter-spacing: -0.5px;
+    margin-bottom: 3px;
   }
   .projects .content .box-3 .clientsTable {
     flex-wrap: wrap;
@@ -106,6 +110,9 @@
   .projects .content .box-2 .cases .item {
     width: 48%;
     margin-right: 2%;
+    &:after {
+      content: none;
+    }
   }
   .projects .content .box-2 .cases .item:nth-child(2n) {
     width: 48%;
@@ -117,6 +124,7 @@
   }
   .projects .content .box-2 .cases .item .text {
     letter-spacing: -0.5px;
+    margin-bottom: 3px;
   }
   .projects .content .box-3 .clientsTable {
     flex-wrap: wrap;
@@ -146,6 +154,9 @@
     max-width: 290px;
     width: 100%;
     margin-right: 0;
+   &:after {
+     content: none;
+   }
   }
   .projects .content .box-2 .cases .item:nth-child(2n) {
     width: 100%;
@@ -158,6 +169,8 @@
   .projects .content .box-2 .cases .item .text {
     letter-spacing: -0.5px;
     font-size: 19px;
+    margin-bottom: 3px;
+
   }
   .projects .content .box-3 .clientsTable {
     flex-wrap: wrap;

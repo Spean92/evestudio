@@ -25,13 +25,27 @@
   .case .content .case_wrapper .left_case_wrapper .box-2 {
     width: 100%;
   }
+  .case .content .case_wrapper .right_case_wrapper aside{
+     display: none;
+   }
+
   .case .content .case_wrapper .wrapper.passive .left_case_wrapper .box-4 {
     width: 100%;
   }
+  .case .content .case_wrapper .box-3.gallery .gallery_full {
+  display: none;
+    &.mobile {
+      display: inline-block;
+    }
+  }
+
 }
 @media only screen and (min-width : 480px) and (max-width : 723px) {
   .case .content .case_wrapper .left_case_wrapper {
     width: 100%;
+    .big_img.big_video {
+      height: 300px;
+    }
   }
   .case .content .case_wrapper .wrapper.passive .left_case_wrapper {
     margin-top: 0;
@@ -46,16 +60,31 @@
   .case .content .case_wrapper .wrapper.passive .left_case_wrapper .box-4 {
     width: 100%;
   }
+  .case .content .case_wrapper .right_case_wrapper aside{
+    display: none;
+  }
   .case .content .case_wrapper .right_case_wrapper {
     width: 100%;
   }
   .case .content .case_wrapper .right_case_wrapper .box-5 {
     padding-bottom: 40px;
+  }
+  .case .content .case_wrapper .box-3.gallery .gallery_full {
+    display: none;
+    &.mobile {
+      display: inline-block;
+    }
+  }
+  .case .content .case_wrapper .siblingsCase a {
+    width: 45%;
   }
 }
 @media only all and (max-width : 479px) {
   .case .content .case_wrapper .left_case_wrapper {
     width: 100%;
+    .big_img.big_video {
+      height: 200px;
+    }
   }
   .case .content .case_wrapper .wrapper.passive .left_case_wrapper {
     margin-top: 0;
@@ -67,6 +96,9 @@
   .case .content .case_wrapper .left_case_wrapper .box-2 h4 {
     font-size: 40px;
   }
+  .case .content .case_wrapper .right_case_wrapper aside{
+    display: none;
+  }
   .case .content .case_wrapper .wrapper.passive .left_case_wrapper .box-4 {
     width: 100%;
   }
@@ -75,5 +107,14 @@
   }
   .case .content .case_wrapper .right_case_wrapper .box-5 {
     padding-bottom: 40px;
+  }
+  .case .content .case_wrapper .box-3.gallery .gallery_full {
+    display: none;
+    &.mobile {
+      display: inline-block;
+    }
+  }
+  .case .content .case_wrapper .siblingsCase a {
+    width: 45%;
   }
 }

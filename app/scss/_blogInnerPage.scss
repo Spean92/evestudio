@@ -48,6 +48,19 @@
             text-align: left;
             margin: 30px 0;
           }
+          ul {
+            li {
+              font-size: 15px;
+              font-family: "Segoe UI";
+              color: rgb(0, 0, 0);
+              line-height: 1.714;
+              text-align: left;
+              margin: 5px 0;
+              &:before {
+                content: "- ";
+              }
+            }
+          }
           .links {
 
             a {

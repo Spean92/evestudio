@@ -118,11 +118,13 @@
               a {
                 h4 {
                   margin-bottom: 5px;
-                  font-size: 22px;
+                  font-size: 20px;
                   font-family: "Segoe UI Bold";
                   color: rgb(0, 0, 0);
                   text-transform: uppercase;
                   line-height: 1;
+                  height: 3em;
+                  overflow-y: hidden;
                   transition: all .3s ease;
 
                 }
@@ -131,9 +133,10 @@
                   font-family: "Segoe UI";
                   color: rgb(0, 0, 0);
                   line-height: 1.5;
-                  margin-bottom: 60px;
+                  margin-bottom: 40px;
                   transition: all .3s ease;
-
+                  height: 4.5em;
+                  overflow-y: hidden;
                 }
                 &:hover {
                   h4,p {
@@ -142,7 +145,17 @@
 
                 }
               }
+              &:last-child {
+                a {
+                  h4 {
 
+                  }
+                  p {
+                    height: 3em;
+                    overflow-y: hidden;
+                  }
+                }
+              }
 
             }
           }

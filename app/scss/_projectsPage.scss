@@ -75,22 +75,28 @@
   width: 270px;
   /*height: 224px;*/
   display: inline-block;
+  position: relative;
   vertical-align: top;
   //margin-right: 25px;
   margin-bottom: 44px;
   cursor: pointer;
-  &:hover {
-    .img {
-      .effect {
-        //opacity: 0.5;
-      }
+    &:after {
+      content: '';
+      position: absolute;
+      left:0;
+      bottom:-4px;
+      width: 0;
+      height: 1px;
+      background: #000;
+      transition: all .5s ease-in-out;
     }
-    .text {
+    &:hover {
       &:after {
         width: 100%;
       }
-    }
   }
+
+
 
 }
 .projects .content .box-2 .cases .item:nth-child(4n) {
@@ -127,16 +133,7 @@
   line-height: 1;
   text-align: left;
   margin-top: 13px;
-  &:after {
-    content: '';
-    position: absolute;
-    left:0;
-    bottom:-4px;
-    width: 0;
-    height: 1px;
-    background: #000;
-    transition: all .5s ease-in-out;
-  }
+
 }
 
 /*-------------------------------------*/

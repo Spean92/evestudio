@@ -1,28 +1,5 @@
 $(document).ready(function() {
 
-    (function someShit() {
-        $('.switcher p').on('click', function () {
-            var sibs = $(this).siblings('.switcher p');
-            $('.switcher p').not(sibs).addClass('active');
-            sibs.removeClass('active');
-            var ident = $(this).attr('value');
-            console.log(ident);
-            switch (ident) {
-                case "1":
-                    $('header').css({'border-bottom':'1px solid rgba(255, 255, 255, 0.2)', 'box-shadow': 'none'});
-                    $('header.active').css({'border-bottom':'1px solid rgba(32,35,39, 0.1)', 'box-shadow': 'none'});
-                    break;
-                case "2":
-                    $('header').css({'border-bottom':'none', 'box-shadow': '0 2px 25px 0 rgba(0, 0, 0, 0.2)'});
-                    $('header.active').css({'border-bottom':'none', 'box-shadow': '0 2px 25px 0 rgba(0, 0, 0, 0.2)'});
-                    break;
-                case "3":
-                    $('header').css({'border-bottom':'none', 'box-shadow': 'none'});
-                    $('header.active').css({'border-bottom':'none', 'box-shadow': 'none'});
-                    break;
-            }
-            });
-    })();
 
 // Цвет полоски меню
 	var box1 = $('.box-1').height();
@@ -261,7 +238,17 @@ $(document).ready(function() {
         });
     }
 
-
+// OWL
+    var owl = $(".owl-carousel-main");
+    owl.owlCarousel({
+        dots: true,
+        mouseDrag : false,
+        startPosition : 0,
+        singleItem:true,
+        loop:true,
+        items : 1,
+        smartSpeed: 1000
+    });
 //Map's on click
     $('#box-5 .google_map').on('click', function () {
         $(this).find("iframe").css("pointer-events", "auto");

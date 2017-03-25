@@ -17,6 +17,7 @@ b {
 .show {
   display: block;
 }
+
 *::-webkit-input-placeholder {
   color: #666;
   opacity: 1;
@@ -59,6 +60,12 @@ li {
 body {
   font-family: "RobotoRegular", sans-serif;
   font-size: 16px;
+  .main-wrapper {
+    .mobile {
+      display: none;
+    }
+  }
+
 }
 main.content {
   padding: 0;

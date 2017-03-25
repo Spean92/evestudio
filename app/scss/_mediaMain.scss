@@ -1,6 +1,6 @@
 @media only screen and (min-width : 1600px) {
   .mainpage .content .box-2 div .item .left{
-    height: 100%;
+    //height: 100%;
     /*margin-top: 50px;*/
     width: 710px;
     float: left;
@@ -378,6 +378,8 @@
   .mainpage .content .box-2 {
     margin-top: 0;
     padding-bottom: 0;
+    width: 100vw;
+    overflow: hidden;
   }
   .mainpage .content .box-2 .wrapper {
     padding-top: 50px;
@@ -572,6 +574,8 @@
   .mainpage .content .box-2 {
     margin-top: 0;
     padding-bottom: 0;
+    width: 100vw;
+    overflow: hidden;
   }
   .mainpage .content .box-2 .wrapper {
     padding-top: 50px;
@@ -583,7 +587,7 @@
   .mainpage .content .box-2 div .item {
     height: 1030px;
     position: relative;
-    overflow: hidden;
+    //overflow: hidden;
   }
   .mainpage .content .box-2 div .item.case1 {
     height: 1580px;
