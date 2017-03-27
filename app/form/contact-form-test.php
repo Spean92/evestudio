@@ -44,8 +44,39 @@ $fields = array(
     )
 );
 
-$message = 'Привет ' . htmlspecialchars($fields[0]['val'], ENT_QUOTES) . " Ваше поздравление скоро будет доставленно получателю)<br><br> Приятных праздников!! <br>\n";
-
+// $message = 'Привет ' . htmlspecialchars($fields[0]['val'], ENT_QUOTES) . " Ваше поздравление скоро будет доставленно получателю)<br><br> Приятных праздников!! <br>\n";
+$message = 'Привет ' . htmlspecialchars($fields[0]['val'], ENT_QUOTES) . " Ваше поздравление скоро будет доставленно получателю)<br><br> Приятных праздников!! <br>\n" . '<table width="320" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td rowspan="9" width="51%" height="150" style="height:150px;"><img src="https://evestudio.bitrix24.ua/docs/pub/0e298be6c238124ab5492ee4a4916d9b/showFile/?&token=3b5m5pps6pav" border="0" width="150" height="150" style="display: block;" alt="" /></td>
+    </tr>
+    <tr>
+      <td colspan="4" height="16" style="height:16px; font-size: 12px;"><span style="color: #000000; font-size: 15px; font-family: "Arial";"><b>МАКСИМ ВОРОНЮК</b></span></td>
+    </tr>
+    <tr>
+      <td colspan="4" height="16" style="height:16px; font-size: 12px;"><span style="color: #000000; font-size: 12px; font-family: "Arial";"><b>Інтернет-маркетолог</b></span></td>
+    </tr>
+    <tr>
+      <td colspan="4" height="12" style="height:12px; font-size: 12px;"></td>
+    </tr>
+    <tr>
+      <td colspan="4" height="16" style="height:16px; font-size: 12px;"><span style="font-size: 12px; font-family: "Arial";">095 227 25 25</span></td>
+    </tr>
+    <tr>
+      <td colspan="4" height="16" style="height:16px; font-size: 12px;"><span style="font-size: 12px; font-family: "Arial";">044 227 26 26</span></td>
+    </tr>
+    <tr>
+      <td colspan="4" height="16" style="height:16px; font-size: 12px;"><span style="font-size:12px; font-family: "Arial";">skype добавить</span></td>
+    </tr>
+    <tr>
+      <td colspan="1" width="25" height="35" style="height:35px;"><a href="https://www.facebook.com/Eve.ua" target="_blank" style="text-decoration: none;"><img src="https://evestudio.bitrix24.ua/docs/pub/ea1b78a5122665cff6e1678978681f99/showFile/?&token=raase9vpenlw" border="0" width="22" height="22" style="display: block; height:22px;" alt="" /></a></td>
+      <td colspan="1" width="25" height="35" style="height:35px;"><a href="https://www.youtube.com/user/EveStudio1" target="_blank" style="text-decoration: none;"><img src="https://evestudio.bitrix24.ua/docs/pub/5d0579893e4096fe48c837374f9ddaed/showFile/?&token=ub45ml2a3dh8" border="0" width="22" height="20" style="display: block; height:20px;" alt="" /></a></td>
+      <td colspan="1" width="25" height="35" style="height:35px;"><a href="https://www.instagram.com/evestudio_ua/" target="_blank" style="text-decoration: none;"><img src="https://evestudio.bitrix24.ua/docs/pub/7c7d16ae0c26208d61c145e44e6e47a1/showFile/?&token=xqeyf4w8zb4k" border="0" width="22" height="22" style="display: block; height:22px;" alt="" /></a></td>
+      <td colspan="1" width="65"></td>
+    </tr>
+    <tr style="border-top: solid 1px #000;">
+      <td colspan="4"><a href="http://studio.eve.ua/" target="_blank" style="display: inline-block; width: 95%; color: #000000 !important; text-decoration: none; font-family: "Arial"; border-top: solid 1px #000;"><span style="color: #000000;"><b>studio.eve.ua</b></span></a></td>
+    </tr>
+</table>';
 // foreach($fields as $field) {
 // 	$message .= $field['text'].": " . htmlspecialchars($field['val'], ENT_QUOTES) . "<br>\n";
 // }

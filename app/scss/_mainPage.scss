@@ -204,9 +204,26 @@
   background-position: right center;
   background-size: contain;
 }
+.mainpage .content .box-2 div .item.case1 .right .img{
+  width: 100%;
+  //max-width: 600px;
+  //height: 100%;
+  background: url(../img/1.png) no-repeat;
+  background-position: right center;
+  background-size: contain;
+}
 .mainpage .content .box-2 div .item.case2 .left .img{
   width: 100%;
   height: 100%;
+  //max-width: 837px;
+  max-height: 615px;
+  /* float: left; */
+  background: url(../img/2.png) no-repeat;
+  background-position: right center;
+}
+.mainpage .content .box-2 div .item.case2 .right .img{
+  width: 100%;
+  //height: 100%;
   //max-width: 837px;
   max-height: 615px;
   /* float: left; */
@@ -222,6 +239,15 @@
   background: url(../img/3.png) no-repeat;
   background-position: right center;
 }
+.mainpage .content .box-2 div .item.case3 .right .img{
+  width: 100%;
+  //height: 100%;
+  //max-width: 826px;
+  max-height: 575px;
+  /* float: left; */
+  background: url(../img/3.png) no-repeat;
+  background-position: right center;
+}
 .mainpage .content .box-2 div .item.case4 .left .img{
   width: 100%;
   height: 100%;
@@ -231,9 +257,28 @@
   background: url(../img/4.png) no-repeat;
   background-position: right center;
 }
+.mainpage .content .box-2 div .item.case4 .right .img{
+  width: 100%;
+  //height: 100%;
+  //max-width: 837px;
+  max-height: 615px;
+  //float: left;
+  background: url(../img/4.png) no-repeat;
+  background-position: right center;
+}
 .mainpage .content .box-2 div .item.case5 .left .img{
   width: 100%;
   height: 100%;
+  //max-width: 837px;
+  max-height: 545px;
+  float: left;
+  background: url(../img/5.png) no-repeat;
+  background-position: right center;
+  /* background-size: cover; */
+}
+.mainpage .content .box-2 div .item.case5 .right .img{
+  width: 100%;
+  //height: 100%;
   //max-width: 837px;
   max-height: 545px;
   float: left;

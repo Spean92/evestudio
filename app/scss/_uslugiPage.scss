@@ -198,6 +198,13 @@
               line-height: 1.714;
             }
           }
+          .image.mobile {
+            width:150%;
+            height: 250px;
+            background: url("../img/uslugi_2.png") no-repeat;
+            background-size: contain;
+            background-position: right center;
+          }
           .slider {
             h5 {
               margin-bottom: 18px;
