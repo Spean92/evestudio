@@ -51,6 +51,51 @@
       margin-top: 100vh;
       padding-top: 65px;
       .wrapper {
+
+        //-------FORM-----------
+        .form {
+          width:1200px;
+          margin: 0 auto 50px auto;
+          form {
+            fieldset {
+              margin: 20px auto;
+              legend {
+                input {
+
+                }
+                label {
+
+                }
+              }
+              &.letterText {
+                textarea {
+                  height: 100px;
+                }
+              }
+              &.pictureSelect {
+                margin-top: 20px;
+                  label {
+                    display: inline-block;
+                    width:30%;
+                    vertical-align: top;
+                    img {
+                      width:100%;
+                    }
+                  }
+              }
+            }
+            button {
+
+            }
+          }
+          .thx {
+            display: none;
+          }
+        }
+
+
+        //-----------------------
+
         //padding-bottom: 70px;
         width: 1240px;
         h2{

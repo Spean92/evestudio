@@ -276,6 +276,7 @@
   }
   footer .footer {
     padding: 25px 0 25px 0;
+    position: relative;
   }
   footer .footer * {
     display: none;
@@ -289,6 +290,25 @@
     width: 700px;
     text-align: center;
     margin: 0 auto;
+  }
+  footer .footer div.top {
+    position: absolute;
+    display: block;
+    right:0;
+    top:calc(50% - 10px);
+    * {
+      display: block;
+    }
+    .wrap {
+      a {
+        width: 50px;
+        height: 20px;
+        background: url(../img/sprite.png);
+        background-size: 240%;
+        background-position: -120px -69px;
+        text-align: center;
+      }
+    }
   }
   footer .footer div.icons {
     display: block;
@@ -451,6 +471,7 @@
   }
   footer .footer {
     padding: 25px 0 25px 0;
+    position: relative;
   }
   footer .footer * {
     display: none;
@@ -464,6 +485,25 @@
     width: 400px;
     text-align: center;
     margin: 0 auto;
+  }
+  footer .footer div.top {
+    position: absolute;
+    display: block;
+    right:0;
+    top:calc(50% - 10px);
+    * {
+      display: block;
+    }
+    .wrap {
+      a {
+        width: 50px;
+        height: 20px;
+        background: url(../img/sprite.png);
+        background-size: 240%;
+        background-position: -120px -69px;
+        text-align: center;
+      }
+    }
   }
   footer .footer div.icons {
     display: block;
@@ -625,6 +665,7 @@
   }
   footer .footer {
     padding: 25px 0 25px 0;
+    position: relative;
   }
   footer .footer * {
     display: none;
@@ -638,6 +679,25 @@
     width: 250px;
     text-align: center;
     margin: 0 auto;
+  }
+  footer .footer div.top {
+    position: absolute;
+    display: block;
+    right:0;
+    top:calc(50% - 10px);
+    * {
+      display: block;
+    }
+    .wrap {
+      a {
+        width: 50px;
+        height: 20px;
+        background: url(../img/sprite.png);
+        background-size: 240%;
+        background-position: -120px -69px;
+        text-align: center;
+      }
+    }
   }
   footer .footer div.icons {
     display: block;
