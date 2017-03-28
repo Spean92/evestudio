@@ -225,7 +225,7 @@
   /*BOX-2*/
   /**/
   .mainpage .content .box-2 {
-    margin-top: 0;
+    //margin-top: 0;
   }
   .mainpage .content .box-2 div .item .left {
     height: 92%;
@@ -376,7 +376,7 @@
   /*BOX-2*/
   /**/
   .mainpage .content .box-2 {
-    margin-top: 0;
+    //margin-top: 0;
     padding-bottom: 0;
     width: 100vw;
     overflow: hidden;
@@ -541,11 +541,11 @@
   /*BOX-1*/
   /**/
   .content .box-1 .text {
-    width: 280px !important;
+    width: 94% !important;
     padding-top: 30vh !important;
   }
   .content .box-1 .text h1 {
-    font-size: 34px !important;
+    font-size: 31px !important;
     line-height:1.4 !important;
   }
   .mainpage .content .box-1 .text {
@@ -557,18 +557,18 @@
   }
 
   .mainpage .content .box-1 .text p {
-    width: 90%;
+    width: 94%;
     line-height: 1.35;
     margin-bottom: 15px;
   }
   .mainpage .content .box-1 {
-    position: static;
+    //position: static;
   }
   /**/
   /*BOX-2*/
   /**/
   .mainpage .content .box-2 {
-    margin-top: 0;
+    //margin-top: 0;
     padding-bottom: 0;
     width: 100vw;
     overflow: hidden;
@@ -577,7 +577,7 @@
     padding-top: 50px;
   }
   .mainpage .content .box-2 .wrap {
-    width:320px;
+    width:100%;
 
   }
   .mainpage .content .box-2 div .item {
@@ -637,10 +637,11 @@
     //margin-bottom: 520px;
   }
  body .main-wrapper.mainpage .content .box-2 div .item .right .img {
-    height: 300px;
-    width: 120%;
-    background-position: right center;
-    background-size: cover;
+   height: 350px;
+   width: 130%;
+   background-position: center center;
+   background-size: contain;
+   margin-left: -15%;
   }
   .mainpage .content .box-2 div .item .right {
     width: 100%;
@@ -654,12 +655,10 @@
     margin-top: -30px;
   }
   .mainpage .content .box-2 div .item .right .first,  .mainpage .content .box-2 div .item .right .second,  .mainpage .content .box-2 div .item .right .third,  .mainpage .content .box-2 div .item .right a {
-    width:90%;
-    margin: 5% auto;
+    width:94%;
+    margin: 3% auto;
   }
-  .mainpage .content .box-2 div .item .right .first h2 span{
-    display: inline-block !important;
-  }
+
   .mainpage .content .box-2 div .item .right .second p br{
     display: none;
   }
@@ -667,7 +666,7 @@
     display: none;
   }
   .mainpage .content .box-2 div .item .right .first h2 {
-    font-size: 45px;
+    font-size: 35px;
     line-height:1;
   }
   .mainpage .content .box-2 div .item .right .second {
@@ -677,10 +676,10 @@
     font-size: 15px;
     margin-bottom: 20px;
   }
-  .mainpage .content .box-2 div .item .right .third p:last-child {
-    width: 290px;
-    font-size: 15px;
-  }
+  //.mainpage .content .box-2 div .item .right .third p:last-child {
+  //  width: 290px;
+  //  font-size: 15px;
+  //}
   .mainpage .content .box-2 div .item .right .third p.border {
     font-size: 30px;
   }
@@ -720,7 +719,7 @@
   }
   .mainpage .content .box-3 .all_clients {
     font-size: 15px;
-    width: 290px;
+    width: 100%;
     margin-top: 50px;
   }
 

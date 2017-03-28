@@ -43,11 +43,15 @@
     /*-----------------BOX-2---------------*/
     /*-------------------------------------*/
     .box-2 {
-      background: #fff;
       position: relative;
       margin-top: 100vh;
       padding-top: 65px;
       //padding-bottom: 50px;
+      .bg_white{
+        background: #fff;
+        padding-top: 65px;
+        margin-bottom: -65px;
+      }
       .wrapper {
         //padding-bottom: 100px;
         width: 1240px;
@@ -174,15 +178,20 @@
       }
     }
     .box-3 {
-      background: #fff;
+      //background: #fff;
       position: relative;
       overflow: hidden;
+      padding-top: 65px;
+      margin-bottom: -65px;
+      .bg_white{
+        background: #fff;
+        padding-top: 65px;
+      }
       .wrapper {
         .left-side {
           max-width: 590px;
           .top-text {
             h2 {
-              padding-top: 65px;
               margin-bottom: 30px;
               font-size: 55px;
               font-family: "Segoe UI Light";
@@ -203,7 +212,7 @@
             height: 250px;
             background: url("../img/uslugi_2.png") no-repeat;
             background-size: contain;
-            background-position: right center;
+            background-position: left center;
           }
           .slider {
             h5 {
@@ -271,11 +280,16 @@
       }
     }
     .box-4 {
-      background: #fff;
+      //background: #fff;
       position: relative;
+      padding-top: 65px;
+      .bg_white{
+        background: #fff;
+        padding-top: 65px;
+        //margin-bottom: -65px;
+      }
       .wrapper {
         h2 {
-          padding-top: 65px;
           margin-bottom: 60px;
           font-size: 55px;
           font-family: "Segoe UI Light";

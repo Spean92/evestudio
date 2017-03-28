@@ -96,8 +96,9 @@
 		</nav>
 
 		<section class="box-1">
-			<!-- <div class="bg">
-			</div> -->
+			<div class="bg mobile block">
+				<img src="img/main_bg.png" alt="img">
+			</div>
 			<div class="video_pattern">
 			</div>
 			<video id="video" preload loop>
@@ -619,14 +620,14 @@
         var video = $('#video');
          setTimeout(function(){
         if (window.screen.width > 1000) {
-            $('.box-1 .bg').fadeOut(2000);
+//            $('.box-1 .bg').fadeOut(2000);
             $('.box-1 .sound').fadeIn(2000);
             $('.box-1 #start').fadeIn(2000);
             video.fadeIn(2000);
             video[0].play();
             var mark = 0;
         } else if (window.screen.width < 1000) {
-            $('.box-1 .bg').hide();
+//            $('.box-1 .bg').hide();
             $('.box-1 .sound').hide();
             $('.box-1 #start').hide();
             video[0].pause();
@@ -636,14 +637,14 @@
             if (mark == 1) {
                 $('#start .pause').show();
                 $('#start .play').hide();
-                $('.box-1 .bg').fadeOut(500);
+//                $('.box-1 .bg').fadeOut(500);
                 video[0].play();
                 mark = 0;
             } else {
                 video[0].pause();
                 $('#start .pause').hide()
                 $('#start .play').show();
-                $('.box-1 .bg').fadeIn(500);
+//                $('.box-1 .bg').fadeIn(500);
                 mark = 1;
             }
         });

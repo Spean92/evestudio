@@ -28,12 +28,16 @@
   left: 0;
 }
 .mainpage .content .box-1 .bg{
-  background: url(../img/box-1.png) no-repeat;
+  //background: url(../img/main_bg.png) no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 4;
+  img {
+    height: 100%;
+    width: auto;
+  }
 }
 .mainpage .content .box-1 .video_pattern{
   height: 100%;
@@ -152,6 +156,7 @@
   margin-top: 20px;
   padding-top: 60px;
   clear: both;
+
 }
 .mainpage .content .box-2 div .item {
   min-height: 515px;

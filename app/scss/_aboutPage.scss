@@ -46,10 +46,15 @@
     /*-----------------BOX-2---------------*/
     /*-------------------------------------*/
     .box-2 {
-      background: #fff;
       position: relative;
       margin-top: 100vh;
       padding-top: 65px;
+      //padding-top: 76px;
+      margin-bottom: -65px;
+      .bg_white {
+        background: #fff;
+        padding-top: 65px;
+      }
       .wrapper {
 
         //-------FORM-----------
@@ -190,9 +195,13 @@
       }
     }
     .box-3 {
-      background: #fff;
       position: relative;
       padding-top: 65px;
+      margin-bottom: -65px;
+      .bg_white {
+        background: #fff;
+        padding-top: 65px;
+      }
       .wrapper {
         h2 {
           margin-bottom: 50px;
@@ -256,11 +265,14 @@
       }
     }
     .box-4 {
-      background: #fff;
       position: relative;
+      padding-top: 65px;
+      .bg_white {
+        background: #fff;
+        padding-top: 65px;
+      }
       .wrapper {
         h2 {
-          padding-top: 65px;
           margin-bottom: 60px;
           font-size: 55px;
           font-family: "Segoe UI Light";

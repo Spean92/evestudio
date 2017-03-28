@@ -62,14 +62,26 @@
 }
 @media only all and (max-width : 479px) {
   .uslugi_page .content .box-2 .wrapper {
-    width: 300px;
+    width: 94%;
+    max-width: 470px;
   }
   .uslugi_page .content .box-2 .wrapper h2 {
     font-size: 40px;
+    margin-left: 0;
   }
   .uslugi_page .content .box-2 .wrapper .paggs_buts {
     margin: 0;
-    padding-bottom: 180px;
+    padding-bottom: 110px;
+    a {
+      width:45%;
+    }
+  }
+  .uslugi_page .content .box-2 .wrapper .flex .cl {
+    width:100%;
+    margin: 0 auto;
+    height: 145vh;
+    min-height:800px;
+    max-height: 900px;
   }
   .uslugi_page .content .box-2 .wrapper .paggs_buts a.next {
     margin-bottom: 0;
@@ -83,6 +95,9 @@
   .uslugi_page .content .box-3 .wrapper .paggs_buts {
     margin: 0;
     padding-bottom: 180px;
+    a {
+      width:45% !important;
+    }
   }
   .uslugi_page .content .box-3 .wrapper .right-side {
     display: none;

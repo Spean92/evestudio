@@ -88,7 +88,9 @@ $(document).ready(function() {
 	$('header .right div.bars').click(function(){
 		if (menu == 0) {
 			// $('#box-2, #box-3, footer').fadeOut();
-            $('.box-1, .box-2, .box-3, .box-4, .box5').css('display', 'none');
+            if ($(window).width()<768) {
+                $('.box-1, .box-2, .box-3, .box-4, .box5').css('display', 'none');
+            }
 			$('body').css("overflow", "hidden");
 			$('main nav.nav').fadeIn(300);
             $('header .right div.bars').addClass("act");
@@ -106,8 +108,9 @@ $(document).ready(function() {
 			menu = 1;
 		} else {
 			$('main nav.nav').fadeOut(300);
-            $('.box-1, .box-2, .box-3, .box-4, .box5').css('display', 'block');
-
+            if ($(window).width()<768) {
+                $('.box-1, .box-2, .box-3, .box-4, .box5').css('display', 'block');
+            }
             $('body').css("overflow", "auto");
 			// $('#box-2, #box-3, footer').fadeIn();
             $('header .right div.bars').removeClass("act");
@@ -122,12 +125,14 @@ $(document).ready(function() {
 		}
 	});
 	$('.nav .container a').on('click', function(){
-        $('.box-1, .box-2, .box-3, .box-4, .box5').css('display', 'block');
+	    if ($(window).width()<768) {
+            $('.box-1, .box-2, .box-3, .box-4, .box5').css('display', 'block');
+        }
 
         $('main nav.nav').fadeOut(300);
 		$('body').css("overflow", "auto");
 		// $('header').addClass('active');
-		$('header.active').css('background', 'rgba(255, 255, 255, 0.7)');
+		$('header').css('background', 'rgba(255, 255, 255, 0.7)');
 		// $('#box-2, #box-3').fadeIn();
 		// $('#box-2, #box-3, footer').fadeIn();
 		// $('header .right div.bars').css({'border-top': '2px solid white', 'border-bottom': '2px solid white'});
@@ -136,7 +141,7 @@ $(document).ready(function() {
         $('header .right div.bars').addClass('bars1');
             var id  = $(this).attr('href'),
                 top = $(id).offset().top;
-            $('body,html').animate({scrollTop: top - 65}, 800);
+            $('body,html').animate({scrollTop: top}, 800);
 
 		menu = 0;
 
@@ -154,7 +159,7 @@ $(document).ready(function() {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top - 65}, 800);
+        $('body,html').animate({scrollTop: top}, 800);
     });
 
 
@@ -302,7 +307,9 @@ $(document).ready(function() {
     $(window).on('load', someHeight);
     $(window).on('resize', someHeight);
 	//Wow js
-    var wow = new WOW();
+    var wow = new WOW({
+        offset: 100
+    });
     wow.init();
 
 

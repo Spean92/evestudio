@@ -43,13 +43,19 @@
 /*-----------------BOX-2---------------*/
 /*-------------------------------------*/
 .projects .content .box-2 {
-  background: #fff;
   padding-bottom: 0px;
+  //padding-top: 130px;
   margin-top: 100vh;
   position: relative;
+  padding-top: 65px;
+  margin-bottom: -65px;
+}
+.projects .content .box-2 .bg_white{
+  padding-top: 65px;
+  background: #fff;
 }
 .projects .content .box-2 .wrapper{
-  padding-top: 65px;
+  //padding-top: 0;
 }
 .projects .content .box-2 .header {
 
@@ -61,7 +67,7 @@
   color: rgb(0, 0, 0);
   line-height: 1.071;
   text-align: left;
-  margin-top: 0;
+  //margin-top: 65px;
   margin-bottom: 40px;
 }
 .projects .content .box-2 .cases {
@@ -140,10 +146,15 @@
 /*-----------------BOX-3---------------*/
 /*-------------------------------------*/
 .projects .content .box-3 {
-  background: #fff;
+  //background: #fff;
   position: relative;
   padding-top: 65px;
+}
+.projects .content .box-3 .bg_white{
+  padding-top: 65px;
+  background: #fff;
   padding-bottom: 100px;
+
 }
 .projects .content .box-3 .header {
 

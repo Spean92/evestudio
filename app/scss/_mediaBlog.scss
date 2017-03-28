@@ -67,6 +67,8 @@
 
   .blog_page .content .box-2 .wrapper .left_side {
     width: 100%;
+    margin:0;
+
     .flex {
       .item-flex {
         width: 100%;
@@ -87,8 +89,12 @@
   }
   .blogInner_page .content .box-2 .wrapper .left_side {
     width: 100%;
+    margin:0;
   }
   .blogInner_page .content .box-2 .wrapper .right_side {
     display: none;
+  }
+  .blogInner_page .content .wrapper .paggs_buts a {
+    width:45%;
   }
 }

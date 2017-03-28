@@ -148,10 +148,11 @@
   /**/
   .projects .content .box-2 .cases {
     padding-bottom: 15px;
-    max-width: 290px;
+    max-width: 470px;
+    width: 100%;
   }
   .projects .content .box-2 .cases .item {
-    max-width: 290px;
+    max-width: 470px;
     width: 100%;
     margin-right: 0;
    &:after {
@@ -176,7 +177,7 @@
     flex-wrap: wrap;
   }
   .projects .content .box-3 .clientsTable .clientRow {
-    width: 290px;
+    width: 94%;
     margin-right: 0;
   }
   .projects .content .box-3 .header h2 {
