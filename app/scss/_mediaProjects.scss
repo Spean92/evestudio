@@ -9,7 +9,7 @@
     width: 100%;
   }
   .projects .content .box-2 .cases {
-    max-width: 1024px;
+    max-width: 1000px;
   }
   .projects .content .box-2 .cases .item {
     width: 23%;
@@ -31,11 +31,11 @@
   /*PROJECTS PAGE*/
   /**/
   .projects .wrapper {
-    width: 940px;
+    width: 920px;
     padding: 0 0px;
   }
   .projects .content .box-2 .cases {
-    max-width: 940px;
+    max-width: 920px;
   }
   .projects .content .box-2 .cases .item {
     width: 23%;
@@ -62,15 +62,16 @@
   /*PROJECTS PAGE*/
   /**/
   .projects .wrapper {
-    width: 724px;
+    width: 704px;
     padding: 0 0px;
   }
   .projects .content .box-2 .cases {
-    max-width: 724px;
+    max-width: 704px;
   }
   .projects .content .box-2 .cases .item {
     width: 48%;
     margin-right: 2%;
+    overflow: hidden;
     &:after {
       content: none;
     }
@@ -101,11 +102,12 @@
   /*PROJECTS PAGE*/
   /**/
   .projects .wrapper {
-    width: 480px;
+    width: 94%;
     padding: 0 0px;
+    overflow: hidden;
   }
   .projects .content .box-2 .cases {
-    max-width: 480px;
+    max-width: 100%;
   }
   .projects .content .box-2 .cases .item {
     width: 48%;

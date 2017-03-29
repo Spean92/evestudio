@@ -1,15 +1,15 @@
 
-@media only screen and (min-width : 1200px) and (max-width : 1599px) {
+@media only screen and (min-width : 1240px) and (max-width : 1599px) {
 
 }
 /*==========  Desktop First Method  ==========*/
 /*******************************/
 /*******************************/
-@media only screen and (min-width : 1024px) and (max-width : 1199px) {
+@media only screen and (min-width : 1024px) and (max-width : 1239px) {
   .wrapper {
     width: 1000px !important;
     margin: 0 auto;
-    padding: 0 5px;
+    //padding: 0 5px;
     position: relative;
     z-index: 5;
   }
@@ -172,7 +172,7 @@
 @media only screen and (min-width : 724px) and (max-width : 939px) {
   .wrapper {
     width: 704px !important;
-    padding: 0 10px;
+    //padding: 0 10px;
   }
   body {
     font-size: 15px;
@@ -349,8 +349,8 @@
 /*******************************/
 @media only screen and (min-width : 480px) and (max-width : 723px) {
   .wrapper {
-    width: 460px !important;
-    padding: 0 5px;
+    width: 94% !important;
+    //padding: 0 5px;
   }
   body {
     font-size: 15px;

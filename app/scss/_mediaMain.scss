@@ -8,7 +8,7 @@
     left: -20vw;
   }
 }
-@media only screen and (min-width : 1024px) and (max-width : 1199px) {
+@media only screen and (min-width : 1024px) and (max-width : 1239px) {
   .mainpage {
     overflow: hidden;
 
@@ -24,7 +24,7 @@
   .mainpage .content .box-1 .sound {
     margin-right: -450px;
   }
-  .mainpage .content .box-1 #play {
+  .mainpage .content .box-1 #start {
     margin-right: -495px;
   }
   .mainpage .content .box-2 .wrap {
@@ -32,8 +32,9 @@
 
   }
   .mainpage .content .box-2 div .item .left {
-    left:0;
-    width: 50%;
+    width: 100%;
+    margin-left: -50%;
+    left: 0;
   }
 }
 @media only screen and (min-width : 940px) and (max-width : 1023px) {
@@ -97,7 +98,7 @@
     height: 100%;
     float: left;
     //background: url(../img/videopeoduction.png) no-repeat;
-    background-position: 0 center;
+    background-position: 0 top;
     /* background-size: 140%; */
     background-size: contain;
   }
@@ -108,7 +109,7 @@
     max-height: 615px;
     float: left;
     //background: url(../img/web-dev.png) no-repeat;
-    background-position: right 200px;
+    background-position: right top;
     background-size: 160%;
     /* background-size: cover; */
   }
@@ -119,7 +120,7 @@
     max-height: 575px;
     float: left;
     //background: url(../img/design-dev.png) no-repeat;
-    background-position: -50px 120px;
+    background-position: -50px top;
     background-size: 110%;
     /* background-size: cover; */
     /* background-size: contain; */
@@ -131,7 +132,7 @@
     max-height: 615px;
     float: left;
     //background: url(../img/branding.png) no-repeat;
-    background-position: -170px center;
+    background-position: -170px top;
     background-size: 140%;
     /* background-size: cover; */
   }
@@ -142,7 +143,7 @@
     max-height: 545px;
     float: left;
     //background: url(../img/marketing.png) no-repeat;
-    background-position: -50px 180px;
+    background-position: -50px top;
     background-size: 110%;
     /* background-size: cover; */
   }
@@ -158,7 +159,6 @@
   }
   .mainpage .content .box-2 div .item .right .second p {
     font-size: 15px;
-    line-height: 27px;
     width: 340px;
   }
   .mainpage .content .box-2 div .item .right .second p br{
@@ -166,11 +166,9 @@
   }
   .mainpage .content .box-2 div .item .right .third p.border {
     font-size: 30px;
-    line-height: 21px;
   }
   .mainpage .content .box-2 div .item .right .third p:last-child {
     font-size: 15px;
-    line-height: 20px;
     margin-top: 20px;
     width: 340px;
   }
@@ -179,7 +177,6 @@
   }
   .mainpage .content .box-2 div .item .right a {
     font-size: 15px;
-    line-height: 20px;
   }
   .owl-theme .owl-controls{
     margin-top: -100px;
@@ -209,6 +206,13 @@
   /**/
   /*BOX-1*/
   /**/
+  body .main-wrapper .box-1 .bg img {
+    margin-left: 0;
+    min-width: 100%;
+  }
+  .mainpage {
+    overflow: hidden;
+  }
   .mainpage .content .box-1 .text {
     width: 704px;
   }
@@ -219,7 +223,6 @@
     width: 90%;
   }
   .mainpage .content .box-1 {
-    position: static;
   }
   /**/
   /*BOX-2*/
@@ -310,12 +313,16 @@
     background-size: 110%;
     /* background-size: cover; */
   }
+  .mainpage .content .box-2 div .item .right .first h2 {
+    font-size: 45px;
+  }
   .mainpage .content .box-2 div .item .right .first h2 span{
     display: inline-block !important;
   }
   .mainpage .content .box-2 div .item .right .second p br{
     display: none;
   }
+
   .mainpage .content .box-2 div .item .right .third p:last-child br{
     display: none;
   }
@@ -323,7 +330,7 @@
     width: 300px;
     float: left;
     margin-left: 10px;
-    margin-top: 40px;
+    margin-top: 0;
   }
   .owl-theme .owl-controls{
     margin-top: 0px;
@@ -353,12 +360,18 @@
   /**/
   /*BOX-1*/
   /**/
+  body .main-wrapper .box-1 .bg img {
+    margin-left: 0;
+    min-width: 100%;
+  }
+  .mainpage {
+    overflow: hidden;
+  }
   .mainpage .content .box-1 {
-    position: static;
     min-height: 430px;
   }
   .mainpage .content .box-1 .text {
-    width: 460px;
+    width: 100%;
     padding-top: 25vh;
   }
   .mainpage .content .box-1 .text h1 {
@@ -385,17 +398,20 @@
     padding-top: 50px;
   }
   .mainpage .content .box-2 .wrap {
-    width: 480px;
+    width: 100%;
   }
   .mainpage .content .box-2 div .item {
     //height: 880px;
     position: relative;
   }
+  .mainpage .content .box-2 div .item .right .second p {
+    margin-bottom: 0;
+  }
   .mainpage .content .box-2 div .item.case1 {
     //height: 1100px;
     position: relative;
-    margin-top: 64px;
-    padding-top: 67px;
+    //margin-top: 64px;
+    //padding-top: 67px;
   }
   .mainpage .content .box-2 div .item.case2 {
     //height: 920px;
@@ -446,16 +462,16 @@
     height: 100%;
     float: left;
     //background: url(../img/videopeoduction.png) no-repeat;
-    background-position: -20px 150px;
+    background-position: -20px center;
     /* background-size: 140%; */
     background-size: contain;
   }
 
   body .main-wrapper.mainpage .content .box-2 div .item .right .img {
-    height: 300px;
-    width: 120%;
-    background-position: right center;
-    background-size: cover;
+    height: 400px;
+    width: 150%;
+    background-position: left center;
+    background-size: contain;
   }
   .mainpage .content .box-2 div .item .right {
     width: 100%;
@@ -467,8 +483,8 @@
 
   }
   .mainpage .content .box-2 div .item .right .first,  .mainpage .content .box-2 div .item .right .second,  .mainpage .content .box-2 div .item .right .third,  .mainpage .content .box-2 div .item .right a {
-    width:90%;
-    margin: 5% auto;
+    width:94%;
+    margin: 6% auto;
   }
   .owl-theme .owl-controls{
     margin-top: 15px;
@@ -483,7 +499,7 @@
     font-size: 15px;
   }
   .mainpage .content .box-2 div .item .right .third p:last-child {
-    width: 400px;
+    width: 94%;
   }
   .mainpage .content .box-2 div .item .right .third p.border {
     font-size: 30px;
@@ -531,7 +547,7 @@
   }
   .mainpage .content .box-3 .all_clients {
     font-size: 15px;
-    width: 460px;
+    width: 100%;
     margin-top: 50px;
   }
 }

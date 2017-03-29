@@ -2,10 +2,108 @@
 
 }
 @media only screen and (min-width : 1024px) and (max-width : 1199px) {
+  .about_page {
+    overflow: hidden;
+  }
+  .about_page .content .box-2 .wrapper {
+    > h2 {
+      margin-left: 0;
+    }
+    > p {
+      margin-left: 0;
+      margin-bottom: 45px;
+    }
+  }
+  .about_page .content .box-2 .wrapper .slider  {
+    width: 1030px;
+    margin-left: -15px;
+    .item {
+      display: inline-block;
+      width: 90%;
+      margin: 0 5%;
+      .wrap {
+        .img {
+          width: 100%;
+        }
+        .text {
+          .post {
+            height: 3em;
+          }
+        }
+      }
+    }
+  }
+  .about_page .content .box-2 .wrapper .paggs_buts {
+    margin:0;
+  }
+  .about_page .content .box-3 .wrapper {
+    .left {
+      float: left;
+      max-width: 580px;
+      margin-right: 3.5%;
+      text-align: right;
+      font-size: 0;
+      width: 48%;
+      .img {
+        height: 350px;
+        img {
+          min-width: 100%;
+          width:auto;
+          min-height: 100%;
+        }
+      }
+    }
+    .right {
+      width: 48%;
+      p {
+        height: 350px;
 
+      }
+      .img {
+        height: 350px;
+        img {
+          min-width: 100%;
+          width:auto;
+          min-height: 100%;
+        }
+      }
+    }
+  }
 }
 @media only screen and (min-width : 940px) and (max-width : 1023px) {
+  .about_page {
+    overflow: hidden;
+     .content .box-2 .wrapper {
+      > h2 {
+         margin-left: 0;
+       }
+      > p {
+         margin-left: 0;
+       }
 
+     }
+
+  }
+  .about_page .content .box-2 .wrapper .slider  {
+    width: 950px;
+    margin-left: -25px;
+    .item {
+      display: inline-block;
+      width: 90%;
+      margin: 0 5%;
+      .wrap {
+        .img {
+          width: 100%;
+          height:auto;
+        }
+        .text {
+          .post {
+            height: 3em;
+          }
+        }
+      }
+    }
+  }
   .about_page .content .box-3 .wrapper .left {
     max-width: 100%;
     width: 100%;
@@ -15,21 +113,77 @@
 
     }
   }
-  .about_page .content .box-3 .wrapper .right {
-    max-width: 100%;
-    width: 100%;
-    p {
-      height: auto;
-      margin: 30px 0;
+  .about_page .content .box-3 .wrapper {
+    .left {
+      float: left;
+      max-width: 580px;
+      margin-right: 3.5%;
+      text-align: right;
+      font-size: 0;
+      width: 48%;
+      .img {
+        height: 350px;
+        img {
+          min-width: 100%;
+          width:auto;
+          min-height: 100%;
+        }
+      }
     }
-    .img {
-      width: 100%;
-      max-width: 100% !important;
+    .right {
+      width: 48%;
+      p {
+        height: 350px;
 
+      }
+      .img {
+        height: 350px;
+        img {
+          min-width: 100%;
+          width:auto;
+          min-height: 100%;
+        }
+      }
     }
   }
 }
 @media only screen and (min-width : 724px) and (max-width : 939px) {
+  .about_page {
+    overflow: hidden;
+    .content .box-2 .wrapper {
+      > h2 {
+        margin-left: 0;
+      }
+      > p {
+        margin-left: 0;
+      }
+
+    }
+
+  }
+  .about_page .content .box-2 .wrapper .slider  {
+    width: 740px;
+    margin-left: -15px;
+    .item {
+      display: inline-block;
+      width: 90%;
+      margin: 0 5%;
+      .wrap {
+        .img {
+          width: 100%;
+          height:auto;
+        }
+        .text {
+          .post {
+            height: 3em;
+          }
+        }
+      }
+    }
+  }
+  .about_page .content .box-2 .wrapper .paggs_buts {
+    margin:0;
+  }
   .about_page .content .box-3 .wrapper .left {
     max-width: 100%;
     width: 100%;
@@ -61,16 +215,48 @@
 
 }
 @media only screen and (min-width : 480px) and (max-width : 723px) {
+  .about_page .content .box-2 .wrapper {
+    > h2 {
+      margin-left: 0;
+    }
+    > p{
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+    .slider {
+      .item {
+        width:100%;
+        margin: 0 auto;
+        .wrap {
+          .img {
+            width:100%;
+            height:auto;
+          }
+        }
+      }
+    }
+  }
+
+  .about_page .content .box-2 .wrapper .paggs_buts {
+    margin-left: 0px;
+    margin-right: 0px;
+    a {
+      width:45%;
+
+    }
+  }
   .about_page .content .box-3 .wrapper .left {
     .img {
       display: none;
 
     }
   }
-  .about_page .content .box-3 .wrapper {
+  .about_page .content .box-3 .wrapper{
     .right {
       margin-bottom: 25px;
+
       p {
+        height: auto;
       }
       .img {
         display: none;
@@ -80,6 +266,8 @@
     }
     .slider {
       margin-bottom: 30px;
+      width: 106%;
+      margin-left: -3%;
     }
   }
 }

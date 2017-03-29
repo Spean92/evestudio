@@ -2,21 +2,84 @@
 
 }
 @media only screen and (min-width : 1024px) and (max-width : 1199px) {
+  .blog_page .content .box-2 .wrapper .left_side {
+    display: inline-block;
+    vertical-align: top;
+    width: 72.5%;
+    margin-right: 4%;
+    .flex {
+      .item-flex {
+        width:30%;
+      }
+    }
+  }
+  .blog_page .content .box-2 .wrapper .right_side {
+    display: inline-block;
+    vertical-align: top;
+    width: 23.5%;
+    margin-left: 0;
+  }
+  //
+  //INNER
+  //
+  .blogInner_page .content .box-2 .wrapper .left_side {
+    width: 72.5%;
+    margin-right: 3%;
 
+  }
+  .blogInner_page .content .box-2 .wrapper .right_side {
+    margin-left: 0;
+    width:23.5%;
+  }
 }
 @media only screen and (min-width : 940px) and (max-width : 1023px) {
+  .blog_page .content .box-2 .wrapper .left_side {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin-right: 0;
+    .flex {
+      .item-flex {
+        width:23%;
+      }
+    }
+  }
+  .blog_page .content .box-2 .wrapper .right_side {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin-left: 0;
+  }
+  //
+  //INNER
+  //
+  .blogInner_page .content .box-2 .wrapper .left_side {
+    width: 100%;
+    margin-right: 0;
 
-
+  }
+  .blogInner_page .content .box-2 .wrapper .right_side {
+    margin-left: 0;
+    width:100%;
+  }
 }
 @media only screen and (min-width : 724px) and (max-width : 939px) {
   .blog_page .content .box-2 .wrapper .left_side {
+    display: inline-block;
+    vertical-align: top;
     width: 100%;
+    margin-right: 0;
+    .flex {
+      .item-flex {
+        width:48%;
+      }
+    }
   }
   .blog_page .content .box-2 .wrapper .right_side {
-    margin-left: 0;
+    display: inline-block;
+    vertical-align: top;
     width: 100%;
-    ul {
-    }
+    margin-left: 0;
   }
   //
   //INNER
@@ -25,11 +88,13 @@
     width: 100%;
   }
   .blogInner_page .content .box-2 .wrapper .right_side {
-    margin-left: 0;
-    width: 100%;
+    display: none;
   }
 }
 @media only screen and (min-width : 480px) and (max-width : 723px) {
+  .blog_page {
+    overflow: hidden;
+  }
   .blog_page .content .box-2 .wrapper .left_side h2 {
     font-size: 40px;
   }
@@ -58,6 +123,9 @@
   }
   .blogInner_page .content .box-2 .wrapper .right_side {
     display: none;
+  }
+  .blogInner_page .content .paggs_buts a {
+    width: 45%;
   }
 }
 @media only all and (max-width : 479px) {
