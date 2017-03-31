@@ -340,6 +340,9 @@
   /**/
   .mainpage .content .box-3 .header {
     width: 704px;
+    h2 {
+      font-size: 45px;
+    }
   }
   .mainpage .content .box-3 .clients {
     width: 704px;
@@ -507,6 +510,9 @@
 
   .mainpage .content .box-2 div .item .right a {
     font-size: 15px;
+    width:45%;
+    margin-left: auto;
+    margin-right: 3%;
   }
   .mainpage .content .box-2 div .item .right .second p br{
     display: none;
@@ -521,7 +527,7 @@
     width: 460px;
   }
   .mainpage .content .box-3 .header h2 {
-    font-size: 58px;
+    font-size: 56px;
   }
   .mainpage .content .box-3 .clients {
     display: none;
@@ -547,7 +553,7 @@
   }
   .mainpage .content .box-3 .all_clients {
     font-size: 15px;
-    width: 100%;
+    width: 45%;
     margin-top: 50px;
   }
 }
@@ -701,6 +707,9 @@
   }
   .mainpage .content .box-2 div .item .right a {
     font-size: 15px;
+    width:45%;
+    margin-left: auto;
+    margin-right: 3%;
   }
   /**/
   /*BOX-3*/
@@ -709,7 +718,7 @@
     width: 300px;
   }
   .mainpage .content .box-3 .header h2 {
-    font-size: 58px;
+    font-size: 35px;
   }
   .mainpage .content .box-3 .clients {
     display: none;
@@ -719,11 +728,11 @@
   }
   .mainpage .content .box-3 .clients_mob .lid {
     width: 49%;
-    padding: 10px;
+    padding: 20px 25px;
     display: inline-block;
     vertical-align: middle;
     float: none;
-    max-height: 70px;
+    max-height: 100px;
     overflow: hidden;
   }
   .mainpage .content .box-3 .clients_mob .lid a img{
@@ -735,7 +744,7 @@
   }
   .mainpage .content .box-3 .all_clients {
     font-size: 15px;
-    width: 100%;
+    width: 45%;
     margin-top: 50px;
   }
 

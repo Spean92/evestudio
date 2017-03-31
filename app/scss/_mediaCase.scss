@@ -2,7 +2,9 @@
 
 }
 @media only screen and (min-width : 1024px) and (max-width : 1199px) {
-
+.case {
+  overflow: hidden;
+}
   .case .content .case_wrapper .left_case_wrapper {
     width: 72.5%;
     margin-right: 4%;
@@ -16,7 +18,9 @@
   }
 }
 @media only screen and (min-width : 940px) and (max-width : 1023px) {
-
+  .case {
+    overflow: hidden;
+  }
   .case .content .case_wrapper .left_case_wrapper {
     width: 72.5%;
     margin-right: 4%;
@@ -62,9 +66,15 @@
       display: inline-block;
     }
   }
+  .right_list.mobile.block  {
+    width:270px;
+  }
 
 }
 @media only screen and (min-width : 480px) and (max-width : 723px) {
+  .case {
+    overflow: hidden;
+  }
   .case .content .case_wrapper .left_case_wrapper {
     width: 100%;
     .big_img.big_video {
@@ -86,7 +96,7 @@
     width: 100%;
   }
   .case .content .case_wrapper .left_case_wrapper .box-2 h4 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .case .content .case_wrapper .wrapper.passive .left_case_wrapper .box-4 {
     width: 100%;
@@ -109,8 +119,14 @@
   .case .content .case_wrapper .siblingsCase a {
     width: 45%;
   }
+  .right_list.mobile.block  {
+    width:270px;
+  }
 }
 @media only all and (max-width : 479px) {
+  .case {
+    overflow: hidden;
+  }
   .case .content .case_wrapper .left_case_wrapper {
     width: 100%;
     .big_img.big_video {
@@ -130,7 +146,7 @@
     width: 100%;
   }
   .case .content .case_wrapper .left_case_wrapper .box-2 h4 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .case .content .case_wrapper .right_case_wrapper aside{
     display: none;
@@ -140,6 +156,9 @@
   }
   .case .content .case_wrapper .right_case_wrapper {
     width: 100%;
+    .right_list {
+
+    }
   }
   .case .content .case_wrapper .right_case_wrapper .box-5 {
     padding-bottom: 40px;
@@ -152,5 +171,8 @@
   }
   .case .content .case_wrapper .siblingsCase a {
     width: 45%;
+  }
+  .right_list.mobile.block  {
+    width:270px;
   }
 }

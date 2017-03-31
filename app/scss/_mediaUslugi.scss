@@ -88,8 +88,20 @@
     background-size: contain;
     background-position: center center;
   }
+  .uslugi_page .content .box-4 .wrapper .experts.flex {
+    display: block;
+    width: 100%;
+    font-size: 0;
+  }
   .uslugi_page .content .box-4 .wrapper .experts.flex .fl1 {
-    max-width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 46%;
+    margin-left: 2%;
+    margin-right: 2%;
+    &:nth-child(2n+1) {
+      margin-left: 0;
+    }
   }
 }
 @media only screen and (min-width : 480px) and (max-width : 723px) {
@@ -110,11 +122,14 @@
     }
   }
   .uslugi_page .content .box-2 .wrapper .paggs_buts {
-    padding-bottom: 180px;
+    padding-bottom: 80px;
     margin: 0;
     a {
       width:45%;
     }
+  }
+  .uslugi_page .content .box-3 .wrapper .left-side .top-text h2 {
+    font-size: 56px;
   }
   .uslugi_page .content .box-3 .wrapper .right-side .image {
     display: none;
@@ -139,6 +154,9 @@
   .uslugi_page .content .box-3 .wrapper .left-side .paggs_buts a {
     width:45%;
   }
+  .uslugi_page .content .box-4 .wrapper h2 {
+    font-size: 56px;
+  }
 }
 @media only all and (max-width : 479px) {
   .uslugi_page .content .box-2 .wrapper {
@@ -146,12 +164,12 @@
     max-width: 470px;
   }
   .uslugi_page .content .box-2 .wrapper h2 {
-    font-size: 40px;
+    font-size: 35px;
     margin-left: 0;
   }
   .uslugi_page .content .box-2 .wrapper .paggs_buts {
     margin: 0;
-    padding-bottom: 110px;
+    padding-bottom: 65px;
     a {
       width:45%;
     }
@@ -170,7 +188,7 @@
     margin-bottom: 0;
   }
   .uslugi_page .content .box-3 .wrapper .left-side .top-text h2 {
-    font-size: 40px;
+    font-size: 35px;
   }
   .uslugi_page .content .box-3 .wrapper .left-side .top-text p {
     margin-bottom: 0;
@@ -186,7 +204,7 @@
     display: none;
   }
   .uslugi_page .content .box-4 .wrapper h2 {
-    font-size: 40px;
+    font-size: 35px;
   }
 
 }

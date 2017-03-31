@@ -94,7 +94,19 @@
   .projects .content .box-3 .clientsTable .clientRow {
     width: 50%;
     margin-right: 0;
+    &:nth-child(3) {
+      ul {
+        border: none;
+      }
+    }
+    &:nth-child(4) {
+      ul {
+        border: none;
+      }
+
+    }
   }
+
 }
 @media only screen and (min-width : 480px) and (max-width : 723px) {
 
@@ -105,6 +117,9 @@
     width: 94%;
     padding: 0 0px;
     overflow: hidden;
+  }
+  .projects .content .box-2 .header h2 {
+    font-size: 56px;
   }
   .projects .content .box-2 .cases {
     max-width: 100%;
@@ -128,6 +143,9 @@
     letter-spacing: -0.5px;
     margin-bottom: 3px;
   }
+  .projects .content .box-3 .header h2 {
+    font-size: 56px;
+  }
   .projects .content .box-3 .clientsTable {
     flex-wrap: wrap;
   }
@@ -141,6 +159,14 @@
   .projects .content .box-3 .clientsTable .clientRow {
     width: 100%;
     margin-right: 0;
+    ul {
+      border:none;
+    }
+    &:first-child {
+      ul {
+        border-top: 1px solid rgba(32,35,39,.1);
+      }
+    }
   }
 }
 @media only all and (max-width : 479px) {
@@ -148,6 +174,9 @@
   /**/
   /*Projects*/
   /**/
+  .projects .content .box-2 .header h2 {
+    font-size: 35px;
+  }
   .projects .content .box-2 .cases {
     padding-bottom: 15px;
     max-width: 470px;
@@ -175,11 +204,22 @@
     margin-bottom: 3px;
 
   }
+  .projects .content .box-3 .header h2 {
+    font-size:35px;
+  }
   .projects .content .box-3 .clientsTable {
     flex-wrap: wrap;
   }
   .projects .content .box-3 .clientsTable .clientRow {
-    width: 94%;
+    ul {
+      border:none;
+    }
+    &:first-child {
+      ul {
+        border-top: 1px solid rgba(32,35,39,.1);
+      }
+    }
+    width: 100%;
     margin-right: 0;
   }
   .projects .content .box-3 .header h2 {

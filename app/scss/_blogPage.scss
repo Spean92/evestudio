@@ -175,13 +175,14 @@
               font-family: "Segoe UI";
               text-align: left;
               padding: 11.5px 0;
-              border-bottom: 1px solid black;
+              border-bottom: 1px solid rgba(32,35,39,.1);
               transition: all .3s ease;
               &:first-child {
-                border-top: 1px solid black;
+                border-top: 1px solid rgba(32,35,39,.1);;
               }
               &:hover {
-                opacity: 0.5;
+                color: rgba(0,0,0,0.5);
+                border-color: rgba(0,0,0,1);
               }
             }
           }

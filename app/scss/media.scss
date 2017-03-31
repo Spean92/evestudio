@@ -20,7 +20,7 @@
     padding-top: 20vh;
   }
   header .right {
-    width: 900px;
+    width: 820px;
   }
   footer .footer div.logo {
     transform: translateX(150px);
@@ -259,6 +259,20 @@
     width: auto;
     height: 100%;
   }
+  #nav .foot {
+    hr {
+    border-color: #fff;
+     }
+    .sub_line {
+      display: block;
+      height: 50px;
+      line-height:3;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+
   /**/
   /*header*/
   /**/
@@ -279,9 +293,42 @@
   /**/
   footer {
     background: #000;
+    .wrapper {
+      hr {
+        width:106%;
+        margin-left: -3%;
+        border-color: #fff;
+      }
+      .sub_line {
+        position: relative;
+        height:50px;
+        line-height: 50px;
+        display: block;
+        color: #fff;
+        div.top {
+          position: absolute;
+          display: block;
+          right:0;
+          top:calc(50% - 10px);
+          * {
+            display: block;
+          }
+          .wrap {
+            a {
+              width: 50px;
+              height: 20px;
+              background: url(../img/sprite.png);
+              background-size: 240%;
+              background-position: -120px -69px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
   }
   footer .footer {
-    padding: 25px 0 25px 0;
+    padding: 25px 0 50px 0;
     position: relative;
   }
   footer .footer * {
@@ -297,25 +344,7 @@
     text-align: center;
     margin: 0 auto;
   }
-  footer .footer div.top {
-    position: absolute;
-    display: block;
-    right:0;
-    top:calc(50% - 10px);
-    * {
-      display: block;
-    }
-    .wrap {
-      a {
-        width: 50px;
-        height: 20px;
-        background: url(../img/sprite.png);
-        background-size: 240%;
-        background-position: -120px -69px;
-        text-align: center;
-      }
-    }
-  }
+
   footer .footer div.icons {
     display: block;
     width: 100%;
@@ -438,6 +467,18 @@
     width: auto;
     height: 100%;
   }
+  #nav .foot {
+    hr {
+      border-color: #fff;
+    }
+    .sub_line {
+      display: block;
+      height: 50px;
+      line-height:3;
+      text-align: center;
+      color: #fff;
+    }
+  }
   /**/
   /*header*/
   /**/
@@ -476,9 +517,42 @@
   /**/
   footer {
     background: #000;
+    .wrapper {
+      hr {
+        width:106%;
+        margin-left: -3%;
+        border-color: #fff;
+      }
+      .sub_line {
+        position: relative;
+        height:50px;
+        line-height: 50px;
+        display: block;
+        color: #fff;
+        div.top {
+          position: absolute;
+          display: block;
+          right:0;
+          top:calc(50% - 10px);
+          * {
+            display: block;
+          }
+          .wrap {
+            a {
+              width: 50px;
+              height: 20px;
+              background: url(../img/sprite.png);
+              background-size: 240%;
+              background-position: -120px -69px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
   }
   footer .footer {
-    padding: 25px 0 25px 0;
+    padding: 25px 0 50px 0;
     position: relative;
   }
   footer .footer * {
@@ -494,25 +568,7 @@
     text-align: center;
     margin: 0 auto;
   }
-  footer .footer div.top {
-    position: absolute;
-    display: block;
-    right:0;
-    top:calc(50% - 10px);
-    * {
-      display: block;
-    }
-    .wrap {
-      a {
-        width: 50px;
-        height: 20px;
-        background: url(../img/sprite.png);
-        background-size: 240%;
-        background-position: -120px -69px;
-        text-align: center;
-      }
-    }
-  }
+
   footer .footer div.icons {
     display: block;
     width: 100%;
@@ -619,7 +675,7 @@
     display: block;
     width: 100%;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 30px;
   }
   #nav .foot div.icons * {
     display: inline-block;
@@ -634,6 +690,18 @@
   #nav .foot div.icons a img {
     width: auto;
     height: 100%;
+  }
+  #nav .foot {
+    hr {
+      border-color: #fff;
+    }
+    .sub_line {
+      display: block;
+      height: 50px;
+      line-height:3;
+      text-align: center;
+      color: #fff;
+    }
   }
   /**/
   /*header*/
@@ -673,9 +741,42 @@
   /**/
   footer {
     background: #000;
+    .wrapper {
+      hr {
+        width:106%;
+        margin-left: -3%;
+        border-color: #fff;
+      }
+      .sub_line {
+        position: relative;
+        height:50px;
+        line-height: 50px;
+        display: block;
+        color: #fff;
+        div.top {
+          position: absolute;
+          display: block;
+          right:0;
+          top:calc(50% - 10px);
+          * {
+            display: block;
+          }
+          .wrap {
+            a {
+              width: 50px;
+              height: 20px;
+              background: url(../img/sprite.png);
+              background-size: 240%;
+              background-position: -120px -69px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
   }
   footer .footer {
-    padding: 25px 0 25px 0;
+    padding: 25px 0 50px 0;
     position: relative;
   }
   footer .footer * {
@@ -691,25 +792,25 @@
     text-align: center;
     margin: 0 auto;
   }
-  footer .footer div.top {
-    position: absolute;
-    display: block;
-    right:0;
-    top:calc(50% - 10px);
-    * {
-      display: block;
-    }
-    .wrap {
-      a {
-        width: 50px;
-        height: 20px;
-        background: url(../img/sprite.png);
-        background-size: 240%;
-        background-position: -120px -69px;
-        text-align: center;
-      }
-    }
-  }
+  //footer .footer div.top {
+  //  position: absolute;
+  //  display: block;
+  //  right:0;
+  //  top:calc(50% - 10px);
+  //  * {
+  //    display: block;
+  //  }
+  //  .wrap {
+  //    a {
+  //      width: 50px;
+  //      height: 20px;
+  //      background: url(../img/sprite.png);
+  //      background-size: 240%;
+  //      background-position: -120px -69px;
+  //      text-align: center;
+  //    }
+  //  }
+  //}
   footer .footer div.icons {
     display: block;
     width: 100%;

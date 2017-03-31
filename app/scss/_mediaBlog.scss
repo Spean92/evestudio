@@ -69,6 +69,10 @@
     vertical-align: top;
     width: 100%;
     margin-right: 0;
+    h2 {
+      font-size: 45px !important;
+      margin-bottom: 0.5em !important;
+    }
     .flex {
       .item-flex {
         width:48%;
@@ -78,7 +82,7 @@
   .blog_page .content .box-2 .wrapper .right_side {
     display: inline-block;
     vertical-align: top;
-    width: 100%;
+    width: 270px;
     margin-left: 0;
   }
   //
@@ -86,6 +90,13 @@
   //
   .blogInner_page .content .box-2 .wrapper .left_side {
     width: 100%;
+  }
+  .blogInner_page .content .box-2 .wrapper .left_side h2 {
+    font-size: 30px;
+    display: block;
+    font-family: "Segoe UI Bold";
+    color: #000;
+    line-height: 1.2;
   }
   .blogInner_page .content .box-2 .wrapper .right_side {
     display: none;
@@ -96,7 +107,9 @@
     overflow: hidden;
   }
   .blog_page .content .box-2 .wrapper .left_side h2 {
-    font-size: 40px;
+    font-size: 56px !important;
+    margin-bottom: 0.5em !important;
+
   }
   .blog_page .content .box-2 .wrapper .left_side {
     width: 100%;
@@ -108,7 +121,7 @@
   }
   .blog_page .content .box-2 .wrapper .right_side {
     margin-left: 0;
-    width: 100%;
+    width: 45%;
     ul {
     }
   }
@@ -117,6 +130,13 @@
   //
   .blogInner_page .content .box-2 .wrapper .left_side h1 {
     font-size: 40px;
+  }
+  .blogInner_page .content .box-2 .wrapper .left_side h2 {
+    font-size: 30px;
+    display: block;
+    font-family: "Segoe UI Bold";
+    color: #000;
+    line-height: 1.2;
   }
   .blogInner_page .content .box-2 .wrapper .left_side {
     width: 100%;
@@ -130,7 +150,9 @@
 }
 @media only all and (max-width : 479px) {
   .blog_page .content .box-2 .wrapper .left_side h2 {
-    font-size: 35px;
+    font-size: 35px !important;
+    margin-bottom: 0.5em !important;
+
   }
 
   .blog_page .content .box-2 .wrapper .left_side {
@@ -145,7 +167,7 @@
   }
   .blog_page .content .box-2 .wrapper .right_side {
     margin-left: 0;
-    width: 100%;
+    width: 45%;
     ul {
     }
   }
@@ -154,6 +176,13 @@
   //
   .blogInner_page .content .box-2 .wrapper .left_side h1 {
     font-size: 35px;
+  }
+  .blogInner_page .content .box-2 .wrapper .left_side h2 {
+    font-size: 30px;
+    display: block;
+    font-family: "Segoe UI Bold";
+    color: #000;
+    line-height: 1.2;
   }
   .blogInner_page .content .box-2 .wrapper .left_side {
     width: 100%;

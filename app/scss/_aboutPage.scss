@@ -50,7 +50,7 @@
       margin-top: 100vh;
       padding-top: 65px;
       //padding-top: 76px;
-      margin-bottom: -65px;
+      margin-bottom: -130px;
       .bg_white {
         background: #fff;
         padding-top: 65px;
@@ -279,6 +279,13 @@
           color: rgb(0, 0, 0);
           line-height: 1.09;
           text-align: left;
+        }
+        >p {
+          margin-bottom: 60px;
+          font-size: 15px;
+          font-family: "Segoe UI Bold";
+          color: rgb(0, 0, 0);
+          line-height: 1.714;
         }
         .content {
           padding-bottom: 70px;

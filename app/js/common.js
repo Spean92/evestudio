@@ -13,7 +13,21 @@ $(document).ready(function() {
 	var finalPos3 = pos3;
     var html = document.documentElement, body = document.body;
 
-
+    function whiteBG() {
+        if (body.scrollTop<finalPos1){
+            $('.box-1').css('opacity', '1');
+        } else if (body.scrollTop>finalPos1 && body.scrollTop<pos1) {
+            $('.box-1').css('opacity', '0');
+        }else if(body.scrollTop>finalPos1 && body.scrollTop<finalPos2) {
+            $('.box-1').css('opacity', '0');
+        } else if (body.scrollTop>finalPos2) {
+            $('.box-1').css('opacity', '0');
+        }
+    };
+    if ($(window).width()<768) {
+        whiteBG();
+        $(window).on('scroll', whiteBG);
+    };
     function header() {
         if (body.scrollTop<finalPos1){
             // $('#homeMenu').css('display','inline-block');
@@ -26,6 +40,8 @@ $(document).ready(function() {
             $('.menu').addClass('show').removeClass('hide');
             $('.menu nav ul li a').removeClass('wow fadeInDown');
             $('.menu nav ul li a').css('visibility','visible');
+            $('.box-1 .bg').css('opacity', '1');
+
 
         } else if (body.scrollTop>finalPos1 && body.scrollTop<pos1) {
             $('header').addClass('active');
@@ -34,6 +50,7 @@ $(document).ready(function() {
             $('.bars.bars1').addClass('show').removeClass('hide');
             $('.menu').addClass('hide').removeClass('show');
             $('.menu nav ul li a').removeClass('wow fadeInDown');
+            $('.box-1 .bg').css('opacity', '0');
 
 
         }else if(body.scrollTop>finalPos1 && body.scrollTop<finalPos2) {
@@ -46,6 +63,7 @@ $(document).ready(function() {
             $('.bars.bars1').addClass('show').removeClass('hide');
             $('.menu').addClass('hide').removeClass('show');
             $('.menu nav ul li a').removeClass('wow fadeInDown');
+            $('.box-1 .bg').css('opacity', '0');
 
 
         } else if (body.scrollTop>finalPos2) {
@@ -57,6 +75,7 @@ $(document).ready(function() {
             $('.bars.bars1').addClass('show').removeClass('hide');
             $('.menu').addClass('hide').removeClass('show');
             $('.menu nav ul li a').removeClass('wow fadeInDown');
+            $('.box-1 .bg').css('opacity', '0');
         }
         //  console.log(body.scrollTop);
     }
@@ -131,12 +150,8 @@ $(document).ready(function() {
 
         $('main nav.nav').fadeOut(300);
 		$('body').css("overflow", "auto");
-		// $('header').addClass('active');
-		$('header').css('background', 'rgba(255, 255, 255, 0.7)');
-		// $('#box-2, #box-3').fadeIn();
-		// $('#box-2, #box-3, footer').fadeIn();
-		// $('header .right div.bars').css({'border-top': '2px solid white', 'border-bottom': '2px solid white'});
-		// $('header .right div.bars').css('background', 'none');
+		$('header').css('background', 'rgba(255, 255, 255, 1)');
+        $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
 		$('header .right div.bars').removeClass('act');
         $('header .right div.bars').addClass('bars1');
             var id  = $(this).attr('href'),
@@ -147,13 +162,7 @@ $(document).ready(function() {
 
 	});
 
-//Кнопка "Наверх"
-	$("#top").click(function () {
-		$("body, html").animate({
-			scrollTop: 1
-		}, 800);
-		return false;
-	});
+
 //плавный скролл
     $("a[href^='#']").on("click", function (event) {
         event.preventDefault();
@@ -161,12 +170,19 @@ $(document).ready(function() {
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 800);
     });
-
+//Кнопка "Наверх"
+    $("#top, .sub_line .top").click(function () {
+        $("body, html").animate({
+            scrollTop: 1
+        }, 800);
+        return false;
+    });
 
 // OWL
     $(".owl-carousel-case").owlCarousel({
 		dots: true,
 		mouseDrag : false,
+        touchDrag : false,
 		startPosition : 0,
 		singleItem:true,
 		loop:true,
@@ -180,10 +196,12 @@ $(document).ready(function() {
         dots: false,
 		nav: false,
         mouseDrag : false,
+        touchDrag : false,
         startPosition : 2,
         smartSpeed: 1000,
         singleItem:true,
         loop:true,
+        autoplay: true,
         items : 1
     });
 //OWL Buts
@@ -203,10 +221,12 @@ $(document).ready(function() {
             dots: false,
             nav: false,
             mouseDrag : false,
+            touchDrag : false,
             startPosition : 2,
             singleItem:false,
             loop:true,
             smartSpeed: 1000,
+            autoplay: true,
             items : 4
         });
 //OWL Buts
@@ -227,11 +247,13 @@ $(document).ready(function() {
             dots: false,
             nav: false,
             slideSpeed : 300,
-            mouseDrag : true,
+            mouseDrag : false,
+            touchDrag : false,
             startPosition : 2,
             paginationSpeed : 400,
             singleItem:false,
             loop:true,
+            autoplay: true,
             items : 2
         });
         //OWL Buts
@@ -252,11 +274,13 @@ $(document).ready(function() {
             dots: false,
             nav: false,
             slideSpeed : 300,
-            mouseDrag : true,
+            mouseDrag : false,
+            touchDrag : false,
             startPosition : 2,
             paginationSpeed : 400,
             singleItem:false,
             loop:true,
+            autoplay: true,
             items : 1
         });
         //OWL Buts
@@ -279,10 +303,12 @@ $(document).ready(function() {
     owl.owlCarousel({
         dots: true,
         mouseDrag : false,
+        touchDrag : false,
         startPosition : 0,
         singleItem:true,
         loop:true,
         items : 1,
+        autoplay: true,
         smartSpeed: 1000
     });
 //Map's on click
@@ -316,6 +342,8 @@ $(document).ready(function() {
     //MEDIA things
     if (($(window).width()>1023) && ($('.main-wrapper').hasClass('blogInner_page') == false)) {
         $(window).on('scroll', header);
+    // } else if ($(window).width()<1023) {
+    //     $(window).on('scroll', header);
     } else {
         $('header').addClass('active');
         $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
