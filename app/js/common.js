@@ -202,6 +202,7 @@ $(document).ready(function() {
         singleItem:true,
         loop:true,
         autoplay: true,
+        autoplayTimeout : 3000,
         items : 1
     });
 //OWL Buts
@@ -227,6 +228,8 @@ $(document).ready(function() {
             loop:true,
             smartSpeed: 1000,
             autoplay: true,
+            autoplayTimeout : 3000,
+
             items : 4
         });
 //OWL Buts
@@ -254,6 +257,8 @@ $(document).ready(function() {
             singleItem:false,
             loop:true,
             autoplay: true,
+            autoplayTimeout : 3000,
+
             items : 2
         });
         //OWL Buts
@@ -281,6 +286,7 @@ $(document).ready(function() {
             singleItem:false,
             loop:true,
             autoplay: true,
+            autoplayTimeout : 3000,
             items : 1
         });
         //OWL Buts
@@ -309,6 +315,7 @@ $(document).ready(function() {
         loop:true,
         items : 1,
         autoplay: true,
+        autoplayTimeout : 3000,
         smartSpeed: 1000
     });
 //Map's on click

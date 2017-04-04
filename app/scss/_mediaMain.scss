@@ -232,7 +232,7 @@
   }
   .mainpage .content .box-2 div .item .left {
     height: 92%;
-    margin-top: -50px;
+    margin-top: 0px;
     width: 400px;
     float: left;
     left:0;
@@ -244,29 +244,29 @@
     width: 720px;
   }
   .mainpage .content .box-2 div .item.case1 {
-    height: 710px;
+    height: 900px;
     padding-top: 50px;
   }
   .mainpage .content .box-2 div .item.case2 {
-    height: 610px;
+    height: 780px;
   }
   .mainpage .content .box-2 div .item.case3 {
-    height: 560px;
+    height: 670px;
   }
   .mainpage .content .box-2 div .item.case4 {
-    height: 580px;
+    height: 680px;
   }
   .mainpage .content .box-2 div .item.case5 {
-    height: 650px;
+    height: 800px;
   }
   .mainpage .content .box-2 div .item.case1 .left .img {
-    width: 100%;
+    width: 200%;
     height: 100%;
     float: left;
     //background: url(../img/videopeoduction.png) no-repeat;
-    background-position: 0 center;
+    background-position: -400px center;
     /* background-size: 140%; */
-    background-size: contain;
+    background-size: contain !important;
   }
   .mainpage .content .box-2 div .item.case2 .left .img {
     width: 100%;
@@ -313,6 +313,14 @@
     background-size: 110%;
     /* background-size: cover; */
   }
+  .mainpage .content .box-2 div .item .left .img {
+    width: 200% !important;
+    background-position: -300px center !important;
+
+    background-size: contain !important;
+    margin-left: -30%;
+    max-height: none !important;
+  }
   .mainpage .content .box-2 div .item .right .first h2 {
     font-size: 45px;
   }
@@ -347,6 +355,12 @@
   .mainpage .content .box-3 .clients {
     width: 704px;
     margin: 30px auto 30px auto;
+  }
+  .mainpage .content .box-3 .all_clients {
+    display: none;
+    &.mobile {
+      display: block;
+    }
   }
   .mainpage .content .box-3 .wrapper .clients .row .lid {
     width: 24%;
@@ -556,6 +570,12 @@
     width: 45%;
     margin-top: 50px;
   }
+  .mainpage .content .box-3 .all_clients {
+    display: none;
+    &.mobile {
+      display: block;
+    }
+  }
 }
 @media only all and (max-width : 479px) {
 
@@ -747,5 +767,10 @@
     width: 45%;
     margin-top: 50px;
   }
-
+  .mainpage .content .box-3 .all_clients {
+    display: none;
+    &.mobile {
+      display: block;
+    }
+  }
 }

@@ -30,6 +30,7 @@
 .mainpage .content .box-1 .bg{
   //background: url(../img/main_bg.png) no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -569,10 +570,52 @@ overflow: hidden;
     background: #000;
     transition: all .2s ease-in-out;
   }
+  &.mobile {
+    display: none;
+  }
 }
 .mainpage .content .box-3 .all_clients:hover {
   opacity: 0.5;
   &:after {
     width:100%;
+  }
+}
+.owl-dots .owl-dot {
+  span {
+    position: relative;
+    &:after {
+      transform-origin: right;
+      transform: scaleX(0);
+      content: '';
+      position: absolute;
+      top:0;
+      left:0;
+      width: 40px;
+      height: 2px;
+      background: #000000;
+      //margin: 5px 7px;
+      display: inline-block;
+      -webkit-backface-visibility: visible;
+      -webkit-transition: opacity .2s ease;
+      transition: opacity .2s ease;
+      -webkit-border-radius: 30px;
+      border-radius: 30px;
+      transition: transform 0s linear;
+    }
+  }
+  &.active{
+    span {
+      background: #d6d6d6;
+      &:after {
+        transform-origin: left;
+        transform: scaleX(1);
+        transition: transform 3s linear;
+      }
+    }
+  }
+  &:hover {
+    span {
+      background: #d6d6d6;
+    }
   }
 }

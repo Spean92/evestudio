@@ -62,9 +62,13 @@
     width: 744px;
     margin-left: -20px;
   }
-  .uslugi_page .content .box-2 .wrapper .flex .cl{
-    width: 90%;
-    margin: 0 5%;
+  .uslugi_page .content .box-2 .wrapper .flex .cl {
+    width:100%;
+    margin: 0 auto;
+    p {
+      height: auto;
+      margin-bottom: 20px;
+    }
     ul {
       width: 100%;
     }
@@ -119,6 +123,17 @@
           width: 100%;
         }
       }
+    }
+  }
+  .uslugi_page .content .box-2 .wrapper .flex .cl {
+    width:100%;
+    margin: 0 auto;
+    p {
+      height: auto;
+      margin-bottom: 20px;
+    }
+    ul {
+      width: 100%;
     }
   }
   .uslugi_page .content .box-2 .wrapper .paggs_buts {
@@ -177,9 +192,10 @@
   .uslugi_page .content .box-2 .wrapper .flex .cl {
     width:100%;
     margin: 0 auto;
-    height: 145vh;
-    min-height:800px;
-    max-height: 900px;
+    p {
+      height: auto;
+      margin-bottom: 20px;
+    }
     ul {
       width: 100%;
     }
@@ -195,7 +211,7 @@
   }
   .uslugi_page .content .box-3 .wrapper .paggs_buts {
     margin: 0;
-    padding-bottom: 180px;
+    padding-bottom: 80px;
     a {
       width:45% !important;
     }
