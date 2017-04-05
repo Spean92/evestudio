@@ -279,9 +279,17 @@
   /**/
   header {
     /*position: absolute;*/
+    background: rgba(255, 255, 255, 1);
+
     .wrapper {
       .right {
         width: auto;
+        > .menu {
+          display:none !important;
+        }
+        > .bars {
+          display: block !important;
+        }
       }
     }
 
@@ -487,6 +495,8 @@
   header {
     /*position: absolute;*/
     height: 55px;
+    background: rgba(255, 255, 255, 1);
+
   }
   header .left {
     margin-top: 10px;
@@ -497,6 +507,12 @@
   header .right {
     margin-top: 15px;
     width: auto;
+    > .menu {
+      display:none !important;
+    }
+    > .bars {
+      display: block !important;
+    }
   }
   header .right div.home {
     text-align: left;
@@ -712,6 +728,7 @@
   header {
     /*position: absolute;*/
     height: 55px;
+    background: rgba(255, 255, 255, 1);
   }
   header .left {
     margin-top: 10px;
@@ -722,6 +739,12 @@
   header .right {
     margin-top: 15px;
     width:auto;
+    > .menu {
+      display:none !important;
+    }
+    > .bars {
+      display: block !important;
+    }
   }
   header .right div.home {
     text-align: left;

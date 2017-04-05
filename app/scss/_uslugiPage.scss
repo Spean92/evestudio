@@ -13,8 +13,8 @@
       .bg {
         height: 100%;
         width: 100%;
-        position: fixed;
-        background-attachment: fixed;
+        position: absolute;
+        //background-attachment: fixed;
         z-index: 4;
         overflow: hidden;
         img {

@@ -17,7 +17,7 @@ $(document).ready(function() {
         if (body.scrollTop<finalPos1){
             $('.box-1').css('opacity', '1');
         } else if (body.scrollTop>finalPos1 && body.scrollTop<pos1) {
-            $('.box-1').css('opacity', '0');
+            $('.box-1').css('opacity', '1');
         }else if(body.scrollTop>finalPos1 && body.scrollTop<finalPos2) {
             $('.box-1').css('opacity', '0');
         } else if (body.scrollTop>finalPos2) {
@@ -50,7 +50,7 @@ $(document).ready(function() {
             $('.bars.bars1').addClass('show').removeClass('hide');
             $('.menu').addClass('hide').removeClass('show');
             $('.menu nav ul li a').removeClass('wow fadeInDown');
-            $('.box-1 .bg').css('opacity', '0');
+            $('.box-1 .bg').css('opacity', '1');
 
 
         }else if(body.scrollTop>finalPos1 && body.scrollTop<finalPos2) {
@@ -182,7 +182,7 @@ $(document).ready(function() {
     $(".owl-carousel-case").owlCarousel({
 		dots: true,
 		mouseDrag : false,
-        touchDrag : false,
+        // touchDrag : false,
 		startPosition : 0,
 		singleItem:true,
 		loop:true,
@@ -196,13 +196,13 @@ $(document).ready(function() {
         dots: false,
 		nav: false,
         mouseDrag : false,
-        touchDrag : false,
+        // touchDrag : false,
         startPosition : 2,
         smartSpeed: 1000,
         singleItem:true,
         loop:true,
         autoplay: true,
-        autoplayTimeout : 3000,
+        autoplayTimeout : 4500,
         items : 1
     });
 //OWL Buts
@@ -222,13 +222,13 @@ $(document).ready(function() {
             dots: false,
             nav: false,
             mouseDrag : false,
-            touchDrag : false,
+            // touchDrag : false,
             startPosition : 2,
             singleItem:false,
             loop:true,
             smartSpeed: 1000,
             autoplay: true,
-            autoplayTimeout : 3000,
+            autoplayTimeout : 4500,
 
             items : 4
         });
@@ -251,13 +251,13 @@ $(document).ready(function() {
             nav: false,
             slideSpeed : 300,
             mouseDrag : false,
-            touchDrag : false,
+            // touchDrag : false,
             startPosition : 2,
             paginationSpeed : 400,
             singleItem:false,
             loop:true,
             autoplay: true,
-            autoplayTimeout : 3000,
+            autoplayTimeout : 4500,
 
             items : 2
         });
@@ -280,13 +280,13 @@ $(document).ready(function() {
             nav: false,
             slideSpeed : 300,
             mouseDrag : false,
-            touchDrag : false,
+            // touchDrag : false,
             startPosition : 2,
             paginationSpeed : 400,
             singleItem:false,
             loop:true,
             autoplay: true,
-            autoplayTimeout : 3000,
+            autoplayTimeout : 4500,
             items : 1
         });
         //OWL Buts
@@ -309,7 +309,7 @@ $(document).ready(function() {
     owl.owlCarousel({
         dots: true,
         mouseDrag : false,
-        touchDrag : false,
+        // touchDrag : false,
         startPosition : 0,
         singleItem:true,
         loop:true,
