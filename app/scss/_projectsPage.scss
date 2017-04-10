@@ -171,6 +171,7 @@
   margin-bottom: 40px;
 }
 .projects .content .box-3 .clientsTable {
+  width: 1240px;
   display: flex;
   justify-content: space-between;
 }
@@ -210,6 +211,7 @@
       width: initial;
       max-width:60px;
       max-height: 30px;
+      display: initial !important;
     }
   }
 

@@ -19,8 +19,11 @@
     width: auto;
     height: auto;
   }
+  .projects .content .box-3 .clientsTable {
+    width: 100%;
+  }
   .projects .content .box-3 .clientsTable .clientRow {
-    width: 23%;
+    width: 100%;
     margin-right: 2.2%;
   }
 }
@@ -48,8 +51,11 @@
   .projects .content .box-2 .cases .item .text {
     letter-spacing: -0.5px;
   }
+  .projects .content .box-3 .clientsTable {
+    width: 100%;
+  }
   .projects .content .box-3 .clientsTable .clientRow {
-    width: 48.5%;
+    width: 100%;
     margin-right: 2.4%;
   }
   .projects .content .box-3 .clientsTable .clientRow:nth-child(2n) {
@@ -90,9 +96,11 @@
   }
   .projects .content .box-3 .clientsTable {
     flex-wrap: wrap;
+    width: 100%;
   }
   .projects .content .box-3 .clientsTable .clientRow {
-    width: 50%;
+    width: 100%;
+
     margin-right: 0;
     &:nth-child(3) {
       ul {
@@ -148,6 +156,7 @@
   }
   .projects .content .box-3 .clientsTable {
     flex-wrap: wrap;
+    width: 100%;
   }
   .projects .content .box-3 .clientsTable .clientRow {
     width: 48.5%;
@@ -209,8 +218,10 @@
   }
   .projects .content .box-3 .clientsTable {
     flex-wrap: wrap;
+    width: 100%;
   }
   .projects .content .box-3 .clientsTable .clientRow {
+
     ul {
       border:none;
     }

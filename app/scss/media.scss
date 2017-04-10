@@ -418,12 +418,12 @@
   /**/
   #nav .container {
     padding-top: 13vh;
-    padding-bottom: 165px;
+    padding-bottom: 75px;
     padding-left: 0;
     padding-right: 0;
     height: 100vh;
     max-width: none;
-    overflow: hidden;
+    overflow: scroll;
     position: relative;
   }
   #nav .container>h1 {
@@ -450,6 +450,7 @@
   }
   #nav .foot {
     border: 0;
+    height:75px;
   }
   #nav .foot .wrapper .left, #nav .foot .wrapper .right {
     display: none;
@@ -461,7 +462,7 @@
     display: block;
     width: 100%;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 0px;
   }
   #nav .foot div.icons * {
     display: inline-block;

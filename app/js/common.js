@@ -104,8 +104,8 @@ $(document).ready(function() {
 
 // Меню
 	var menu = 0;
-	$('header .right div.bars').click(function(){
-		if (menu == 0) {
+	$('header .right div.bars').on("click", function(){
+        if (menu == 0) {
 			// $('#box-2, #box-3, footer').fadeOut();
             if ($(window).width()<768) {
                 $('.box-1, .box-2, .box-3, .box-4, .box5').css('display', 'none');
@@ -125,7 +125,7 @@ $(document).ready(function() {
 			$('header #logo').attr('src', 'img/evestudio_logo_r_whire.svg');
 			$(".b24-widget-button-position-bottom-middle.b24-widget-button-wrapper").hide();
 			menu = 1;
-		} else {
+		} else if (menu == 1) {
 			$('main nav.nav').fadeOut(300);
             if ($(window).width()<768) {
                 $('.box-1, .box-2, .box-3, .box-4, .box5').css('display', 'block');
@@ -141,30 +141,29 @@ $(document).ready(function() {
             $(".b24-widget-button-position-bottom-middle.b24-widget-button-wrapper").fadeIn(1000);
 
 			menu = 0;
+
 		}
+
 	});
-	$('.nav .container a').on('click', function(){
-	    if ($(window).width()<768) {
-            $('.box-1, .box-2, .box-3, .box-4, .box5').css('display', 'block');
+    $('.nav .container a').on('click', function() {
+        if (menu == 1) {
+            if ($(window).width() < 768) {
+                $('.box-1, .box-2, .box-3, .box-4, .box5').css('display', 'block');
+            }
+            $('main nav.nav').fadeOut(300);
+            $('body').css("overflow", "auto");
+            $('header').css('background', 'rgb(255, 255, 255)');
+            $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
+            $('header .right div.bars').removeClass('act');
+            $('header .right div.bars').addClass('bars1');
+            $(".b24-widget-button-position-bottom-middle.b24-widget-button-wrapper").fadeIn(1000);
+            menu = 0;
         }
-
-        $('main nav.nav').fadeOut(300);
-		$('body').css("overflow", "auto");
-		$('header').css('background', 'rgba(255, 255, 255, 1)');
-        $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
-		$('header .right div.bars').removeClass('act');
-        $('header .right div.bars').addClass('bars1');
-            var id  = $(this).attr('href'),
-                top = $(id).offset().top;
-            $('body,html').animate({scrollTop: top}, 800);
-
-		menu = 0;
-
-	});
+    });
 
 
 //плавный скролл
-    $("a[href^='#']").on("click", function (event) {
+    $("a[href^='#box']").on("click", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
@@ -232,6 +231,28 @@ $(document).ready(function() {
 
             items : 4
         });
+        $(".owl-carousel-usl").owlCarousel({
+            dots: false,
+            nav: false,
+            mouseDrag : false,
+            // touchDrag : false,
+            startPosition : 2,
+            singleItem:false,
+            loop:false,
+            autoplay: false,
+            items : 4
+        });
+        $(".owl-carousel-clients").owlCarousel({
+            dots: false,
+            nav: false,
+            mouseDrag : false,
+            // touchDrag : false,
+            startPosition : 2,
+            singleItem:false,
+            loop:false,
+            autoplay: false,
+            items : 4
+        });
 //OWL Buts
             // Go to the next item
             $('.box-2 .paggs_buts .next').click(function(e) {
@@ -261,21 +282,77 @@ $(document).ready(function() {
 
             items : 2
         });
+        $(".owl-carousel-usl").owlCarousel({
+            dots: false,
+            nav: false,
+            slideSpeed : 300,
+            mouseDrag : false,
+            // touchDrag : false,
+            startPosition : 2,
+            paginationSpeed : 400,
+            singleItem:false,
+            loop:true,
+            autoplay: true,
+            autoplayTimeout : 4500,
+            items : 2
+        });
+        $(".owl-carousel-clients").owlCarousel({
+            dots: false,
+            nav: false,
+            slideSpeed : 300,
+            mouseDrag : false,
+            // touchDrag : false,
+            startPosition : 2,
+            paginationSpeed : 400,
+            singleItem:false,
+            loop:true,
+            autoplay: true,
+            autoplayTimeout : 4500,
+            items : 2
+        });
         //OWL Buts
         // Go to the next item
         $('.box-2 .paggs_buts .next').click(function(e) {
             e.preventDefault();
-            $('.owl-carousel-about').trigger('next.owl.carousel');
+            $('.owl-carousel-about, .owl-carousel-usl').trigger('next.owl.carousel');
         });
 // Go to the previous item
         $('.box-2 .paggs_buts .prev').click(function(e) {
             e.preventDefault();
             // With optional speed parameter
             // Parameters has to be in square bracket '[]'
-            $('.owl-carousel-about').trigger('prev.owl.carousel');
+            $('.owl-carousel-about, .owl-carousel-usl').trigger('prev.owl.carousel');
         });
     } else if ($(window).width()<724) {
         $(".owl-carousel-about").owlCarousel({
+            dots: false,
+            nav: false,
+            slideSpeed : 300,
+            mouseDrag : false,
+            // touchDrag : false,
+            startPosition : 2,
+            paginationSpeed : 400,
+            singleItem:false,
+            loop:true,
+            autoplay: true,
+            autoplayTimeout : 4500,
+            items : 1
+        });
+        $(".owl-carousel-usl").owlCarousel({
+            dots: false,
+            nav: false,
+            slideSpeed : 300,
+            mouseDrag : false,
+            // touchDrag : false,
+            startPosition : 2,
+            paginationSpeed : 400,
+            singleItem:false,
+            loop:true,
+            autoplay: true,
+            autoplayTimeout : 4500,
+            items : 1
+        });
+        $(".owl-carousel-clients").owlCarousel({
             dots: false,
             nav: false,
             slideSpeed : 300,
@@ -293,14 +370,14 @@ $(document).ready(function() {
         // Go to the next item
         $('.box-2 .paggs_buts .next').click(function(e) {
             e.preventDefault();
-            $('.owl-carousel-about').trigger('next.owl.carousel');
+            $('.owl-carousel-about, .owl-carousel-usl').trigger('next.owl.carousel');
         });
 // Go to the previous item
         $('.box-2 .paggs_buts .prev').click(function(e) {
             e.preventDefault();
             // With optional speed parameter
             // Parameters has to be in square bracket '[]'
-            $('.owl-carousel-about').trigger('prev.owl.carousel');
+            $('.owl-carousel-about, .owl-carousel-usl').trigger('prev.owl.carousel');
         });
     }
 
