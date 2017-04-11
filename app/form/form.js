@@ -39,4 +39,24 @@ jQuery(document).ready(function($) {
             });
         return false;
     });
+    $("#hunter form").submit(function() {
+        var str = $(this).serialize();
+
+        $.ajax({
+            type: "POST",
+            url: "./form/super-form.php",
+            data: str,
+            success: function (msg) {
+                // if (msg == 'OK') {
+                //
+                // } else {
+                //   result = msg;
+                $('#hunter form').fadeOut(100);
+                $('#hunter .thx').fadeIn(300);
+                // }
+
+            }
+        });
+        return false;
+        });
 });
