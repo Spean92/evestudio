@@ -151,6 +151,37 @@
   //background: #fff;
   position: relative;
   padding-top: 65px;
+  .paggs_buts {
+    margin-top: 30px;
+    padding-bottom: 65px;
+    //background: #fff;
+    a{
+      display: inline-block;
+      margin-bottom: 75px;
+      //background: #fff;
+      position: relative;
+      width:270px;
+      overflow: hidden;
+      font-size: 15px;
+      font-family: "Segoe UI Bold";
+      color: rgb(0, 0, 0);
+      transition: all .2s ease;
+      hr {
+        margin-top: 5px;
+      }
+      &.prev {
+        text-align: left;
+        float: left;
+      }
+      &.next {
+        text-align: right;
+        float: right;
+      }
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
 }
 .projects .content .box-3 .bg_white{
   padding-top: 65px;

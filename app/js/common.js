@@ -201,7 +201,7 @@ $(document).ready(function() {
         singleItem:true,
         loop:true,
         autoplay: true,
-        autoplayTimeout : 4500,
+        autoplayTimeout : 7000,
         items : 1
     });
 //OWL Buts
@@ -227,7 +227,7 @@ $(document).ready(function() {
             loop:true,
             smartSpeed: 1000,
             autoplay: true,
-            autoplayTimeout : 4500,
+            autoplayTimeout : 5000,
 
             items : 4
         });
@@ -254,16 +254,26 @@ $(document).ready(function() {
             items : 4
         });
 //OWL Buts
+        $('.projects .box-3 .paggs_buts .next').click(function(e) {
+            e.preventDefault();
+            $('.owl-carousel-clients').trigger('next.owl.carousel');
+        });
+        $('.projects .box-3 .paggs_buts .prev').click(function(e) {
+            e.preventDefault();
+            $('.owl-carousel-clients').trigger('prev.owl.carousel');
+        });
+
             // Go to the next item
             $('.box-2 .paggs_buts .next').click(function(e) {
                 e.preventDefault();
                 $('.owl-carousel-about').trigger('next.owl.carousel');
             });
+        //OWL Buts
+        // Go to the next item
+
 // Go to the previous item
             $('.box-2 .paggs_buts .prev').click(function(e) {
                 e.preventDefault();
-                // With optional speed parameter
-                // Parameters has to be in square bracket '[]'
                 $('.owl-carousel-about').trigger('prev.owl.carousel');
             });
     } else if (($(window).width()>723) && ($(window).width()<1024)) {
@@ -278,7 +288,7 @@ $(document).ready(function() {
             singleItem:false,
             loop:true,
             autoplay: true,
-            autoplayTimeout : 4500,
+            autoplayTimeout : 5000,
 
             items : 2
         });
@@ -293,7 +303,7 @@ $(document).ready(function() {
             singleItem:false,
             loop:true,
             autoplay: true,
-            autoplayTimeout : 4500,
+            autoplayTimeout : 7000,
             items : 2
         });
         $(".owl-carousel-clients").owlCarousel({
@@ -311,6 +321,14 @@ $(document).ready(function() {
             items : 2
         });
         //OWL Buts
+        $('.projects .box-3 .paggs_buts .next').click(function(e) {
+            e.preventDefault();
+            $('.owl-carousel-clients').trigger('next.owl.carousel');
+        });
+        $('.projects .box-3 .paggs_buts .prev').click(function(e) {
+            e.preventDefault();
+            $('.owl-carousel-clients').trigger('prev.owl.carousel');
+        });
         // Go to the next item
         $('.box-2 .paggs_buts .next').click(function(e) {
             e.preventDefault();
@@ -335,7 +353,7 @@ $(document).ready(function() {
             singleItem:false,
             loop:true,
             autoplay: true,
-            autoplayTimeout : 4500,
+            autoplayTimeout : 5000,
             items : 1
         });
         $(".owl-carousel-usl").owlCarousel({
@@ -349,7 +367,7 @@ $(document).ready(function() {
             singleItem:false,
             loop:true,
             autoplay: true,
-            autoplayTimeout : 4500,
+            autoplayTimeout : 7000,
             items : 1
         });
         $(".owl-carousel-clients").owlCarousel({
@@ -367,6 +385,14 @@ $(document).ready(function() {
             items : 1
         });
         //OWL Buts
+        $('.projects .box-3 .paggs_buts .next').click(function(e) {
+            e.preventDefault();
+            $('.owl-carousel-clients').trigger('next.owl.carousel');
+        });
+        $('.projects .box-3 .paggs_buts .prev').click(function(e) {
+            e.preventDefault();
+            $('.owl-carousel-clients').trigger('prev.owl.carousel');
+        });
         // Go to the next item
         $('.box-2 .paggs_buts .next').click(function(e) {
             e.preventDefault();

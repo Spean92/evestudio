@@ -94,6 +94,9 @@
     letter-spacing: -0.5px;
     margin-bottom: 3px;
   }
+  .projects .content .box-3 .bg_white{
+    padding-bottom: 0;
+  }
   .projects .content .box-3 .clientsTable {
     flex-wrap: wrap;
     width: 100%;
@@ -150,6 +153,14 @@
   .projects .content .box-2 .cases .item .text {
     letter-spacing: -0.5px;
     margin-bottom: 3px;
+  }
+  .projects .content .box-3 .bg_white{
+    padding-bottom: 0;
+     .paggs_buts {
+      a {
+        width:45%;
+      }
+    }
   }
   .projects .content .box-3 .header h2 {
     font-size: 56px;
@@ -212,6 +223,14 @@
     font-size: 19px;
     margin-bottom: 3px;
 
+  }
+  .projects .content .box-3 .bg_white{
+    padding-bottom: 0;
+    .paggs_buts {
+      a {
+        width: 45%;
+      }
+    }
   }
   .projects .content .box-3 .header h2 {
     font-size:35px;

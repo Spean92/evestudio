@@ -9,10 +9,15 @@
     border-top: 1px solid #000;
     width: 220px;
     margin: 0 20px;
-    height: 1100px;
+    p {
+      height: 37em;
+    }
+    ul {
+      width: 95%;
+    }
   }
   .uslugi_page .content .box-4 .wrapper .experts.flex .fl1 {
-    max-width: 48%;
+    max-width: 46%;
   }
 }
 @media only screen and (min-width : 940px) and (max-width : 1023px) {
@@ -42,8 +47,11 @@
       width: 100%;
     }
   }
+  .uslugi_page .content .box-3 .wrapper .right-side {
+    top: 80px;
+  }
   .uslugi_page .content .box-4 .wrapper .experts.flex .fl1 {
-    max-width: 48%;
+    max-width: 46%;
   }
 
 }
@@ -59,25 +67,28 @@
     margin-bottom: 0;
   }
   .uslugi_page .content .box-2 .wrapper .flex {
-    width: 744px;
-    margin-left: -20px;
+    width: 105%;
+    margin-left: -2.5%;
   }
   .uslugi_page .content .box-2 .wrapper .flex .cl {
-    width:100%;
+    width:90%;
     margin: 0 auto;
+
     p {
       height: auto;
       margin-bottom: 20px;
+
     }
     ul {
       width: 100%;
     }
   }
   .uslugi_page .content .box-2 .wrapper .paggs_buts {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 30px;
-    padding-bottom: 110px;
+    padding-bottom: 80px;
+    margin: 0;
+    a {
+      width:45%;
+    }
   }
   .uslugi_page .content .box-3 .wrapper .right-side .image {
     display: none;
@@ -118,7 +129,6 @@
       .cl {
         width: 100%;
         margin: 0;
-        height: 700px;
         ul {
           width: 100%;
         }

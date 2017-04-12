@@ -154,6 +154,45 @@ hr.thin {
     width: 970px;
     height: auto;
     background-color: #000;
+    .header {
+      display: none;
+      height: 76px;
+      position: relative;
+      top: 0;
+      width: 100%;
+      border-bottom: 1px solid rgba(255,255,255,.2);
+      transition: all .3s ease-in-out;
+      .left {
+        float: left;
+        margin-top: 12px;
+        .img_logo {
+          width: 67px;
+          height: 54px;
+          overflow: hidden;
+        }
+      }
+      .right {
+        float: right;
+        margin-top: 25px;
+        width: auto;
+        .close {
+          //position: absolute;
+          //right:-40px;
+          //top:-35px;
+          width:30px;
+          height:30px;
+          overflow: hidden;
+          cursor: pointer;
+          svg {
+            path {
+              //fill: #000;
+              //stroke: #000;
+            }
+          }
+        }
+      }
+    }
+
     .inner_wrapper {
       position: relative;
       padding-bottom: 120px;

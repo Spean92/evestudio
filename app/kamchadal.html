@@ -9,6 +9,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
+	<!-- Facebook Pixel Code -->
+	<script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1214274738650069'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1214274738650069&ev=PageView&noscript=1"/></noscript>
+	<!-- DO NOT MODIFY -->
+	<!-- End Facebook Pixel Code -->
 </head>
 <body>
 
@@ -366,6 +379,23 @@
 <div id="hunter" class="popUp" style="display: none">
 	<div class="bg"></div>
 	<div class="window">
+		<div class="header mobile block">
+			<div class="wrapper">
+				<div class="left">
+					<div class="img_logo">
+						<a href="index.html">
+							<img id="logo" src="img/evestudio_logo_r_whire.svg" alt="Logo" />
+						</a>
+					</div>
+				</div>
+				<div class="right">
+					<div class="close">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.333 23.25"><path d="M22.292 1.059L1.077 22.274m0-21.215l21.215 21.215" fill="#FFF" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"/></svg>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="inner_wrapper">
 			<div class="close">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.333 23.25"><path d="M22.292 1.059L1.077 22.274m0-21.215l21.215 21.215" fill="#FFF" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"/></svg>
@@ -378,10 +408,10 @@
 						<input name="senderName" type="text" required>
 					</label>
 					<label>Телефон
-						<input name="senderPhone" type="text">
+						<input name="senderPhone" type="text" required>
 					</label>
 					<label>Email*
-						<input name="senderMail" type="text" required>
+						<input name="senderMail" type="text">
 					</label>
 				</fieldset>
 				<fieldset class="boxes">
@@ -478,11 +508,19 @@
 
 <script>
     $(document).ready(function () {
-        setTimeout(function() {$('#hunter').fadeIn(300)}, 7000);
+        setTimeout(function() {
+            $('#hunter').fadeIn(300);
+            $('html, body').animate({
+                scrollTop: $("#hunter .close").offset().top
+            }, 500);
+        }, 1000);
         $('#hunter .close').on('click', function () {
             $('#hunter').fadeOut(300);
         });
+
+
     });
+    console.log($('#hunter').offset().top);
 </script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
