@@ -390,7 +390,7 @@
 				</div>
 				<div class="right">
 					<div class="close">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.333 23.25"><path d="M22.292 1.059L1.077 22.274m0-21.215l21.215 21.215" fill="#FFF" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"/></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.333 23.25"><path d="M22.292 1.059L1.077 22.274m0-21.215l21.215 21.215" fill="#FFF" stroke="#FFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="10"/></svg>
 					</div>
 				</div>
 			</div>
@@ -398,7 +398,7 @@
 
 		<div class="inner_wrapper">
 			<div class="close">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.333 23.25"><path d="M22.292 1.059L1.077 22.274m0-21.215l21.215 21.215" fill="#FFF" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10"/></svg>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.333 23.25"><path d="M22.292 1.059L1.077 22.274m0-21.215l21.215 21.215" fill="#FFF" stroke="#FFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="10"/></svg>
 			</div>
 			<form method="post">
 				<h2>Обсудить проект</h2>
@@ -407,10 +407,10 @@
 					<label>Имя*
 						<input name="senderName" type="text" required>
 					</label>
-					<label>Телефон
+					<label>Телефон*
 						<input name="senderPhone" type="text" required>
 					</label>
-					<label>Email*
+					<label>Email
 						<input name="senderMail" type="text">
 					</label>
 				</fieldset>
@@ -451,41 +451,41 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
-			<div class="popFooter">
-				<div class="wrapper">
-					<div class="left">
-						&#169; 2009-2017
-					</div>
-					<div class="right">
-						<div class="soc">
-							<a href="https://www.facebook.com/Eve.ua/" target="_blank">
-								<img src="img/facebook_white.svg" alt="img">
-							</a>
-							<a href="https://www.instagram.com/evestudio_ua/" target="_blank">
-								<img src="img/instagram_white.png" alt="img">
-							</a>
-							<a href="https://www.youtube.com/user/EveStudio1" target="_blank">
-								<img src="img/youtube_white.svg" alt="img">
-							</a>
-						</div>
-						<div class="mail">
-							<a href="mailto:studio@eve.ua">studio@eve.ua</a>
-						</div>
-						<div class="phone">
-							<a href="tel:+380 95 227 25 25">+380 95 227 25 25</a>
-							<a href="tel:+380 44 227 26 26">+380 44 227 26 26</a>
-						</div>
-					</div>
-					<div class="icons">
-						<a href="tel:+380 95 227 25 25"><img src="img/phone_white.png" alt="img"></a>
-						<a href="mailto:studio@eve.ua"><img src="img/mail_white.png" alt="img"></a>
-						<a href="https://www.facebook.com/Eve.ua/" target="_blank"><img src="img/facebook_white.png" alt="img"></a>
-						<a href="https://www.instagram.com/evestudio_ua/" target="_blank"><img src="img/instagram_white.png" alt="img"></a>
-						<a href="https://www.youtube.com/user/EveStudio1" target="_blank"><img src="img/youtube_white.png" alt="img"></a>
-					</div>
-					<hr class="thin">
-				</div>
-			</div>
+			<!--<div class="popFooter">-->
+				<!--<div class="wrapper">-->
+					<!--<div class="left">-->
+						<!--&#169; 2009-2017-->
+					<!--</div>-->
+					<!--<div class="right">-->
+						<!--<div class="soc">-->
+							<!--<a href="https://www.facebook.com/Eve.ua/" target="_blank">-->
+								<!--<img src="img/facebook_white.svg" alt="img">-->
+							<!--</a>-->
+							<!--<a href="https://www.instagram.com/evestudio_ua/" target="_blank">-->
+								<!--<img src="img/instagram_white.png" alt="img">-->
+							<!--</a>-->
+							<!--<a href="https://www.youtube.com/user/EveStudio1" target="_blank">-->
+								<!--<img src="img/youtube_white.svg" alt="img">-->
+							<!--</a>-->
+						<!--</div>-->
+						<!--<div class="mail">-->
+							<!--<a href="mailto:studio@eve.ua">studio@eve.ua</a>-->
+						<!--</div>-->
+						<!--<div class="phone">-->
+							<!--<a href="tel:+380 95 227 25 25">+380 95 227 25 25</a>-->
+							<!--<a href="tel:+380 44 227 26 26">+380 44 227 26 26</a>-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div class="icons">-->
+						<!--<a href="tel:+380 95 227 25 25"><img src="img/phone_white.png" alt="img"></a>-->
+						<!--<a href="mailto:studio@eve.ua"><img src="img/mail_white.png" alt="img"></a>-->
+						<!--<a href="https://www.facebook.com/Eve.ua/" target="_blank"><img src="img/facebook_white.png" alt="img"></a>-->
+						<!--<a href="https://www.instagram.com/evestudio_ua/" target="_blank"><img src="img/instagram_white.png" alt="img"></a>-->
+						<!--<a href="https://www.youtube.com/user/EveStudio1" target="_blank"><img src="img/youtube_white.png" alt="img"></a>-->
+					<!--</div>-->
+					<!--<hr class="thin">-->
+				<!--</div>-->
+			<!--</div>-->
 		</div>
 	</div>
 </div>
@@ -510,17 +510,18 @@
     $(document).ready(function () {
         setTimeout(function() {
             $('#hunter').fadeIn(300);
-            $('html, body').animate({
-                scrollTop: $("#hunter .close").offset().top
-            }, 500);
-        }, 1000);
+            if  ($(window).width()<1024) {
+                $('.kamchadal').css({'position': 'fixed', 'opacity':'0', 'z-index': '-10'});
+            }
+        }, 7000);
         $('#hunter .close').on('click', function () {
             $('#hunter').fadeOut(300);
+            $('.kamchadal').css({'position': 'static', 'opacity':'1', 'z-index': '0'});
         });
 
 
     });
-    console.log($('#hunter').offset().top);
+    console.log($('#hunter .inner_wrapper').offset().top);
 </script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">

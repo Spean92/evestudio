@@ -148,8 +148,8 @@ hr.thin {
   }
   .window {
     display: block;
-    position: absolute;
-    top:50%;
+    position: fixed;
+    top:36px;
     left:calc(50% - 485px);
     width: 970px;
     height: auto;
@@ -195,12 +195,12 @@ hr.thin {
 
     .inner_wrapper {
       position: relative;
-      padding-bottom: 120px;
+      padding-bottom: 0px;
 
       .close {
         position: absolute;
-        right:-40px;
-        top:-35px;
+        right:-37px;
+        top:-36px;
         width:30px;
         height:30px;
         overflow: hidden;
@@ -217,29 +217,29 @@ hr.thin {
         font-size: 56px;
         font-family: "Segoe UI Light";
         color: rgb(255, 255, 255);
-        line-height: 1.071;
+        line-height: 0.85;
         text-align: left;
       }
       h4 {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
         font-size: 23px;
         font-family: "Segoe UI Black";
         color: rgb(255, 255, 255);
         text-transform: uppercase;
-        line-height: 2.043;
+        line-height: 1.6;
         text-align: left;
-
+        letter-spacing: 0.7px;
       }
       form {
         //display: none;
 
         width:100%;
-        padding:50px;
+        padding:40px 50px 50px 50px;
         fieldset {
           //display: flex;
           //justify-content: space-between;
           //flex-wrap: nowrap;
-          margin-bottom: 45px;
+          margin-bottom: 40px;
           p {
             margin-left: -20px;
             font-size: 15px;
@@ -247,7 +247,7 @@ hr.thin {
             color: rgb(255, 255, 255);
             line-height: 1;
             text-align: left;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
           }
           label {
             display: inline-block;
@@ -258,7 +258,7 @@ hr.thin {
             line-height: 1.667;
             text-align: left;
             input,textarea {
-              font-size: 15px;
+              font-size: 17px;
               font-family: "Segoe UI Light";
               color: rgb(255, 255, 255);
               line-height: 1.667;
@@ -279,7 +279,7 @@ hr.thin {
               input {
                 width:90%;
                 display: block;
-                font-size: 15px;
+                font-size: 17px;
                 font-family: "Segoe UI Light";
                 color: rgb(255, 255, 255);
                 line-height: 1.667;
@@ -293,6 +293,7 @@ hr.thin {
             width: 106%;
             margin-left: 20px;
             font-size: 0;
+            margin-bottom: 35px;
             input {
               opacity: 0;
               position: absolute;
@@ -333,18 +334,19 @@ hr.thin {
               }
           }
           &.text {
+            margin-bottom: 33px;
             label {
               width:100%;
               font-size: 15px;
               font-family: "Segoe UI Light";
               color: rgb(255, 255, 255);
-              line-height: 1.667;
+              line-height: 1;
               text-align: left;
               textarea {
-                margin-top: 20px;
+                margin-top: 18px;
                 display: block;
                 width: 100%;
-                height: 125px;
+                height: 130px;
                 font-size: 15px;
                 font-family: "Segoe UI Light";
                 color: rgb(255, 255, 255);
@@ -356,11 +358,12 @@ hr.thin {
         }
         input[type='submit'] {
           padding: 0;
-          width:250px;
+          width:185px;
           font-size: 15.252px;
           font-family: "Segoe UI Bold";
           color: rgb(255, 255, 255);
-          line-height: 1.574;
+          line-height: 1;
+          padding-bottom: 6px;
           text-align: left;
           background: none;
           border:none;
@@ -373,11 +376,16 @@ hr.thin {
       .thx {
         display: none;
         width:100%;
-        padding:50px;
+        padding: 40px 50px 60px 50px;
+        h4 {
+          line-height: 2;
+          margin-top: -6px;
+          margin-bottom: 32px;
+        }
         .butts {
           a {
             padding: 0;
-            width:250px;
+            width: 181px;
             font-size: 15.252px;
             font-family: "Segoe UI Bold";
             color: rgb(255, 255, 255);
