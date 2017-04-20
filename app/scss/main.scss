@@ -149,7 +149,7 @@ hr.thin {
   .window {
     display: block;
     position: fixed;
-    top:36px;
+    top:calc(50% - 326px);
     left:calc(50% - 485px);
     width: 970px;
     height: auto;
@@ -173,7 +173,7 @@ hr.thin {
       }
       .right {
         float: right;
-        margin-top: 25px;
+        margin-top: 23px;
         width: auto;
         .close {
           //position: absolute;
@@ -199,8 +199,8 @@ hr.thin {
 
       .close {
         position: absolute;
-        right:-37px;
-        top:-36px;
+        right:50px;
+        top:53px;
         width:30px;
         height:30px;
         overflow: hidden;
@@ -265,6 +265,8 @@ hr.thin {
               text-align: left;
               background: none;
               outline:none;
+              border-radius: 0;
+              resize: none;
             }
           }
           &.fields {
@@ -370,6 +372,7 @@ hr.thin {
           position: relative;
           outline:none;
           border-bottom: 1px solid rgba(255,255,255,0.7);
+          border-radius: 0;
 
         }
       }

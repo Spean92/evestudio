@@ -379,22 +379,22 @@
 <div id="hunter" class="popUp" style="display: none">
 	<div class="bg"></div>
 	<div class="window">
-		<div class="header mobile block">
-			<div class="wrapper">
-				<div class="left">
-					<div class="img_logo">
-						<a href="index.html">
-							<img id="logo" src="img/evestudio_logo_r_whire.svg" alt="Logo" />
-						</a>
-					</div>
-				</div>
-				<div class="right">
-					<div class="close">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.333 23.25"><path d="M22.292 1.059L1.077 22.274m0-21.215l21.215 21.215" fill="#FFF" stroke="#FFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="10"/></svg>
-					</div>
-				</div>
-			</div>
-		</div>
+		<!--<div class="header mobile block">-->
+			<!--<div class="wrapper">-->
+				<!--<div class="left">-->
+					<!--<div class="img_logo">-->
+						<!--<a href="index.html">-->
+							<!--<img id="logo" src="img/evestudio_logo_r_whire.svg" alt="Logo" />-->
+						<!--</a>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--<div class="right">-->
+					<!--<div class="close">-->
+						<!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.333 23.25"><path d="M22.292 1.059L1.077 22.274m0-21.215l21.215 21.215" fill="#FFF" stroke="#FFF" stroke-width="1" stroke-linecap="round" stroke-miterlimit="10"/></svg>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
 
 		<div class="inner_wrapper">
 			<div class="close">
@@ -512,6 +512,9 @@
             $('#hunter').fadeIn(300);
             if  ($(window).width()<1024) {
                 $('.kamchadal').css({'position': 'fixed', 'opacity':'0', 'z-index': '-10'});
+                $("body, html").animate({
+                    scrollTop: 0
+                }, 100);
             }
         }, 7000);
         $('#hunter .close').on('click', function () {
@@ -554,14 +557,13 @@
 <!-- /Yandex.Metrika counter -->
 <!-- Google Analytics counter -->
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-96149672-1', 'auto');
-    ga('send', 'pageview');
-
+	ga('create', 'UA-97549733-1', 'auto');
+	ga('send', 'pageview');
 </script>
 <!-- /Google Analytics counter -->
 <!--Bitrix call-back form-->

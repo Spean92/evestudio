@@ -163,9 +163,12 @@
     font-size: 12px;
   }
   #hunter {
+    .bg {
+      display: none;
+    }
     .window {
       display: block;
-      position: absolute;
+      position: static;
       top: 0;
       right:0;
       bottom:0;
@@ -396,9 +399,12 @@
     font-size: 12px;
   }
   #hunter {
+    .bg {
+      display: none;
+    }
     .window {
       display: block;
-      position: absolute;
+      position: static;
       top: 0;
       right:0;
       bottom:0;
@@ -412,6 +418,8 @@
       }
       .inner_wrapper {
         form {
+          padding:40px 3% 50px 3%;
+
           fieldset {
             width: 100% !important;
             > p {
@@ -680,9 +688,12 @@
     font-size: 12px;
   }
   #hunter {
+    .bg {
+      display: none;
+    }
     .window {
       display: block;
-      position: absolute;
+      position: static;
       top: 0;
       right:0;
       bottom:0;
@@ -696,6 +707,8 @@
       }
       .inner_wrapper {
         form {
+          padding:40px 3% 50px 3%;
+
           fieldset {
             width: 100% !important;
             > p {
@@ -763,9 +776,12 @@
 /********************************/
 @media only all and (max-width : 479px) {
   #hunter {
+    .bg {
+      display: none;
+    }
     .window {
       display: block;
-      position: absolute;
+      position: static;
       top: 0;
       right:0;
       bottom:0;
@@ -1022,9 +1038,12 @@
     font-size: 12px;
   }
   #hunter {
+    .bg {
+      display: none;
+    }
     .window {
       display: block;
-      position: absolute;
+      position: static;
       top: 0;
       right:0;
       bottom:0;
@@ -1034,10 +1053,16 @@
       background-color: #000;
       overflow-x: hidden;
       .header {
-        display: block;
+        display: none;
       }
       .inner_wrapper {
+        .close {
+          top:3.8%;
+          right: 3%;
+        }
         form {
+          padding:30px 3% 50px 3%;
+
           fieldset {
             width: 100% !important;
             > p {
