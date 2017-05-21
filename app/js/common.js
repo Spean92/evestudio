@@ -108,7 +108,7 @@ $(document).ready(function() {
         if (menu == 0) {
 			// $('#box-2, #box-3, footer').fadeOut();
             if ($(window).width()<768) {
-                $('.box-1, .box-2, .box-3, .box-4, .box5').css('display', 'none');
+                $('.box-1, .box-2, .box-3, .box-4, .box-5, footer').css('display', 'none');
             }
 			$('body').css("overflow", "hidden");
 			$('main nav.nav').fadeIn(300);
@@ -128,7 +128,7 @@ $(document).ready(function() {
 		} else if (menu == 1) {
 			$('main nav.nav').fadeOut(300);
             if ($(window).width()<768) {
-                $('.box-1, .box-2, .box-3, .box-4, .box5').css('display', 'block');
+                $('.box-1, .box-2, .box-3, .box-4, .box-5, footer').css('display', 'block');
             }
             $('body').css("overflow", "auto");
 			// $('#box-2, #box-3, footer').fadeIn();

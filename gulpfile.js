@@ -30,7 +30,7 @@ gulp.task('html', function() {
 gulp.task('scss', function() {
   return gulp.src('app/scss/*.scss')
     .pipe(sass())
-    .pipe(autoprefixer('last 20 versions'))
+    .pipe(autoprefixer('last 25 versions'))
     .pipe(cleanCSS())
     // .pipe(rename("style.min.css"))
     .pipe(gulp.dest('dest/css'))

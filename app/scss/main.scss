@@ -1,132 +1,258 @@
-@import "bootstrap-grid-3.3.1.min";
+//@import "bootstrap-grid-3.3.1.min";
 @import "reset";
-@import "font-awsome";
-@import "fontello";
+//@import "font-awsome";
+//@import "fontello";
 @import "fonts";
-@import "owl";
 @import "animate";
-a {
-  text-decoration: none;
-}
-b {
-  font-family: 'Segoe UI Bold';
-}
-.hide {
-  display: none;
-}
-.show {
-  display: block;
-}
+@import "owl";
+//CONSTANTS
 
-*::-webkit-input-placeholder {
-  color: #666;
-  opacity: 1;
+$bigFont50: 50px;
+$regFont18: 18px;
+$regFont22: 22px;
+.bigFont50 {
+  font-size: $bigFont50;
+  font-family: "SegoeUILight", sans-serif;
+  color: #333;
+  line-height: 1.35;
+  margin-bottom: 20px;
 }
-*:-moz-placeholder {
-  color: #666;
-  opacity: 1;
+.midFont22 {
+  font-size: $regFont22;
+  font-family: "SegoeUIBold", sans-serif;
+  text-transform: uppercase;
+  color: #333;
+  line-height: 1.35;
+  text-align: left;
 }
-*::-moz-placeholder {
-  color: #666;
-  opacity: 1;
+.regFont18 {
+  font-size: $regFont18;
+  font-family: "SegoeUILight", sans-serif;
+  color: #747474;
+  line-height: 1.35;
+  text-align: left;
 }
-*:-ms-input-placeholder {
-  color: #666;
-  opacity: 1;
+.someButton {
+  font-size: $regFont18;
+  line-height: 1.35;
+  font-family: "SegoeUIBold", sans-serif;
+  color: #333;
+  text-transform: uppercase;
 }
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid {
-
+@keyframes anim-moema-1 {
+  60% {
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 }
-body input:required:valid,
-body textarea:required:valid {
-
+@keyframes anim-moema-2 {
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 }
-/**/
-/**/
-/**/
-
-/**/
-/**/
-/**/
-ul {
-  margin: 0;
-  padding: 0;
+.owl-dots .owl-dot {
+  span {
+    position: relative;
+    &:after {
+      transform-origin: right;
+      transform: scaleX(0);
+      content: '';
+      position: absolute;
+      top:0;
+      left:0;
+      width: 40px;
+      height: 2px;
+      background: #000000;
+      //margin: 5px 7px;
+      display: inline-block;
+      -webkit-backface-visibility: visible;
+      -webkit-transition: opacity .2s ease;
+      transition: opacity .2s ease;
+      -webkit-border-radius: 30px;
+      border-radius: 30px;
+      transition: transform 0s linear;
+    }
+  }
+  &.active{
+    span {
+      background: #d6d6d6;
+      &:after {
+        transform-origin: left;
+        transform: scaleX(1);
+        transition: transform 3s linear;
+      }
+    }
+  }
+  &:hover {
+    span {
+      background: #d6d6d6;
+    }
+  }
 }
-li {
-  list-style: none;
+//-------------
+//END CONSTANTS
+// Custom styles
+html, body {
+  position: relative;
+  height:100%;
 }
 body {
-  font-family: "RobotoRegular", sans-serif;
+  font-family: "SegoeUI", sans-serif;
   font-size: 16px;
+  a {
+    text-decoration: none;
+  }
+  b {
+    font-family: 'SegoeUIBold', sans-serif;
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
+    .inline-block {
+      display: inline-block;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  hr {
+    border-color: black;
+    margin: 0;
+    //padding-top: 10px;
+    border: none;
+    border-top: 1px solid;
+    margin-bottom: 5px;
+    &.thin {
+      border-color: rgba(32, 35, 39, 0.1);
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .clearfix {
+    clear: both;
+  }
+//  ---------------
+// end custom styles
   .main-wrapper {
     .mobile {
       display: none;
     }
-  }
-  main.content {
-    section.box-1 {
-      .bg {
-        filter: brightness(0.55);
+    .wrapper {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+      z-index: 5;
+      &.passive {
+        z-index: 4;
       }
     }
+    main {
+      &.content {
+        .box-1 {
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          .bg{
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 4;
+            img {
+              height: 100%;
+              width: auto;
+            }
+          }
+          .text{
+            padding-top: 29vh;
+            z-index: 52;
+            width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            text-transform: uppercase;
+            h1{
+              font-size: 95px;
+              width: 100%;
+              font-family: "SegoeUIBold", sans-serif;
+              color: rgb(255, 255, 255);
+              line-height: 1.2;
+              text-align: center;
+              margin-bottom: 30px;
+            }
+            p{
+              font-size: 21px;
+              width: 50%;
+              margin: 0 auto;
+              color: rgb(255, 255, 255);
+              line-height: 34px;
+              text-align: center;
+              span{
+                border: 2px white solid;
+                font-weight: bolder;
+                font-size: 20px;
+                line-height: 17px;
+                padding: 0px 10px 7px 10px;
+                font-family: "SegoeUIBold";
+                display: inline-block;
+              }
+            }
+          }
+        }
+
+      }
+    }
+    // MAIN_PAGE
+    @import "mainPage";
+
+    // PROJECTS_PAGE
+    @import "projectsPage";
+
+    // USLUGI_PAGE
+    @import "uslugiPage";
+
+    // ABOUT_PAGE
+    @import "aboutPage";
+
+    // CASES_PAGE
+    @import "casePage";
+
+    // Blog_PAGE
+    @import "blogPage";
+    @import "blogInnerPage";
+
+
+    /*HEADER*/
+    @import "header";
+    /*FOOTER*/
+    @import "footer";
   }
+}
 
-}
-main.content {
-  padding: 0;
-  background: #000;
-}
-.wrapper {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
-  z-index: 5;
-  &.passive {
-    z-index: 4;
-  }
-}
-img {
-  width: 100%;
-}
-@import "header";
-/*FOOTER*/
-@import "footer";
-// MAIN_PAGE
-@import "mainPage";
-hr {
-  border-color: black;
-  margin: 0;
-  //padding-top: 10px;
-  border: none;
-  border-top: 1px solid;
-  margin-bottom: 5px;
-}
-hr.thin {
-  border-color: rgba(32, 35, 39, 0.1);
-  margin: 0;
-  padding: 0;
-}
-.clearfix {
-  clear: both;
-}
-// PROJECTS_PAGE
-@import "projectsPage";
 
-// USLUGI_PAGE
-@import "uslugiPage";
 
-// ABOUT_PAGE
-@import "aboutPage";
-
-// CASES_PAGE
-@import "casePage";
-
-// Blog_PAGE
-@import "blogPage";
-@import "blogInnerPage";
 
 #hunter {
   position: absolute;
@@ -232,7 +358,7 @@ hr.thin {
       }
       form {
         //display: none;
-
+        box-sizing: border-box;
         width:100%;
         padding:40px 50px 50px 50px;
         fieldset {

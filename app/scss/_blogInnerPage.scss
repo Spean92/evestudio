@@ -1,4 +1,4 @@
-.blogInner_page {
+&.blogInner_page {
   .content {
     background: #fff;
     /*-------------------------------------*/
@@ -18,18 +18,11 @@
           width: 890px;
           margin-right: 20px;
           h1 {
-            font-size: 55px;
-            font-family: "Segoe UI Light";
-            color: rgb(0, 0, 0);
-            line-height: 1.09;
-            text-align: left;
+            @extend .bigFont50;
           }
           h2 {
             margin-bottom: 30px;
-            font-size: 15px;
-            font-family: "Segoe UI Bold";
-            color: #000;
-            line-height: 1.714;
+            @extend .midFont22;
 
           }
           .big_img {
@@ -41,20 +34,12 @@
             }
           }
           p {
-            font-size: 15px;
-            font-family: "Segoe UI";
-            color: rgb(0, 0, 0);
-            line-height: 1.714;
-            text-align: left;
+            @extend .regFont18;
             margin: 30px 0;
           }
           ul {
             li {
-              font-size: 15px;
-              font-family: "Segoe UI";
-              color: rgb(0, 0, 0);
-              line-height: 1.714;
-              text-align: left;
+              @extend .regFont18;
               margin: 5px 0;
               &:before {
                 content: "- ";
@@ -65,8 +50,8 @@
 
             a {
               display: inline-block;
-              font-size: 15px;
-              font-family: "Segoe UI Bold";
+              font-size: $regFont18;
+              font-family: "SegoeUIBold", sans-serif;
               color: rgb(0, 0, 0);
               line-height: 1.714;
               text-align: left;
@@ -85,22 +70,20 @@
           ul {
             margin:13px 0;
             li {
-              font-size: 15px;
-              font-family: "Segoe UI";
+              font-size: $regFont18;
+              font-family: "Segoe UI", sans-serif;
               text-align: left;
               padding: 11.5px 0;
               border-top: 1px solid black;
               transition: all .3s ease;
 
               a {
-                color: #000;
                 h4 {
-                  font-size: 20px;
-                  font-family: "Segoe UI Bold";
-                  text-transform: uppercase;
+                  @extend .midFont22;
+
                 }
                 p {
-                  line-height:1.2;
+                  @extend .regFont18;
                   margin: 10px 0;
 
                 }
@@ -119,12 +102,10 @@
         display: inline-block;
         padding-bottom: 75px;
         width:270px;
-        font-size: 15px;
-        font-family: "Segoe UI Bold";
-        color: rgb(0, 0, 0);
         transition: all .2s ease;
         position: relative;
         overflow: hidden;
+        @extend .someButton;
         hr {
           margin-top: 5px;
         }
