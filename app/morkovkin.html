@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
+	<link rel="stylesheet" href="css/component.css">
 	<!-- Facebook Pixel Code -->
 	<script>
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -31,7 +32,7 @@
 
 	<!-- BEGIN CONTENT -->
 
-	<main class="content">
+	<main id="container" class="content container intro-effect-push">
 		<nav class="nav nav-open" id="nav" style="display:none;">
 			<div class="container">
 				<h1 class="">Карта сайта</h1>
@@ -121,6 +122,149 @@
 				</div>
 			</div>
 		</section>
+		<script src="js/classie.js"></script>
+		<script>
+            (function() {
+
+                // detect if IE : from http://stackoverflow.com/a/16657946
+                var ie = (function(){
+                    var undef,rv = -1; // Return value assumes failure.
+                    var ua = window.navigator.userAgent;
+                    var msie = ua.indexOf('MSIE ');
+                    var trident = ua.indexOf('Trident/');
+
+                    if (msie > 0) {
+                        // IE 10 or older => return version number
+                        rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+                    } else if (trident > 0) {
+                        // IE 11 (or newer) => return version number
+                        var rvNum = ua.indexOf('rv:');
+                        rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
+                    }
+
+                    return ((rv > -1) ? rv : undef);
+                }());
+
+
+                // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179
+                // left: 37, up: 38, right: 39, down: 40,
+                // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+                var keys = [32, 37, 38, 39, 40], wheelIter = 0;
+
+                function preventDefault(e) {
+                    e = e || window.event;
+                    if (e.preventDefault)
+                        e.preventDefault();
+                    e.returnValue = false;
+                }
+
+                function keydown(e) {
+                    for (var i = keys.length; i--;) {
+                        if (e.keyCode === keys[i]) {
+                            preventDefault(e);
+                            return;
+                        }
+                    }
+                }
+
+                function touchmove(e) {
+                    preventDefault(e);
+                }
+
+                function wheel(e) {
+                    // for IE
+                    //if( ie ) {
+                    //preventDefault(e);
+                    //}
+                }
+
+                function disable_scroll() {
+                    window.onmousewheel = document.onmousewheel = wheel;
+                    document.onkeydown = keydown;
+                    document.body.ontouchmove = touchmove;
+                }
+
+                function enable_scroll() {
+                    window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;
+                }
+
+                var docElem = window.document.documentElement,
+                    scrollVal,
+                    isRevealed,
+                    noscroll,
+                    isAnimating,
+                    container = document.getElementById( 'container' );
+//                        trigger = container.querySelector( 'button.trigger' );
+
+                function scrollY() {
+                    return window.pageYOffset || docElem.scrollTop;
+                }
+
+                function scrollPage() {
+                    scrollVal = scrollY();
+
+                    if( noscroll && !ie ) {
+                        if( scrollVal < 0 ) return false;
+                        // keep it that way
+                        window.scrollTo( 0, 0 );
+                    }
+
+                    if( classie.has( container, 'notrans' ) ) {
+                        classie.remove( container, 'notrans' );
+                        return false;
+                    }
+
+                    if( isAnimating ) {
+                        return false;
+                    }
+
+                    if( scrollVal <= 0 && isRevealed ) {
+                        toggle(0);
+                    }
+                    else if( scrollVal > 0 && !isRevealed ){
+                        toggle(1);
+                    }
+                }
+
+                function toggle( reveal ) {
+                    isAnimating = true;
+
+                    if( reveal ) {
+                        classie.add( container, 'modify' );
+                    }
+                    else {
+                        noscroll = true;
+                        disable_scroll();
+                        classie.remove( container, 'modify' );
+                    }
+
+                    // simulating the end of the transition:
+                    setTimeout( function() {
+                        isRevealed = !isRevealed;
+                        isAnimating = false;
+                        if( reveal ) {
+                            noscroll = false;
+                            enable_scroll();
+                        }
+                    }, 1200 );
+                }
+
+                // refreshing the page...
+                var pageScroll = scrollY();
+                noscroll = pageScroll === 0;
+
+                disable_scroll();
+
+                if( pageScroll ) {
+                    isRevealed = true;
+                    classie.add( container, 'notrans' );
+                    classie.add( container, 'modify' );
+                }
+
+                window.addEventListener( 'scroll', scrollPage );
+//                    trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+            })();
+		</script>
 		<div class="case_wrapper clearfix">
 			<div class="wrapper">
 				<div class="left_case_wrapper">
@@ -163,7 +307,7 @@
 						<div class="right_list">
 							<div class="lists">
 								<ul>
-									<li><h2>Сферы конпетенции</h2></li>
+									<li><h2>Сферы компетенции</h2></li>
 									<li><h5>Видеопроизводство</h5></li>
 									<li><p>Сценарий</p></li>
 								</ul>
@@ -261,32 +405,44 @@
 			<div class="clearfix"></div>
 			<div class="wrapper">
 				<div class="siblingsCase">
-					<div class="one_case">
-						<a href="texsa.html">
-							<h4>Texsa</h4>
-							<div class="img_b">
-								<img src="img/texsa.png" alt="">
-							</div>
-							<p>Наши специалисты не скупились на идеи. Было предложено 6 концепций логотипа и 12 альтернатив наименования веб-академии. Среди </p>
-						</a>
-					</div>
-					<div class="one_case">
-						<a href="avon.html">
-							<h4>Avon</h4>
-							<div class="img_b">
-								<img src="img/avon.png" alt="">
-							</div>
-							<p>Наши специалисты не скупились на идеи. Было предложено 6 концепций логотипа и 12 альтернатив наименования веб-академии. Среди </p>
-						</a>
-					</div>
-					<div class="one_case">
-						<a href="kamchadal.html">
-							<h4>kamchadal</h4>
-							<div class="img_b">
-								<img src="img/kamchadal.png" alt="">
-							</div>
-							<p>Наши специалисты не скупились на идеи. Было предложено 6 концепций логотипа и 12 альтернатив наименования веб-академии. Среди </p>
-						</a>
+					<p>Похожие кейсы</p>
+					<div class="nextCases">
+						<div class="one_case">
+							<a href="kamchadal.html">
+								<h4>kamchadal</h4>
+								<div class="img_b">
+									<img src="img/kamchadal.png" alt="">
+								</div>
+								<p>Наши специалисты не скупились на идеи. Было предложено 6 концепций логотипа и 12 альтернатив наименования веб-академии. Среди </p>
+							</a>
+						</div>
+						<div class="one_case">
+							<a href="texsa.html">
+								<h4>Texsa</h4>
+								<div class="img_b">
+									<img src="img/texsa.png" alt="">
+								</div>
+								<p>Наши специалисты не скупились на идеи. Было предложено 6 концепций логотипа и 12 альтернатив наименования веб-академии. Среди </p>
+							</a>
+						</div>
+						<div class="one_case">
+							<a href="avon.html">
+								<h4>Avon</h4>
+								<div class="img_b">
+									<img src="img/avon.png" alt="">
+								</div>
+								<p>Наши специалисты не скупились на идеи. Было предложено 6 концепций логотипа и 12 альтернатив наименования веб-академии. Среди </p>
+							</a>
+						</div>
+						<div class="one_case">
+							<a href="kamchadal.html">
+								<h4>kamchadal</h4>
+								<div class="img_b">
+									<img src="img/kamchadal.png" alt="">
+								</div>
+								<p>Наши специалисты не скупились на идеи. Было предложено 6 концепций логотипа и 12 альтернатив наименования веб-академии. Среди </p>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

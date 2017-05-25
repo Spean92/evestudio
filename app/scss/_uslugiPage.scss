@@ -45,8 +45,10 @@
     /*-------------------------------------*/
     .box-2 {
       position: relative;
-      margin-top: 100vh;
-      padding-top: 65px;
+      margin-top: 0;
+      padding: 0;
+      padding-top: 10px;
+
       //padding-bottom: 50px;
       margin-bottom: -65px;
       .bg_white{
@@ -59,6 +61,7 @@
         width: 1240px;
         h2{
           @extend .bigFont50;
+          margin-left: 20px;
         }
         .flex {
           //display: flex;

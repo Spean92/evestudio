@@ -7,7 +7,7 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(0, 0, 0, 0.5);
   transition: all .3s ease-in-out;
-  z-index: 10;
+  z-index: 16;
   &.active {
     background: rgba(255, 255, 255, 0.9);
     border-color: rgba(32, 35, 39, 0.1);
@@ -93,6 +93,7 @@ header {
         margin-left: auto;
         cursor: pointer;
         position: relative;
+        box-sizing: border-box;
         &:before {
           content: "";
           position: absolute;
@@ -224,7 +225,7 @@ header {
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 6;
+  z-index: 10;
   background: #000;
   transition: all 0.4s;
   .container {
@@ -236,6 +237,8 @@ header {
     max-width: 1300px;
     overflow: hidden;
     position: relative;
+    width: 1200px;
+    margin: 0 auto;
     > h1 {
       font-size: 56px;
       font-family: "Segoe UI Light";
@@ -392,6 +395,9 @@ header {
             }
           }
         }
+      }
+      .icons {
+        display: none;
       }
     }
   }

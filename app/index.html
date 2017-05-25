@@ -9,6 +9,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
+	<link rel="stylesheet" href="css/component.css">
+
 	<!-- Facebook Pixel Code -->
 	<script>
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -31,7 +33,7 @@
 
 	<!-- BEGIN CONTENT -->
 
-	<main class="content">
+	<main id="container" class="content container intro-effect-push">
 		<nav class="nav nav-open" id="nav" style="display:none;">
 			<div class="container">
 				<h1 class="">Карта сайта</h1>
@@ -112,15 +114,14 @@
 			</div>
 		</nav>
 
-		<section class="box-1">
+		<section class="box-1 header">
 			<div class="bg mobile block">
 				<img src="img/main_bg.png" alt="img">
 			</div>
-			<div class="video_pattern">
-			</div>
+			<!--<div class="video_pattern"></div>-->
 			<video id="video" preload loop>
-				<source src="video/eve-studio.ogg" type='video/ogg; codecs="theora, vorbis"'>
-				<source src="video/eve-studio.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+				<!--<source src="video/eve-studio.ogg" type='video/ogg; codecs="theora, vorbis"'>-->
+				<source src="video/showreel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 			</video>
 			<div class="sound">
 				<div id="mute" class="sprite mute"></div>
@@ -131,15 +132,157 @@
 				<div id="play" class="sprite play" style="display: none;"></div>
 			</div>
 			<div class="wrapper">
-				<div class="text">
-					<h1>СОЗДАЕМ КРЕАТИВНЫЕ<br>БИЗНЕС-ИНСТРУМЕНТЫ</h1>
-					<p>ВИДЕОПРОИЗВОДСТВО.</p>
-					<p>ВЕБ-РАЗРАБОТКА. ДИЗАЙН.</p>
-					<p>БРЕНДИНГ. ИНТЕРНЕТ-МАРКЕТИНГ.</p>
-				</div>
+				<!--<div class="text">-->
+					<!--<h1>СОЗДАЕМ КРЕАТИВНЫЕ<br>БИЗНЕС-ИНСТРУМЕНТЫ</h1>-->
+					<!--<p>ВИДЕОПРОИЗВОДСТВО.</p>-->
+					<!--<p>ВЕБ-РАЗРАБОТКА. ДИЗАЙН.</p>-->
+					<!--<p>БРЕНДИНГ. ИНТЕРНЕТ-МАРКЕТИНГ.</p>-->
+				<!--</div>-->
 			</div>
 		</section>
+		<script src="js/classie.js"></script>
+		<script>
+            (function() {
 
+                // detect if IE : from http://stackoverflow.com/a/16657946
+                var ie = (function(){
+                    var undef,rv = -1; // Return value assumes failure.
+                    var ua = window.navigator.userAgent;
+                    var msie = ua.indexOf('MSIE ');
+                    var trident = ua.indexOf('Trident/');
+
+                    if (msie > 0) {
+                        // IE 10 or older => return version number
+                        rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+                    } else if (trident > 0) {
+                        // IE 11 (or newer) => return version number
+                        var rvNum = ua.indexOf('rv:');
+                        rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
+                    }
+
+                    return ((rv > -1) ? rv : undef);
+                }());
+
+
+                // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179
+                // left: 37, up: 38, right: 39, down: 40,
+                // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+                var keys = [32, 37, 38, 39, 40], wheelIter = 0;
+
+                function preventDefault(e) {
+                    e = e || window.event;
+                    if (e.preventDefault)
+                        e.preventDefault();
+                    e.returnValue = false;
+                }
+
+                function keydown(e) {
+                    for (var i = keys.length; i--;) {
+                        if (e.keyCode === keys[i]) {
+                            preventDefault(e);
+                            return;
+                        }
+                    }
+                }
+
+                function touchmove(e) {
+                    preventDefault(e);
+                }
+
+                function wheel(e) {
+                    // for IE
+                    //if( ie ) {
+                    //preventDefault(e);
+                    //}
+                }
+
+                function disable_scroll() {
+                    window.onmousewheel = document.onmousewheel = wheel;
+                    document.onkeydown = keydown;
+                    document.body.ontouchmove = touchmove;
+                }
+
+                function enable_scroll() {
+                    window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;
+                }
+
+                var docElem = window.document.documentElement,
+                    scrollVal,
+                    isRevealed,
+                    noscroll,
+                    isAnimating,
+                    container = document.getElementById( 'container' );
+//                        trigger = container.querySelector( 'button.trigger' );
+
+                function scrollY() {
+                    return window.pageYOffset || docElem.scrollTop;
+                }
+
+                function scrollPage() {
+                    scrollVal = scrollY();
+
+                    if( noscroll && !ie ) {
+                        if( scrollVal < 0 ) return false;
+                        // keep it that way
+                        window.scrollTo( 0, 0 );
+                    }
+
+                    if( classie.has( container, 'notrans' ) ) {
+                        classie.remove( container, 'notrans' );
+                        return false;
+                    }
+
+                    if( isAnimating ) {
+                        return false;
+                    }
+
+                    if( scrollVal <= 0 && isRevealed ) {
+                        toggle(0);
+                    }
+                    else if( scrollVal > 0 && !isRevealed ){
+                        toggle(1);
+                    }
+                }
+
+                function toggle( reveal ) {
+                    isAnimating = true;
+
+                    if( reveal ) {
+                        classie.add( container, 'modify' );
+                    }
+                    else {
+                        noscroll = true;
+                        disable_scroll();
+                        classie.remove( container, 'modify' );
+                    }
+
+                    // simulating the end of the transition:
+                    setTimeout( function() {
+                        isRevealed = !isRevealed;
+                        isAnimating = false;
+                        if( reveal ) {
+                            noscroll = false;
+                            enable_scroll();
+                        }
+                    }, 1200 );
+                }
+
+                // refreshing the page...
+                var pageScroll = scrollY();
+                noscroll = pageScroll === 0;
+
+                disable_scroll();
+
+                if( pageScroll ) {
+                    isRevealed = true;
+                    classie.add( container, 'notrans' );
+                    classie.add( container, 'modify' );
+                }
+
+                window.addEventListener( 'scroll', scrollPage );
+//                    trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+            })();
+		</script>
 		<section id="box-2" class="box-2">
 			<div class="wrap">
 
@@ -323,10 +466,7 @@
 
 			</div>
 		</section>
-		<div class="clearfix">
-
-		</div>
-
+		<!--<div class="clearfix"></div>-->
 		<section id="box-3" class="box-3">
 			<div class="wrapper">
 				<div class="header">
@@ -337,46 +477,46 @@
 
 						<!--<div class="row">-->
 							<div class="lid">
-								<a> <img src="img/lifecell/lifecell_black.svg" alt="img" /></a>
+								<a> <img class="bw" src="img/lifecell/lifecell_black.svg" alt="img" /><img class="color colapse" src="img/lifecell/lifecell.svg" alt="img" /></a>
 							</div>
 							<div class="lid">
-								<a> <img src="img/syngenta/syngenta_black.svg" alt="img" /></a>
+								<a> <img class="bw" src="img/syngenta/syngenta_black.svg" alt="img" /><img class="color colapse" src="img/syngenta/syngenta.svg" alt="img" /></a>
 							</div>
 							<div class="lid">
-								<a> <img src="img/zeppelin/zeppelin_black.svg" alt="img" /></a>
+								<a> <img class="bw" src="img/zeppelin/zeppelin_black.svg" alt="img" /><img  class="color colapse" src="img/zeppelin/zeppelin.svg" alt="img" /></a>
 							</div>
 							<div class="lid">
-								<a> <img src="img/smartbox/smartbox_black.svg" alt="img" /></a>
-							</div>
-						<!--</div>-->
-
-						<!--<div class="row">-->
-							<div class="lid">
-								<a> <img src="img/texsa/texsa_black.svg" alt="img" /></a>
-							</div>
-							<div class="lid">
-								<a> <img class="noBlack" src="img/avon/avon_black.svg" alt="img" /></a>
-							</div>
-							<div class="lid">
-								<a> <img src="img/cersanit/cersnit_black.svg" alt="img" /></a>
-							</div>
-							<div class="lid">
-								<a> <img class="noBlack" src="img/ukraflora/ukraflora_black.svg" alt="img" /></a>
+								<a> <img class="bw" src="img/smartbox/smartbox_black.svg" alt="img" /><img class="color colapse" src="img/smartbox/smartbox.svg" alt="img" /></a>
 							</div>
 						<!--</div>-->
 
 						<!--<div class="row">-->
 							<div class="lid">
-								<a> <img src="img/kamchadal/kamchadal_black.svg" alt="img" /></a>
+								<a> <img class="bw" src="img/texsa/texsa_black.svg" alt="img" /><img class="color colapse" src="img/texsa/texsa.svg" alt="img" /></a>
 							</div>
 							<div class="lid">
-								<a> <img src="img/fiori/fiori_black.svg" alt="img" /></a>
+								<a> <img class="bw noBlack" src="img/avon/avon_black.svg" alt="img" /><img class="noBlack color colapse" src="img/avon/avon.svg" alt="img" /></a>
 							</div>
 							<div class="lid">
-								<a> <img src="img/eistroi/eistroi_black.svg" alt="img" /></a>
+								<a> <img class="bw" src="img/cersanit/cersnit_black.svg" alt="img" /><img class="color colapse" src="img/cersanit/cersnit.svg" alt="img" /></a>
 							</div>
 							<div class="lid">
-								<a> <img src="img/kokl/kokl_black.svg" alt="img" /></a>
+								<a> <img class="bw noBlack" src="img/ukraflora/ukraflora_black.svg" alt="img" /><img class="noBlack color colapse" src="img/ukraflora/ukraflora.svg" alt="img" /></a>
+							</div>
+						<!--</div>-->
+
+						<!--<div class="row">-->
+							<div class="lid">
+								<a> <img class="bw" src="img/kamchadal/kamchadal_black.svg" alt="img" /><img class="color colapse" src="img/kamchadal/kamchadal.svg" alt="img" /></a>
+							</div>
+							<div class="lid">
+								<a> <img class="bw" src="img/fiori/fiori_black.svg" alt="img" /><img class="color colapse" src="img/fiori/fiori.svg" alt="img" /></a>
+							</div>
+							<div class="lid">
+								<a> <img class="bw" src="img/eistroi/eistroi_black.svg" alt="img" /><img class="color colapse" src="img/eistroi/eistroi.svg" alt="img" /></a>
+							</div>
+							<div class="lid">
+								<a> <img class="bw" src="img/kokl/kokl_black.svg" alt="img" /><img class="color colapse" src="img/kokl/kokl.svg" alt="img" /></a>
 							</div>
 						<!--</div>-->
 
@@ -697,7 +837,29 @@
                 flag = 0;
             }
         });
+
+
     });
+    jQuery.fn.random = function() {
+        var randomIndex = Math.floor(Math.random() * 12);
+        return jQuery(this[randomIndex]);
+    };
+    var prev;
+    var timer = window.setInterval(function () {
+        if(prev){
+            prev.mouseleave();
+        }
+        prev = $('.lid a').random().mouseenter();
+//        console.log(prev)
+    }, 1000);
+
+    $('.lid a').hover(function(){
+        $(this).find('.bw').addClass('colapse');
+        $(this).find('.color').removeClass('colapse');
+    }, function(){
+        $(this).find('.bw').removeClass('colapse');
+        $(this).find('.color').addClass('colapse');
+    })
 </script>
 </body>
 </html>

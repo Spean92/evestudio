@@ -1,5 +1,25 @@
 
 &.mainpage {
+  @keyframes opacs {
+    from{
+      opacity: 0;
+      display: none;
+    }
+    to {
+      opacity: 1;
+      display: inline;
+    }
+  }
+  @keyframes opacs_out {
+    from{
+      opacity: 1;
+      display: inline;
+    }
+    to {
+      opacity: 0;
+      display: none;
+    }
+  }
   .content {
     .box-1{
 
@@ -72,8 +92,9 @@
     }
     .box-2 {
       background: #fff;
-      padding-bottom: 0px;
-      margin-top: 100vh;
+      padding: 0px;
+      padding-top: 20px;
+      margin-top: 0;
       position: relative;
       .wrap{
         width: 1200px;
@@ -270,7 +291,7 @@
                 }
                 &:last-child{
                   @extend .regFont18;
-                  margin-bottom: 40px;
+                  margin-bottom: 30px;
                   margin-top: 10px;
                 }
               }
@@ -329,14 +350,14 @@
     }
     .box-3 {
       background: #fff;
-      padding-bottom: 80px;
+      padding-bottom: 20px;
       position: relative;
       .header {
         width: 810px;
         h2{
           @extend .bigFont50;
           margin-top: 0;
-          padding-top: 75px;
+          padding-top: 35px;
         }
         hr{
           border-width: 2px;
@@ -344,7 +365,7 @@
       }
       .clients {
         //width: 1000px;
-        margin: 0 auto;
+        margin: 0 auto 40px auto;
         .flex{
           //margin: 0 auto 0 auto;
           display: flex;
@@ -361,19 +382,33 @@
               display: table-cell;
               text-align: center;
               vertical-align: middle;
+              position: relative;
               //width: 136px;
               //height: 80px;
               //width: 100%;
               //height: 100%;
-              img{
+              transition: all .2s ease-in-out;
+              img {
                 max-width: 136px;
                 max-height: 70px;
                 min-height: 25px;
                 transition: all .2s ease-in-out;
+                opacity:1;
+                //animation: 1s opacs ease;
                 &.noBlack {
                   &:hover{
                     opacity: 0.6;
                   }
+                }
+                &.bw {
+
+                }
+                &.color {
+                  //animation: 1s opacs ease;
+                }
+                &.colapse {
+                  display: none;
+                  opacity: 0;
                 }
               }
               .sprite_clients {
@@ -434,7 +469,20 @@
 
               }
             }
+            //&:hover {
+            //  a {
+            //    img {
+            //      display: none;
+            //      opacity: 0;
+            //      &.color {
+            //        display: inline;
+            //        opacity:1;
+            //      }
+            //    }
+            //  }
+            //}
           }
+
         }
       }
       .clients_mob {

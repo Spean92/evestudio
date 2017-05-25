@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
+	<link rel="stylesheet" href="css/component.css">
 	<!-- Facebook Pixel Code -->
 	<script>
 		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -32,7 +33,7 @@
 
 	<!-- BEGIN CONTENT -->
 
-	<main class="content">
+	<main id="container" class="content container intro-effect-push">
 		<nav class="nav nav-open" id="nav" style="display:none;">
 			<div class="container">
 				<h1 class="">Карта сайта</h1>
@@ -122,7 +123,149 @@
 				</div>
 			</div>
 		</section>
+		<script src="js/classie.js"></script>
+		<script>
+            (function() {
 
+                // detect if IE : from http://stackoverflow.com/a/16657946
+                var ie = (function(){
+                    var undef,rv = -1; // Return value assumes failure.
+                    var ua = window.navigator.userAgent;
+                    var msie = ua.indexOf('MSIE ');
+                    var trident = ua.indexOf('Trident/');
+
+                    if (msie > 0) {
+                        // IE 10 or older => return version number
+                        rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+                    } else if (trident > 0) {
+                        // IE 11 (or newer) => return version number
+                        var rvNum = ua.indexOf('rv:');
+                        rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
+                    }
+
+                    return ((rv > -1) ? rv : undef);
+                }());
+
+
+                // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179
+                // left: 37, up: 38, right: 39, down: 40,
+                // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+                var keys = [32, 37, 38, 39, 40], wheelIter = 0;
+
+                function preventDefault(e) {
+                    e = e || window.event;
+                    if (e.preventDefault)
+                        e.preventDefault();
+                    e.returnValue = false;
+                }
+
+                function keydown(e) {
+                    for (var i = keys.length; i--;) {
+                        if (e.keyCode === keys[i]) {
+                            preventDefault(e);
+                            return;
+                        }
+                    }
+                }
+
+                function touchmove(e) {
+                    preventDefault(e);
+                }
+
+                function wheel(e) {
+                    // for IE
+                    //if( ie ) {
+                    //preventDefault(e);
+                    //}
+                }
+
+                function disable_scroll() {
+                    window.onmousewheel = document.onmousewheel = wheel;
+                    document.onkeydown = keydown;
+                    document.body.ontouchmove = touchmove;
+                }
+
+                function enable_scroll() {
+                    window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;
+                }
+
+                var docElem = window.document.documentElement,
+                    scrollVal,
+                    isRevealed,
+                    noscroll,
+                    isAnimating,
+                    container = document.getElementById( 'container' )
+//                        trigger = container.querySelector( 'button.trigger' );
+
+                function scrollY() {
+                    return window.pageYOffset || docElem.scrollTop;
+                }
+
+                function scrollPage() {
+                    scrollVal = scrollY();
+
+                    if( noscroll && !ie ) {
+                        if( scrollVal < 0 ) return false;
+                        // keep it that way
+                        window.scrollTo( 0, 0 );
+                    }
+
+                    if( classie.has( container, 'notrans' ) ) {
+                        classie.remove( container, 'notrans' );
+                        return false;
+                    }
+
+                    if( isAnimating ) {
+                        return false;
+                    }
+
+                    if( scrollVal <= 0 && isRevealed ) {
+                        toggle(0);
+                    }
+                    else if( scrollVal > 0 && !isRevealed ){
+                        toggle(1);
+                    }
+                }
+
+                function toggle( reveal ) {
+                    isAnimating = true;
+
+                    if( reveal ) {
+                        classie.add( container, 'modify' );
+                    }
+                    else {
+                        noscroll = true;
+                        disable_scroll();
+                        classie.remove( container, 'modify' );
+                    }
+
+                    // simulating the end of the transition:
+                    setTimeout( function() {
+                        isRevealed = !isRevealed;
+                        isAnimating = false;
+                        if( reveal ) {
+                            noscroll = false;
+                            enable_scroll();
+                        }
+                    }, 1200 );
+                }
+
+                // refreshing the page...
+                var pageScroll = scrollY();
+                noscroll = pageScroll === 0;
+
+                disable_scroll();
+
+                if( pageScroll ) {
+                    isRevealed = true;
+                    classie.add( container, 'notrans' );
+                    classie.add( container, 'modify' );
+                }
+
+                window.addEventListener( 'scroll', scrollPage );
+//                    trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+            })();
+		</script>
 		<section id="box-2" class="box-2">
 			<div class="bg_white">
 			<div class="wrapper">
@@ -136,9 +279,9 @@
 							</div>
 							<div class="text">
 								<h4>Сергей <br> Солдатов</h4>
-								<p class="post">Основатель</p>
+								<!--<p class="post">Основатель</p>-->
 								<p>
-									Первое своё дело – цифровую типографию с отделом дизайна – открыл ещё в 2007 году. Очень любит созидать и получает от этого настоящее удовольствие. Увлекается яхтингом, а с недавних пор и авиацией.
+									Основатель. Первое своё дело – цифровую типографию с отделом дизайна – открыл ещё в 2007 году. Очень любит созидать и получает от этого настоящее удовольствие. Увлекается яхтингом, а с недавних пор и авиацией.
 								</p>
 							</div>
 						</div>
@@ -150,9 +293,9 @@
 							</div>
 							<div class="text">
 								<h4>Наталья<br> Шевнюк</h4>
-								<p class="post">Руководитель отдела управления проектами</p>
+								<!--<p class="post">Руководитель отдела управления проектами</p>-->
 								<p>
-									Инженер и маркетолог. Музыкант, танцор и певец. Любит интересные и непростые задачи. Сертификаты от Popel Education, Projector, EMPO marketing school.
+									Руководитель отдела управления проектами. Инженер и маркетолог. Музыкант, танцор и певец. Любит интересные и непростые задачи. Сертификаты от Popel Education, Projector, EMPO marketing school.
 								</p>
 							</div>
 						</div>
@@ -164,9 +307,9 @@
 							</div>
 							<div class="text">
 								<h4>ПАВЕЛ<br> КУЛИК</h4>
-								<p class="post">Финансовый менеджер</p>
+								<!--<p class="post">Финансовый менеджер</p>-->
 								<p>
-									Закончил Киевский Торгово-Економический Университет. Последние 10 лет работает в финансовой сфере. Любит спорт, музыку, общение с друзьями и семьей.
+									Финансовый менеджер. Закончил Киевский Торгово-Економический Университет. Последние 10 лет работает в финансовой сфере. Любит спорт, музыку, общение с друзьями и семьей.
 								</p>
 							</div>
 						</div>
@@ -178,9 +321,9 @@
 							</div>
 							<div class="text">
 								<h4>АЛЛА<br> ПОДОЛЯНКО</h4>
-								<p class="post">Дизайнер</p>
+								<!--<p class="post">Дизайнер</p>-->
 								<p>
-									Многолетний опыт работы в крупных компаниях. Любит музыку, кино, отдых на природе, гонки на картингах. Сертификат от Popel Education.
+									Дизайнер. Многолетний опыт работы в крупных компаниях. Любит музыку, кино, отдых на природе, гонки на картингах. Сертификат от Popel Education.
 								</p>
 							</div>
 						</div>
@@ -192,9 +335,9 @@
 							</div>
 							<div class="text">
 								<h4>КОНСТАНТИН<br> КОМИШАНОВ</h4>
-								<p class="post">Руководитель отдела видеопроизводства</p>
+								<!--<p class="post">Руководитель отдела видеопроизводства</p>-->
 								<p>
-									Сценарист, режиссёр. Окончил КНУТКиТ им. И. К. Карпенко-Карого. Работал на различных телеканалах. Любит рыбалку.
+									Руководитель отдела видеопроизводства. Сценарист, режиссёр. Окончил КНУТКиТ им. И. К. Карпенко-Карого. Работал на различных телеканалах. Любит рыбалку.
 								</p>
 							</div>
 						</div>
@@ -202,10 +345,10 @@
 				</div>
 				<div class="paggs_buts">
 					<a class="prev" href="">Предыдущий
-						<hr class="wow fadeInLeft" data-wow-duration="0.5">
+						<hr class="wow fadeInLeft" data-wow-duration="1">
 					</a>
 					<a class="next" href="">Следующий
-						<hr class="wow fadeInRight" data-wow-duration="0.5">
+						<hr class="wow fadeInRight" data-wow-duration="1">
 					</a>
 				</div>
 				<div class="clearfix"></div>
@@ -231,7 +374,7 @@
 
 				<div class="right">
 					<p>
-						<b>Экспертность, креативность, результат – важнейшие аспекты всех проектов команды EveStudio.</b><br>  Для нас существенно не только показать качественно выполненную работу, но и наполнить ее смыслом, донести до аудитории важность и уникальность мыслей заказчика. Одобрение наших клиентов – лучшая мотивация для сотрудников прилагать еще больше усилий, чтобы превысить все ожидания от последующих проектов. Мы черпаем свое вдохновение, наблюдая за успехами заказчиков. Ведь всегда приятно чувствовать себя частью или даже причиной чьей-то радости. Однажды прочувствовав это, захочется возвращаться к пережитым эмоциям, поэтому к каждому проекту мы подходим с особым энтузиазмом и креативом. Мы громко заявляем об экспертности нашего агентства и готовы подтверждать ее!
+						<b>Экспертность, креативность, результат – важнейшие аспекты всех проектов команды EveStudio</b><br>  Для нас существенно не только показать качественно выполненную работу, но и наполнить ее смыслом, донести до аудитории важность и уникальность мыслей заказчика. Одобрение наших клиентов – лучшая мотивация для сотрудников прилагать еще больше усилий, чтобы превысить все ожидания от последующих проектов. Мы черпаем свое вдохновение, наблюдая за успехами заказчиков. Ведь всегда приятно чувствовать себя частью или даже причиной чьей-то радости. Однажды прочувствовав это, захочется возвращаться к пережитым эмоциям, поэтому к каждому проекту мы подходим с особым энтузиазмом и креативом. Мы громко заявляем об экспертности нашего агентства и готовы подтверждать ее!
 					</p>
 
 					<div class="img img_3">
@@ -259,8 +402,8 @@
 			<div class="bg_white">
 			<div class="wrapper">
 				<h2>Вакансии</h2>
-				<p>Мы ищем креативных, целеустремленных специалистов, готовых присоединиться к дружной, профессиональной команде.</p>
-				<div class="content">
+				<p>Мы ищем креативных, целеустремленных специалистов, готовых присоединиться к дружной, профессиональной команде</p>
+				<div class="conten">
 					<div class="item">
 						<h5>Менеджер по продажам</h5>
 						<p>Основные задачи: проведение встреч с клиентами; увеличение объемов продаж; поддержание и развитие долгосрочных деловых отношений с новыми и существующими клиентами; активное участие в усовершенствовании процесса обслуживания клиентов; регулярный анализ рынка; участие в разработке и реализации планов продаж.

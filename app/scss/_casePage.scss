@@ -11,7 +11,9 @@
       position: relative;
       background: #fff;
       width: 100%;
-      margin: 100vh auto 0 auto;
+      margin: 0 auto 0 auto;
+      padding:0;
+      padding-top: 77px;
       .img.logo_case {
         width:440px;
         margin: 0 auto 100px auto;
@@ -53,7 +55,7 @@
           position: relative;
           width: 900px;
           margin-bottom: 30px;
-          margin-top: 67px;
+          margin-top: 10px;
           h4 {
             display: block;
             @extend .bigFont50;
@@ -134,7 +136,8 @@
                 p {
                   @extend .regFont18;
                   padding: 8px 0;
-                  border-bottom: 1px solid #747474;
+                  margin: 0;
+                  //border-bottom: 1px solid #747474;
                 }
                 h2 {
                   border-top:none;
@@ -146,7 +149,7 @@
                   @extend .regFont18;
                   color: #333;
                   padding: 8px 0;
-                  //border-bottom: 1px solid #747474;
+                  border-bottom: 1px solid #333;
                 }
                 &:first-child {
 
@@ -186,38 +189,44 @@
         }
       }
       .siblingsCase {
-        padding: 40px 0;
+        padding: 20px 0;
         border-top: 1px solid rgba(0,0,0,0.1);
         //border-bottom: 1px solid black;
         margin-top: 30px;
         //display: none;
-        display: flex;
-        justify-content: space-between;
-        .one_case {
-          width: 30%;
-          transition: all .2s ease;
-          &:hover {
-            opacity: 0.5;
-          }
-          h4 {
-            @extend .midFont22;
-            margin-bottom: 10px;
-          }
-          .img_b {
-            margin-bottom: 10px;
-            height:230px;
-            width:100%;
-            overflow: hidden;
-            img {
-              min-height: 100%;
+        p {
+          @extend .bigFont50;
+        }
+        .nextCases {
+          display: flex;
+          justify-content: space-between;
+          .one_case {
+            width: 270px;
+            transition: all .2s ease;
+            &:hover {
+              opacity: 0.5;
+            }
+            h4 {
+              @extend .midFont22;
+              margin-bottom: 10px;
+            }
+            .img_b {
+              margin-bottom: 10px;
+              height:190px;
+              width:100%;
+              overflow: hidden;
+              img {
+                min-height: 100%;
+              }
+            }
+            p {
+              @extend .regFont18;
+              height: 4.05em;
+              overflow: hidden;
             }
           }
-          p {
-            @extend .regFont18;
-            height: 4.05em;
-            overflow: hidden;
-          }
         }
+
       }
     }
 

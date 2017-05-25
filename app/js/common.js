@@ -29,10 +29,64 @@ $(document).ready(function() {
         $(window).on('scroll', whiteBG);
     };
     function header() {
-        if (body.scrollTop<finalPos1){
-            // $('#homeMenu').css('display','inline-block');
-            // $('#aboutMenu').css('display','none');
-            // $('#clientsMenu').css('display','none');
+        // if (body.scrollTop<finalPos1){
+        //     // $('#homeMenu').css('display','inline-block');
+        //     // $('#aboutMenu').css('display','none');
+        //     // $('#clientsMenu').css('display','none');
+        //     $('header').removeClass('active');
+        //     $('header').css('background', 'rgba(0, 0, 0, 0.5)');
+        //     $('header #logo').attr('src', 'img/evestudio_logo_r_whire.svg');
+        //     $('.bars.bars1').addClass('hide').removeClass('show');
+        //     $('.menu').addClass('show').removeClass('hide');
+        //     $('.menu nav ul li a').removeClass('wow fadeInDown');
+        //     $('.menu nav ul li a').css('visibility','visible');
+        //     $('.box-1 .bg').css('opacity', '1');
+        //
+        //
+        // } else if (body.scrollTop>finalPos1 && body.scrollTop<pos1) {
+        //     $('header').addClass('active');
+        //     $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
+        //     $('header.active').css('background', 'rgba(255, 255, 255, 1)');
+        //     $('.bars.bars1').addClass('show').removeClass('hide');
+        //     $('.menu').addClass('hide').removeClass('show');
+        //     $('.menu nav ul li a').removeClass('wow fadeInDown');
+        //     $('.box-1 .bg').css('opacity', '1');
+        //
+        //
+        // }else if(body.scrollTop>finalPos1 && body.scrollTop<finalPos2) {
+        //     // $('#homeMenu').css('display','none');
+        //     // $('#aboutMenu').css('display','inline-block');
+        //     // $('#clientsMenu').css('display','none');
+        //     $('header').addClass('active');
+        //     $('header.active').css('background', 'rgba(255, 255, 255, 0.7)');
+        //     $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
+        //     $('.bars.bars1').addClass('show').removeClass('hide');
+        //     $('.menu').addClass('hide').removeClass('show');
+        //     $('.menu nav ul li a').removeClass('wow fadeInDown');
+        //     $('.box-1 .bg').css('opacity', '0');
+        //
+        //
+        // } else if (body.scrollTop>finalPos2) {
+        //     // $('#homeMenu').css('display','none');
+        //     // $('#aboutMenu').css('display','none');
+        //     // $('#clientsMenu').css('display','inline-block');
+        //     $('header').addClass('active');
+        //     $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
+        //     $('.bars.bars1').addClass('show').removeClass('hide');
+        //     $('.menu').addClass('hide').removeClass('show');
+        //     $('.menu nav ul li a').removeClass('wow fadeInDown');
+        //     $('.box-1 .bg').css('opacity', '0');
+        // }
+
+        if ($('#container').hasClass('modify')) {
+            $('header').addClass('active');
+            $('header.active').css('background', 'rgba(255, 255, 255, 0.7)');
+            $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
+            $('.bars.bars1').addClass('show').removeClass('hide');
+            $('.menu').addClass('hide').removeClass('show');
+            $('.menu nav ul li a').removeClass('wow fadeInDown');
+            // $('.box-1 .bg').css('opacity', '0');
+        } else {
             $('header').removeClass('active');
             $('header').css('background', 'rgba(0, 0, 0, 0.5)');
             $('header #logo').attr('src', 'img/evestudio_logo_r_whire.svg');
@@ -40,45 +94,11 @@ $(document).ready(function() {
             $('.menu').addClass('show').removeClass('hide');
             $('.menu nav ul li a').removeClass('wow fadeInDown');
             $('.menu nav ul li a').css('visibility','visible');
-            $('.box-1 .bg').css('opacity', '1');
-
-
-        } else if (body.scrollTop>finalPos1 && body.scrollTop<pos1) {
-            $('header').addClass('active');
-            $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
-            $('header.active').css('background', 'rgba(255, 255, 255, 1)');
-            $('.bars.bars1').addClass('show').removeClass('hide');
-            $('.menu').addClass('hide').removeClass('show');
-            $('.menu nav ul li a').removeClass('wow fadeInDown');
-            $('.box-1 .bg').css('opacity', '1');
-
-
-        }else if(body.scrollTop>finalPos1 && body.scrollTop<finalPos2) {
-            // $('#homeMenu').css('display','none');
-            // $('#aboutMenu').css('display','inline-block');
-            // $('#clientsMenu').css('display','none');
-            $('header').addClass('active');
-            $('header.active').css('background', 'rgba(255, 255, 255, 0.7)');
-            $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
-            $('.bars.bars1').addClass('show').removeClass('hide');
-            $('.menu').addClass('hide').removeClass('show');
-            $('.menu nav ul li a').removeClass('wow fadeInDown');
-            $('.box-1 .bg').css('opacity', '0');
-
-
-        } else if (body.scrollTop>finalPos2) {
-            // $('#homeMenu').css('display','none');
-            // $('#aboutMenu').css('display','none');
-            // $('#clientsMenu').css('display','inline-block');
-            $('header').addClass('active');
-            $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
-            $('.bars.bars1').addClass('show').removeClass('hide');
-            $('.menu').addClass('hide').removeClass('show');
-            $('.menu nav ul li a').removeClass('wow fadeInDown');
-            $('.box-1 .bg').css('opacity', '0');
+            // $('.box-1 .bg').css('opacity', '1');
         }
         //  console.log(body.scrollTop);
-    }
+    };
+
 	// 	window.onscroll = function(){
   //
   // };
@@ -427,14 +447,14 @@ $(document).ready(function() {
     });
 // black/color IMG
 	$('.lid a img').hover(function() {
-	 var source =	$(this).attr('src');
-		$(this).attr('src', source.slice(0, -10)+'.svg');
-		var hi = $(this).attr('src');
+	 // var source =	$(this).attr('src');
+		// $(this).attr('src', source.slice(0, -10)+'.svg');
+		// var hi = $(this).attr('src');
 	},
 	function() {
-		var source =	$(this).attr('src');
-		$(this).attr('src', source.slice(0, -4)+'_black.svg');
-		var hu = $(this).attr('src');
+		// var source =	$(this).attr('src');
+		// $(this).attr('src', source.slice(0, -4)+'_black.svg');
+		// var hu = $(this).attr('src');
 	});
 // case bottom img height
     function someHeight() {
@@ -444,14 +464,16 @@ $(document).ready(function() {
     $(window).on('resize', someHeight);
 	//Wow js
     var wow = new WOW({
-        offset: 100
+        offset: 150
     });
     wow.init();
 
 
     //MEDIA things
     if (($(window).width()>1023) && ($('.main-wrapper').hasClass('blogInner_page') == false)) {
-        $(window).on('scroll', header);
+        $(window).on('scroll', function () {
+            setTimeout(header, 800);
+        });
     // } else if ($(window).width()<1023) {
     //     $(window).on('scroll', header);
     } else {

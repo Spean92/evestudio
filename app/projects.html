@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
+	<link rel="stylesheet" href="css/component.css">
 	<!-- Facebook Pixel Code -->
 	<script>
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -31,7 +32,7 @@
 
 	<!-- BEGIN CONTENT -->
 
-		<main class="content">
+		<main id="container" class="content container intro-effect-push">
 			<nav class="nav nav-open" id="nav" style="display:none;">
 				<div class="container">
 					<h1 class="">Карта сайта</h1>
@@ -123,6 +124,150 @@
 					</div>
 				</div>
 			</section>
+			<script src="js/classie.js"></script>
+			<script>
+                (function() {
+
+                    // detect if IE : from http://stackoverflow.com/a/16657946
+                    var ie = (function(){
+                        var undef,rv = -1; // Return value assumes failure.
+                        var ua = window.navigator.userAgent;
+                        var msie = ua.indexOf('MSIE ');
+                        var trident = ua.indexOf('Trident/');
+
+                        if (msie > 0) {
+                            // IE 10 or older => return version number
+                            rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+                        } else if (trident > 0) {
+                            // IE 11 (or newer) => return version number
+                            var rvNum = ua.indexOf('rv:');
+                            rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
+                        }
+
+                        return ((rv > -1) ? rv : undef);
+                    }());
+
+
+                    // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179
+                    // left: 37, up: 38, right: 39, down: 40,
+                    // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+                    var keys = [32, 37, 38, 39, 40], wheelIter = 0;
+
+                    function preventDefault(e) {
+                        e = e || window.event;
+                        if (e.preventDefault)
+                            e.preventDefault();
+                        e.returnValue = false;
+                    }
+
+                    function keydown(e) {
+                        for (var i = keys.length; i--;) {
+                            if (e.keyCode === keys[i]) {
+                                preventDefault(e);
+                                return;
+                            }
+                        }
+                    }
+
+                    function touchmove(e) {
+                        preventDefault(e);
+                    }
+
+                    function wheel(e) {
+                        // for IE
+                        //if( ie ) {
+                        //preventDefault(e);
+                        //}
+                    }
+
+                    function disable_scroll() {
+                        window.onmousewheel = document.onmousewheel = wheel;
+                        document.onkeydown = keydown;
+                        document.body.ontouchmove = touchmove;
+                    }
+
+                    function enable_scroll() {
+                        window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;
+                    }
+
+                    var docElem = window.document.documentElement,
+                        scrollVal,
+                        isRevealed,
+                        noscroll,
+                        isAnimating,
+                        container = document.getElementById( 'container' )
+//                        trigger = container.querySelector( 'button.trigger' );
+
+                    function scrollY() {
+                        return window.pageYOffset || docElem.scrollTop;
+                    }
+
+                    function scrollPage() {
+                        scrollVal = scrollY();
+
+                        if( noscroll && !ie ) {
+                            if( scrollVal < 0 ) return false;
+                            // keep it that way
+                            window.scrollTo( 0, 0 );
+                        }
+
+                        if( classie.has( container, 'notrans' ) ) {
+                            classie.remove( container, 'notrans' );
+                            return false;
+                        }
+
+                        if( isAnimating ) {
+                            return false;
+                        }
+
+                        if( scrollVal <= 0 && isRevealed ) {
+                            toggle(0);
+                        }
+                        else if( scrollVal > 0 && !isRevealed ){
+                            toggle(1);
+                        }
+                    }
+
+                    function toggle( reveal ) {
+                        isAnimating = true;
+
+                        if( reveal ) {
+                            classie.add( container, 'modify' );
+                        }
+                        else {
+                            noscroll = true;
+                            disable_scroll();
+                            classie.remove( container, 'modify' );
+                        }
+
+                        // simulating the end of the transition:
+                        setTimeout( function() {
+                            isRevealed = !isRevealed;
+                            isAnimating = false;
+                            if( reveal ) {
+                                noscroll = false;
+                                enable_scroll();
+                            }
+                        }, 1200 );
+                    }
+
+                    // refreshing the page...
+                    var pageScroll = scrollY();
+                    noscroll = pageScroll === 0;
+
+                    disable_scroll();
+
+                    if( pageScroll ) {
+                        isRevealed = true;
+                        classie.add( container, 'notrans' );
+                        classie.add( container, 'modify' );
+                    }
+
+                    window.addEventListener( 'scroll', scrollPage );
+//                    trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+                })();
+			</script>
+			<!--<script src="js/demoad.js"></script>-->
 <!----------->
 <!-- BOX-2 -->
 <!----------->
@@ -132,73 +277,84 @@
 					<div class="header">
 						<h2>Кейсы</h2>
 					</div>
-					<div class="cases">
-						<div class="item">
-							<a href="morkovkin.html">
-								<div class="img">
-									<div class="effect"></div>
-									<img src="img/morkovkin.png" alt="morkovkin">
-								</div>
-								<div class="text">
-									Morkovkin.it
-								</div>
-							</a>
-							<hr class="mobile block wow fadeInLeft" data-wow-duration="0.5">
-						</div>
-						<div class="item">
-							<a href="smartbox.html">
-								<div class="img">
-									<div class="effect"></div>
-									<img src="img/smartbox.png" alt="smartbox">
-								</div>
-								<div class="text">
-									Smartbox
-								</div>
-							</a>
-							<hr class="mobile block wow fadeInLeft" data-wow-duration="0.5">
+					<div class="left_side">
+						<div class="cases">
+							<div class="item">
+								<a href="morkovkin.html">
+									<div class="img">
+										<div class="effect"></div>
+										<img src="img/morkovkin.png" alt="morkovkin">
+									</div>
+									<div class="text">
+										Morkovkin.it
+									</div>
+								</a>
+								<hr class="mobile block wow fadeInLeft" data-wow-duration="0.5">
+							</div>
+							<div class="item">
+								<a href="smartbox.html">
+									<div class="img">
+										<div class="effect"></div>
+										<img src="img/smartbox.png" alt="smartbox">
+									</div>
+									<div class="text">
+										Smartbox
+									</div>
+								</a>
+								<hr class="mobile block wow fadeInLeft" data-wow-duration="0.5">
 
-						</div>
-						<div class="item">
-							<a href="avon.html">
-								<div class="img">
-									<div class="effect"></div>
-									<img src="img/avon.png" alt="avon">
-								</div>
-								<div class="text">
-									Avon
-								</div>
-							</a>
-							<hr class="mobile block wow fadeInLeft" data-wow-duration="0.5">
+							</div>
+							<div class="item">
+								<a href="avon.html">
+									<div class="img">
+										<div class="effect"></div>
+										<img src="img/avon.png" alt="avon">
+									</div>
+									<div class="text">
+										Avon
+									</div>
+								</a>
+								<hr class="mobile block wow fadeInLeft" data-wow-duration="0.5">
 
-						</div>
-						<div class="item">
-							<a href="texsa.html">
-								<div class="img">
-									<div class="effect"></div>
-									<img src="img/texsa.png" alt="texsa">
-								</div>
-								<div class="text">
-									Texsa
-								</div>
-							</a>
-							<hr class="mobile block wow fadeInLeft" data-wow-duration="0.5">
+							</div>
+							<div class="item">
+								<a href="texsa.html">
+									<div class="img">
+										<div class="effect"></div>
+										<img src="img/texsa.png" alt="texsa">
+									</div>
+									<div class="text">
+										Texsa
+									</div>
+								</a>
+								<hr class="mobile block wow fadeInLeft" data-wow-duration="0.5">
 
-						</div>
-						<div class="item">
-							<a href="kamchadal.html">
-								<div class="img">
-									<div class="effect"></div>
-									<img src="img/kamchadal.png" alt="kamchadal">
-								</div>
-								<div class="text">
-									Камчадал
-								</div>
-							</a>
-							<hr class="mobile block wow fadeInLeft" data-wow-duration="0.5">
+							</div>
+							<div class="item">
+								<a href="kamchadal.html">
+									<div class="img">
+										<div class="effect"></div>
+										<img src="img/kamchadal.png" alt="kamchadal">
+									</div>
+									<div class="text">
+										Камчадал
+									</div>
+								</a>
+								<hr class="mobile block wow fadeInLeft" data-wow-duration="0.5">
 
+							</div>
 						</div>
 					</div>
+					<div class="right_side">
+						<h4>Категории</h4>
+						<ul>
+							<li><a href="">Видеопроизводство</a></li>
+							<li><a href="">Веб-разработка</a></li>
+							<li><a href="">Интернет-маркетинг</a></li>
+							<li><a href="">Дизайн и брендинг</a></li>
 
+						</ul>
+					</div>
 					<hr class="thin">
 				</div>
 				</div>

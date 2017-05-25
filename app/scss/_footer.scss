@@ -26,13 +26,13 @@ footer {
         }
       }
       &.visit {
-        transform: translateX(0px);
         p {
           margin: 0;
         }
       }
       &.follow {
-        transform: translateX(0px);
+        padding-left: 50px;
+        box-sizing: border-box;
       }
       &.logo {
         font-size: 10.698px;
