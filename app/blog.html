@@ -269,16 +269,16 @@
 			<div class="bg_white">
 			<div class="wrapper">
 				<div class="left_side">
-					<div class="heading">
-						<h2>Блог</h2>
+					<div id="head_filter" class="heading">
+						<h2>Блог1</h2>
 
 						<p>Да, эта статья именно о том, как можно быть в теме тенденций и при этом тратить на обучение 2 часа в неделю)
 							Начнем с того, что меня никто особо не заставлял учиться, даже в школе. Папа пытался, конечно заглядывать в мой табель
 							класса эдак до 7-го. Но особо кардинальных изменений он там не видел. 4-5 (по пятибалльной системе это очень даже хорошо) –
 							были постоянными в моем табеле, поэтому он успокоился). К какому-то моменту я поняла, что  «шарю» в алгебре, да и задачки по геометрии решаю уже одна из первых, поэтому все же процент пятерок в табеле к окончанию школы стремительно рос к 100%.</p>
 					</div>
-					<div class="flex">
-						<div class="item-flex">
+					<div id="allBlog" class="flex">
+						<div class="item-flex" data-business="business" data-newtech="newtech" data-money="money">
 							<a href="blogInner2.html">
 								<h4>Что такое Big Data и какое будущее ему предстоит ?</h4>
 								<div class="img">
@@ -289,7 +289,7 @@
 								</p>
 							</a>
 						</div>
-						<div class="item-flex">
+						<div class="item-flex" data-world="world">
 							<a href="blogInner3.html">
 								<h4>Merhaba или как я впервые побывала в турции!</h4>
 								<div class="img">
@@ -300,7 +300,7 @@
 								</p>
 							</a>
 						</div>
-						<div class="item-flex">
+						<div class="item-flex" data-world="world">
 							<a href="blogInner4.html">
 								<h4>Путешествие в запретную зону</h4>
 								<div class="img">
@@ -311,7 +311,7 @@
 								</p>
 							</a>
 						</div>
-						<div class="item-flex">
+						<div class="item-flex" data-business="business" data-newtech="newtech" data-money="money">
 							<a href="blogInner5.html">
 								<h4>Доходность Биткоина превысила показатели лидеров IT</h4>
 								<div class="img">
@@ -322,7 +322,7 @@
 								</p>
 							</a>
 						</div>
-						<div class="item-flex">
+						<div class="item-flex" data-business="business" data-newtech="newtech" data-money="money">
 							<a href="blogInner2.html">
 								<h4>Что такое Big Data и какое будущее ему предстоит ?</h4>
 								<div class="img">
@@ -333,7 +333,7 @@
 								</p>
 							</a>
 						</div>
-						<div class="item-flex">
+						<div class="item-flex" data-world="world">
 							<a href="blogInner3.html">
 								<h4>Merhaba или как я впервые побывала в турции!</h4>
 								<div class="img">
@@ -348,14 +348,14 @@
 				</div>
 				<div class="right_side">
 					<h4>Категории</h4>
-					<ul>
-						<li><a href="">Вокруг света</a></li>
-						<li><a href="">Новые технологии</a></li>
-						<li><a href="">Гранит науки</a></li>
-						<li><a href="">Деньги</a></li>
-						<li><a href="">Музыка</a></li>
-						<li><a href="">Спорт</a></li>
-						<li><a href="">Бизнес</a></li>
+					<ul id="blogFilter">
+						<li data-value="world"><a href="">Вокруг света</a></li>
+						<li data-value="newtech"><a href="">Новые технологии</a></li>
+						<li data-value="science"><a href="">Гранит науки</a></li>
+						<li data-value="money"><a href="">Деньги</a></li>
+						<li data-value="music"><a href="">Музыка</a></li>
+						<li data-value="sport"><a href="">Спорт</a></li>
+						<li data-value="business"><a href="">Бизнес</a></li>
 					</ul>
 				</div>
 			</div>

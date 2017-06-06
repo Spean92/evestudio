@@ -192,10 +192,32 @@ $(document).ready(function() {
 //Кнопка "Наверх"
     $("#top, .sub_line .top").click(function () {
         $("body, html").animate({
-            scrollTop: 1
+            scrollTop: 0
         }, 800);
         return false;
     });
+
+// Фильтр кубиков
+    (function filterCase() {
+        $('#caseFilter li, #blogFilter li').on('click', function (e) {
+            e.preventDefault();
+            var filter_value = $(this).data('value');
+            var allCases = $('#allCases .item, #allBlog .item-flex');
+            var filter_text = $(this).find('a').text();
+            var topText = $('#head_filter');
+            $(topText).find('p').fadeOut(0);
+            $(topText).find('h2').text(filter_text);
+            $(allCases).fadeOut(0);
+            for (var i=0; i<allCases.length; i++) {
+                var one_case = allCases[i];
+                // var one_case_data = $(one_case).data();
+                if (filter_value == $(one_case).data(filter_value)) {
+                    $(one_case).fadeIn(500);
+                }
+           }
+
+        });
+    })();
 
 // OWL
     $(".owl-carousel-case").owlCarousel({

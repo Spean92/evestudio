@@ -200,9 +200,11 @@
         .nextCases {
           display: flex;
           justify-content: space-between;
+          align-items: flex-end;
           .one_case {
             width: 270px;
             transition: all .2s ease;
+            overflow: hidden;
             &:hover {
               opacity: 0.5;
             }
@@ -223,6 +225,21 @@
               @extend .regFont18;
               height: 4.05em;
               overflow: hidden;
+              margin-bottom: 0;
+            }
+            &.all_case {
+              a {
+                display: block;
+                text-align: right;
+                border: none;
+                transition: all .2s ease-in-out;
+                position: relative;
+                overflow: hidden;
+                @extend .someButton;
+                hr {
+
+                }
+              }
             }
           }
         }
