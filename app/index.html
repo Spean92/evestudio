@@ -278,8 +278,10 @@
                     classie.add( container, 'notrans' );
                     classie.add( container, 'modify' );
                 }
+				if	($(window).width() > 769) {
+                    window.addEventListener( 'scroll', scrollPage );
 
-                window.addEventListener( 'scroll', scrollPage );
+                }
 //                    trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
             })();
 		</script>

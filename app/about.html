@@ -262,7 +262,10 @@
                     classie.add( container, 'modify' );
                 }
 
-                window.addEventListener( 'scroll', scrollPage );
+                if	($(window).width() > 769) {
+                    window.addEventListener( 'scroll', scrollPage );
+
+                }
 //                    trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
             })();
 		</script>
