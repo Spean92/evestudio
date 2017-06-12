@@ -97,31 +97,73 @@
         }
       }
     }
-    .paggs_buts {
-      a{
-        display: inline-block;
-        padding-bottom: 75px;
-        width:270px;
-        transition: all .2s ease;
-        position: relative;
-        overflow: hidden;
-        @extend .someButton;
-        hr {
-          margin-top: 5px;
-        }
-        &.prev {
-          text-align: left;
-          float: left;
-        }
-        &.next {
-          text-align: right;
-          float: right;
-        }
-        &:hover {
-          opacity: 0.5;
+    .siblingsPage {
+      padding: 20px 0;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      //border-bottom: 1px solid black;
+      margin-top: 30px;
+      //display: none;
+      p {
+        @extend .bigFont50;
+      }
+      .nextCases {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .one_case {
+          width: 270px;
+          border-top:1px solid #747474;
+          padding-top: 20px;
+          transition: all .2s ease;
+          overflow: hidden;
+          &:last-child {
+            border-top: none;
+          }
+          &:hover {
+            opacity: 0.5;
+          }
+          h4 {
+            @extend .midFont22;
+            margin-bottom: 10px;
+            line-height: 1;
+            min-height: 1em;
+            height: auto;
+            max-height: 3em;
+            overflow-y: hidden;
+            transition: all .3s ease;
+          }
+          .img_b {
+            margin-bottom: 10px;
+            height:190px;
+            width:100%;
+            overflow: hidden;
+            img {
+              min-height: 100%;
+            }
+          }
+          p {
+            @extend .regFont18;
+            height: 4.05em;
+            overflow: hidden;
+            margin-bottom: 0;
+          }
+          &.all_case {
+            a {
+              display: block;
+              text-align: right;
+              border: none;
+              transition: all .2s ease-in-out;
+              position: relative;
+              overflow: hidden;
+              @extend .someButton;
+              hr {
 
+              }
+            }
+          }
         }
       }
+
     }
   }
 }

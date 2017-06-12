@@ -4,80 +4,108 @@ footer {
   //position: absolute;
   //bottom: 0;
   //width: 100%;
-  .footer {
-    padding: 55px 0;
-    >div{
-      display: inline-block;
-      vertical-align: top;
-      width: 195px;
-      ul {
-        li {
-          a {
-            //font-size: 14px;
-            //color: rgb(0, 0, 0);
-            //line-height: 1.571;
-            text-align: left;
-            transition: all .2s linear;
-            @extend .regFont18;
-          }
-          &:first-child {
-            font-family: "Segoe UI Black";
-            font-size: 18px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-          }
-        }
-      }
-      &.visit {
-        p {
-          margin: 0;
-        }
-      }
-      &.follow {
-        padding-left: 50px;
-        box-sizing: border-box;
-      }
-      &.logo {
-        font-size: 10.698px;
-        font-family: "Segoe UI";
-        color: rgb(0, 0, 0);
-        line-height: 2.056;
-        text-align: left;
-        transform: translateX(330px);
-        .img_logo{
-          width: 75px;
-          overflow: hidden;
-          display: block;
-          margin-bottom: 4px;
-        }
-      }
-      &.icons {
-        display: none;
-      }
-      &.top {
-        text-align: right;
+  .wrapper {
+    z-index: 10;
+    .footer {
+      padding: 55px 0;
+      >div{
+        display: inline-block;
+        vertical-align: top;
         width: 195px;
-        float: right;
-        .wrap{
-          a{
-            display: inline-block;
-            width: 69px;
-            height: 70px;
-            background: url(../img/sprite.png);
-            background-size: 240%;
-            background-position: -70px -76px;
-            text-align: center;
-            transition: none;
-            &:hover{
-              background-position: 1px -77px;
+        ul {
+          li {
+            a {
+              //font-size: 14px;
+              //color: rgb(0, 0, 0);
+              //line-height: 1.571;
+              text-align: left;
+              transition: all .2s linear;
+              @extend .regFont18;
+            }
+            &:first-child {
+              font-family: "Segoe UI Black";
+              font-size: 18px;
+              text-transform: uppercase;
+              margin-bottom: 10px;
+            }
+          }
+        }
+        &.visit {
+          p {
+            margin: 0;
+          }
+        }
+        &.follow {
+          padding-left: 40px;
+          box-sizing: border-box;
+        }
+        &.logo {
+          font-size: 10.698px;
+          font-family: "Segoe UI";
+          color: rgb(0, 0, 0);
+          line-height: 2.056;
+          text-align: left;
+          transform: translateX(330px);
+          .img_logo{
+            width: 75px;
+            overflow: hidden;
+            display: block;
+            margin-bottom: 4px;
+          }
+        }
+        &.icons {
+          display: none;
+        }
+        &.top {
+          text-align: right;
+          width: 195px;
+          float: right;
+          .wrap{
+            a{
+              display: inline-block;
+              width: 30px;
+              height: 70px;
+              position: fixed;
+              bottom: 45px;
+              right: calc(50% - 600px);
+              z-index:10;
+              //display: none;
+              //background: url(../img/sprite.png);
+              background-image: url(../img/up-arrow.svg);
+              background-repeat: no-repeat;
+              background-size: contain;
+              //background-position: -70px -76px;
+              background-position: center;
+              text-align: center;
+              //transition: none;
+              //opacity: 0.7;
+              display: none;
+              visibility: hidden;
+              opacity: 0;
+              transition: visibility .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), transform .6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+              &.show_arrow {
+                visibility: visible;
+                opacity: 0.7
+              }
+              &.launch_arrow {
+                //background-position: 50% -62px;
+                opacity: 0;
+                transform: translateY(-800px);
+                pointer-events: none
+              }
+              &:hover{
+                //background-position: 1px -77px;
+                opacity: 1;
+              }
 
             }
           }
         }
-      }
-      .copy{
-        display: none;
+        .copy{
+          display: none;
+        }
       }
     }
+
   }
 }

@@ -75,34 +75,54 @@
             width: 270px;
             /*height: 224px;*/
             display: inline-block;
+            border-top:1px solid #747474;
+            padding-top: 20px;
             position: relative;
             vertical-align: top;
-            margin: 0 15px 44px 15px;
+            margin: 0 15px 0 15px;
             cursor: pointer;
             overflow: hidden;
-            &:after {
-              content: '';
-              position: absolute;
-              left:0;
-              bottom:0px;
-              width: 0;
-              height: 1px;
-              background: #000;
-              transition: all .5s ease-in-out;
-            }
+            transition: all .3s ease;
+
             &:hover {
-              &:after {
-                width: 100%;
-              }
+              opacity: 0.5;
+              //h4 {
+              //  &:after {
+              //    width: 100%;
+              //  }
+              //}
+
             }
             //&:nth-child(3n) {
             //  margin-right: 0px;
             //}
+            h4 {
+              position: relative;
+              @extend .midFont22;
+              margin-bottom: 10px;
+              line-height: 1;
+              min-height: 1em;
+              height: auto;
+              max-height: 3em;
+              overflow-y: hidden;
+              transition: all .3s ease;
+              //&:after {
+              //  content: '';
+              //  position: absolute;
+              //  left:0;
+              //  bottom:0px;
+              //  width: 0;
+              //  height: 1px;
+              //  background: #000;
+              //  transition: all .5s ease-in-out;
+              //}
+            }
             .img {
+              position: relative;
               width: 270px;
               height: 190px;
+              margin-bottom: 10px;
               overflow: hidden;
-              position: relative;
               .effect {
                 position: absolute;
                 top:0;
@@ -117,10 +137,11 @@
               }
             }
             .text {
-              position: relative;
-              width: 100%;
-              @extend .midFont22;
-              margin-top: 13px;
+              @extend .regFont18;
+              margin-bottom: 40px;
+              transition: all .3s ease;
+              height: 4.05em;
+              overflow-y: hidden;
             }
           }
         }
@@ -131,7 +152,7 @@
         vertical-align: top;
         width: 270px;
         margin-left: 20px;
-        padding-top: 15px;
+        padding-top: 18px;
         h4 {
           @extend .midFont22;
           margin-bottom: 20px;
@@ -199,7 +220,6 @@
           }
           ul{
             width: 100%;
-            border-top: 1px solid rgba(32, 35, 39, 0.1);
             li{
               width: 100%;
               border-bottom: 1px solid rgba(32, 35, 39, 0.1);
@@ -208,6 +228,7 @@
               transition: opacity .5s linear;
               &:first-child {
                 margin-top: 5px;
+                border-top: 1px solid rgba(32, 35, 39, 0.1);
               }
               &.more {
                 &:before {

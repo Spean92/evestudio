@@ -194,8 +194,20 @@ $(document).ready(function() {
         $("body, html").animate({
             scrollTop: 0
         }, 800);
+        $('#top a').addClass('launch_arrow');
+        setTimeout(function(){
+            $('#top a').removeClass('launch_arrow');
+        },800);
         return false;
     });
+    $(window).on('scroll', function () {
+        if($(window).scrollTop()<50){
+            $('#top a').slideUp(500).removeClass('show_arrow');
+        }else{
+            $('#top a').slideDown(500).addClass('show_arrow');
+        }
+    });
+
 
 // Фильтр кубиков
     (function filterCase() {
@@ -205,7 +217,21 @@ $(document).ready(function() {
             var allCases = $('#allCases .item, #allBlog .item-flex');
             var filter_text = $(this).find('a').text();
             var topText = $('#head_filter');
-            $(topText).find('p').fadeOut(0);
+            var subText = $(topText).find('p');
+            $(subText).addClass('hide');
+            for (var j=0; j<subText.length; j++) {
+                var one_p = subText[j];
+                // var one_case_data = $(one_case).data();
+                if (filter_value == $(one_p).data(filter_value)) {
+                    $(one_p).removeClass('hide');
+                }
+            }
+            // console.log(filter_value);
+            // console.log($(subText).data(filter_value));
+            // if (filter_value == $(subText).data(filter_value)) {
+            //     $(subText).data(filter_value).removeClass('hide');
+            //     console.log($(subText).data(filter_value));
+            // }
             $(topText).find('h2').text(filter_text);
             $(allCases).fadeOut(0);
             for (var i=0; i<allCases.length; i++) {
