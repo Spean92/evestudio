@@ -45,6 +45,7 @@
             }
           }
         }
+
       }
     }
   }
@@ -149,6 +150,35 @@
             }
           }
         }
+        .wrapper {
+          .siblingsPage {
+            p {
+
+            }
+            .nextCases {
+              flex-wrap: wrap;
+              .one_case {
+                width: 45%;
+                a {
+                  //width: 45%;
+                  h4 {
+
+                  }
+                  .img_b {
+                    img {
+
+                    }
+                  }
+                  p {
+
+                  }
+                }
+
+              }
+            }
+
+          }
+        }
       }
     }
   }
@@ -205,6 +235,35 @@
             .right_side {
               display: none;
             }
+          }
+        }
+        .wrapper {
+          .siblingsPage {
+            p {
+
+            }
+            .nextCases {
+              flex-wrap: wrap;
+              .one_case {
+                width: 100%;
+                a {
+                  //width: 45%;
+                  h4 {
+
+                  }
+                  .img_b {
+                    img {
+
+                    }
+                  }
+                  p {
+
+                  }
+                }
+
+              }
+            }
+
           }
         }
         .paggs_buts {
@@ -273,6 +332,35 @@
             a {
               width:45%;
             }
+          }
+        }
+        .wrapper {
+          .siblingsPage {
+            p {
+
+            }
+            .nextCases {
+              flex-wrap: wrap;
+              .one_case {
+                width: 100%;
+                a {
+                  //width: 45%;
+                  h4 {
+
+                  }
+                  .img_b {
+                    img {
+
+                    }
+                  }
+                  p {
+
+                  }
+                }
+
+              }
+            }
+
           }
         }
       }

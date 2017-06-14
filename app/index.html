@@ -131,6 +131,7 @@
 				<div id="pause" class="sprite pause"></div>
 				<div id="play" class="sprite play" style="display: none;"></div>
 			</div>
+			<div class="mob"><button class="trigger"></button> </div>
 			<div class="wrapper">
 				<!--<div class="text">-->
 					<!--<h1>СОЗДАЕМ КРЕАТИВНЫЕ<br>БИЗНЕС-ИНСТРУМЕНТЫ</h1>-->
@@ -212,7 +213,7 @@
                     noscroll,
                     isAnimating,
                     container = document.getElementById( 'container' );
-//                        trigger = container.querySelector( 'button.trigger' );
+//					trigger = container.querySelector( 'button.trigger' );
 
                 function scrollY() {
                     return window.pageYOffset || docElem.scrollTop;
@@ -278,7 +279,7 @@
                     classie.add( container, 'notrans' );
                     classie.add( container, 'modify' );
                 }
-				if	($(window).width() > 769) {
+				if	(window.innerWidth > 769) {
                     window.addEventListener( 'scroll', scrollPage );
 
                 }

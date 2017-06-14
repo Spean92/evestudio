@@ -90,6 +90,12 @@
       }
       .content {
         .box-2 {
+          .left_side {
+            width: 100%;
+          }
+          .right_side {
+
+          }
           .cases{
             max-width: 704px;
             .item {
@@ -159,6 +165,13 @@
               font-size: 56px;
 
             }
+
+          }
+          .left_side {
+            width: 100%;
+          }
+          .right_side {
+
           }
           .cases {
             max-width: 100%;
@@ -226,7 +239,7 @@
 @media only all and (max-width : 479px) {
 
   .main-wrapper {
-    .projects {
+    &.projects {
       .content {
         .box-2 {
           .header {
@@ -234,34 +247,43 @@
               font-size: 35px;
 
             }
+
           }
-          .cases {
-            padding-bottom: 15px;
-            max-width: 470px;
+          .left_side {
             width: 100%;
-            .item {
+            margin-right: 0;
+            .cases {
+              padding-bottom: 15px;
               max-width: 470px;
               width: 100%;
-              margin-right: 0;
-              &:after {
-                content: none;
-              }
-              &:nth-child(2n) {
+              .item {
+                max-width: 470px;
                 width: 100%;
                 margin-right: 0;
-              }
-              .img {
-                width: auto;
-                height: auto;
-              }
-              .text {
-                letter-spacing: -0.5px;
-                font-size: 19px;
-                margin-bottom: 3px;
+                &:after {
+                  content: none;
+                }
+                &:nth-child(2n) {
+                  width: 100%;
+                  margin-right: 0;
+                }
+                .img {
+                  width: auto;
+                  height: auto;
+                }
+                .text {
+                  letter-spacing: -0.5px;
+                  font-size: 19px;
+                  margin-bottom: 3px;
 
+                }
               }
             }
           }
+          .right_side {
+
+          }
+
         }
         .box-3 {
           .bg_white{
