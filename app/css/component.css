@@ -9,7 +9,7 @@
 		url('../fonts/icomoon/icomoon.svg?-ee0u0f#icomoon') format('svg');
 }
 
-@media all and (min-width : 1024px) {
+/*@media all and (min-width : 1024px) {*/
 
 
 html, body, .container, .box-1 {
@@ -277,7 +277,7 @@ button.trigger span::before {
 	transition-delay: 0.6s;
 }
 
-}
+/*}*/
 /* Media Queries */
 @media screen and (max-width: 47em) {
 	.title, .content {

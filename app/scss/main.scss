@@ -187,6 +187,20 @@ body {
               width: auto;
             }
           }
+          .arrow_down {
+            display: none;
+            position: absolute;
+            bottom: 5%;
+            right: 10%;
+            width: 20px;
+            height:20px;
+            background-image: url(../img/arrow_white.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transform: rotate(180deg);
+            z-index: 5;
+          }
           .text{
             padding-top: 29vh;
             z-index: 52;

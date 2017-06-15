@@ -118,6 +118,7 @@
 			<div class="bg mobile block">
 				<img src="img/main_bg.png" alt="img">
 			</div>
+			<div class="arrow_down trigger"></div>
 			<!--<div class="video_pattern"></div>-->
 			<video id="video" preload loop>
 				<!--<source src="video/eve-studio.ogg" type='video/ogg; codecs="theora, vorbis"'>-->
@@ -131,7 +132,6 @@
 				<div id="pause" class="sprite pause"></div>
 				<div id="play" class="sprite play" style="display: none;"></div>
 			</div>
-			<div class="mob"><button class="trigger"></button> </div>
 			<div class="wrapper">
 				<!--<div class="text">-->
 					<!--<h1>СОЗДАЕМ КРЕАТИВНЫЕ<br>БИЗНЕС-ИНСТРУМЕНТЫ</h1>-->
@@ -212,8 +212,8 @@
                     isRevealed,
                     noscroll,
                     isAnimating,
-                    container = document.getElementById( 'container' );
-//					trigger = container.querySelector( 'button.trigger' );
+                    container = document.getElementById( 'container' )
+                trigger = container.querySelector( 'div.trigger' );
 
                 function scrollY() {
                     return window.pageYOffset || docElem.scrollTop;
@@ -279,11 +279,12 @@
                     classie.add( container, 'notrans' );
                     classie.add( container, 'modify' );
                 }
-				if	(window.innerWidth > 769) {
-                    window.addEventListener( 'scroll', scrollPage );
 
-                }
-//                    trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+//                if	(window.innerWidth > 769) {
+                window.addEventListener( 'scroll', scrollPage );
+
+//                }
+                trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
             })();
 		</script>
 		<section id="box-2" class="box-2">

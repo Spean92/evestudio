@@ -17,6 +17,25 @@
         position: relative;
         z-index: 5;
       }
+      main {
+        &.content {
+          .box-1 {
+            .wrapper {
+              .text {
+                width: 100%;
+                h1 {
+
+                }
+              }
+            }
+            .arrow_down {
+              display: block;
+            }
+          }
+
+        }
+      }
+
       #nav {
         .container {
           padding-top: 20vh;
@@ -56,7 +75,23 @@
       video, .video_pattern, .sound, .play {
         display: none !important;
       }
-
+      main {
+        &.content {
+          .box-1 {
+            .wrapper {
+              .text {
+                width: 100%;
+                h1 {
+                  font-size:65px;
+                }
+              }
+            }
+            .arrow_down {
+              display: block;
+            }
+          }
+        }
+      }
       /**/
       /*NAV*/
       /**/
@@ -236,6 +271,23 @@
         .bg {
           img {
             margin-left: -45%;
+          }
+        }
+      }
+      main {
+        &.content {
+          .box-1 {
+            .wrapper {
+              .text {
+                width: 100%;
+                h1 {
+                  font-size:65px;
+                }
+              }
+            }
+            .arrow_down {
+              display: block;
+            }
           }
         }
       }
@@ -507,6 +559,23 @@
         .bg {
           img {
             margin-left: -45%;
+          }
+        }
+      }
+      main {
+        &.content {
+          .box-1 {
+            .wrapper {
+              .text {
+                width: 100%;
+                h1 {
+                  font-size:45px;
+                }
+              }
+            }
+            .arrow_down {
+              display: block;
+            }
           }
         }
       }
@@ -852,6 +921,23 @@
         .bg {
           img {
             margin-left: -45%;
+          }
+        }
+      }
+      main {
+        &.content {
+          .box-1 {
+            .wrapper {
+              .text {
+                width: 100%;
+                h1 {
+                  font-size:40px;
+                }
+              }
+            }
+            .arrow_down {
+              display: block;
+            }
           }
         }
       }

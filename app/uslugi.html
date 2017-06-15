@@ -116,7 +116,7 @@
 		<section class="box-1">
 			<div class="bg"><img src="img/uslugi_1.png" alt="img">
 			</div>
-
+			<div class="arrow_down trigger"></div>
 			<div class="wrapper">
 				<div class="text">
 					<h1>Открываем новые горизонты для вашего бизнеса</h1>
@@ -195,7 +195,7 @@
                     noscroll,
                     isAnimating,
                     container = document.getElementById( 'container' )
-//                        trigger = container.querySelector( 'button.trigger' );
+	                trigger = container.querySelector( 'div.trigger' );
 
                 function scrollY() {
                     return window.pageYOffset || docElem.scrollTop;
@@ -262,11 +262,11 @@
                     classie.add( container, 'modify' );
                 }
 
-                if	(window.innerWidth > 769) {
+//                if	(window.innerWidth > 769) {
                     window.addEventListener( 'scroll', scrollPage );
 
-                }
-//                    trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+//                }
+                    trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
             })();
 		</script>
 		<section id="box-2" class="box-2">
