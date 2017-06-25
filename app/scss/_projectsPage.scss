@@ -303,8 +303,9 @@
           overflow: hidden;
           font-size: $regFont18;
           font-family: "SegoeUIBold", sans-serif;
-          color: #747474;
+          color: #333;
           transition: all .2s ease;
+          text-transform: uppercase;
           hr {
             margin-top: 5px;
           }

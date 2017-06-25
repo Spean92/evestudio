@@ -254,6 +254,25 @@
                 margin-top: 0;
                 .box-4 {
                   width: 100%;
+                  .wrap {
+                    .right_list {
+                      .lists {
+                        ul {
+                          li {
+                            h2 {
+
+                            }
+                            h5 {
+
+                            }
+                            p {
+
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -269,13 +288,15 @@
             }
           }
           .siblingsCase {
-            p {
-
+           > p {
+             font-size: 35px;
+             margin-bottom: 10px;
             }
             .nextCases {
               flex-wrap: wrap;
               .one_case {
                 width: 100%;
+                margin: 20px 0;
                 a {
                   //width: 45%;
                   h4 {
@@ -298,7 +319,7 @@
         }
       }
       .right_list.mobile.block  {
-        width:270px;
+        //width:270px;
       }
     }
   }

@@ -4,9 +4,9 @@
 	font-family: 'icomoon';
 	src:url('../fonts/icomoon/icomoon.eot?-ee0u0f');
 	src:url('../fonts/icomoon/icomoon.eot?#iefix-ee0u0f') format('embedded-opentype'),
-		url('../fonts/icomoon/icomoon.woff?-ee0u0f') format('woff'),
-		url('../fonts/icomoon/icomoon.ttf?-ee0u0f') format('truetype'),
-		url('../fonts/icomoon/icomoon.svg?-ee0u0f#icomoon') format('svg');
+	url('../fonts/icomoon/icomoon.woff?-ee0u0f') format('woff'),
+	url('../fonts/icomoon/icomoon.ttf?-ee0u0f') format('truetype'),
+	url('../fonts/icomoon/icomoon.svg?-ee0u0f#icomoon') format('svg');
 }
 
 /*@media all and (min-width : 1024px) {*/
@@ -320,7 +320,6 @@ button.trigger span::before {
 	.intro-effect-sidefixed .bg-img::after {
 		width: 95%;
 	}
-
 }
 
 @media screen and (max-width: 27em) {
@@ -344,5 +343,12 @@ button.trigger span::before {
 
 	button.trigger::before {
 		display: none;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.intro-effect-push.modify .box-1 {
+		opacity: 0;
+		-webkit-transform: translateY(-100%) scale(0.1);
+		transform: translateY(-100%) scale(0.1);
 	}
 }

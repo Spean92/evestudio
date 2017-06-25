@@ -336,13 +336,14 @@
         }
         .wrapper {
           .siblingsPage {
-            p {
-
+            > p {
+              font-size: 35px;
             }
             .nextCases {
               flex-wrap: wrap;
               .one_case {
                 width: 100%;
+                margin: 20px 0;
                 a {
                   //width: 45%;
                   h4 {

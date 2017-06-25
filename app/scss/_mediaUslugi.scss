@@ -96,9 +96,15 @@
         .box-2 {
           .wrapper {
             width: 704px;
+            h2 {
+              margin-left: 0;
+            }
             .flex {
               width: 105%;
               margin-left: -2.5%;
+              h5 {
+                max-width: 100%;
+              }
               .cl {
                 width:90%;
                 margin: 0 auto;
@@ -185,6 +191,9 @@
               .cl {
                 width:100%;
                 margin: 0 auto;
+                h5 {
+                  max-width: 100%;
+                }
                 p {
                   height: auto;
                   margin-bottom: 20px;
@@ -243,9 +252,20 @@
           }
         }
         .box-4 {
+          .bg_white {
+            padding-top: 60px;
+          }
           .wrapper {
             h2 {
               font-size: 56px;
+              margin-bottom: 65px;
+            }
+            .experts.flex {
+              .fl1 {
+                p {
+                  margin-bottom: 65px;
+                }
+              }
             }
           }
         }
@@ -280,6 +300,9 @@
               .cl {
                 width:100%;
                 margin: 0 auto;
+                h5 {
+                  max-width: 100%;
+                }
                 p {
                   height: auto;
                   margin-bottom: 20px;
@@ -316,9 +339,21 @@
           }
         }
         .box-4 {
+          .bg_white {
+            padding-top: 60px;
+          }
+
           .wrapper {
             h2 {
               font-size: 35px;
+              margin-bottom: 65px;
+            }
+            .experts.flex {
+              .fl1 {
+                p {
+                  margin-bottom: 65px;
+                }
+              }
             }
           }
         }

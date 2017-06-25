@@ -543,8 +543,8 @@
                 .img {
                   height: 400px;
                   width: 150%;
-                  background-position: left center;
-                  background-size: contain;
+                  background-position: center !important;
+                  background-size: cover !important;
                 }
                 .first, .second, .third, a {
                   width:94%;
@@ -563,7 +563,7 @@
                 .second {
                   p {
                     margin-bottom: 0;
-                    font-size: 15px;
+                    //font-size: 15px;
                     br {
                       display: none;
 
@@ -660,6 +660,7 @@
             .clients_mob {
               display: block;
               .lid {
+                box-sizing: border-box;
                 width: 49%;
                 padding: 20px 50px;
                 display: inline-block;
@@ -798,9 +799,9 @@
                 .img {
                   height: 350px;
                   width: 130%;
-                  background-position: center center;
-                  background-size: contain;
-                  margin-left: -15%;
+                  background-position: center !important;
+                  background-size: cover !important;
+                  //margin-left: -15%;
                 }
                 .first, .second, .third, a {
                   width:94%;
@@ -814,7 +815,7 @@
                 }
                 .second {
                   p {
-                    font-size: 15px;
+                    //font-size: 15px;
                     margin-bottom: 20px;
                     br {
                       display: none;
@@ -866,7 +867,7 @@
             .clients_mob {
               display: block;
               .lid {
-                width: 100%;
+                width: 49%;
                 box-sizing: border-box;
                 padding: 20px 25px;
                 display: inline-block;

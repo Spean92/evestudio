@@ -169,9 +169,15 @@
           }
           .left_side {
             width: 100%;
+            .cases {
+              padding-bottom: 0;
+            }
           }
           .right_side {
-
+            margin: 0;
+            + hr {
+              display: none;
+            }
           }
           .cases {
             max-width: 100%;
@@ -189,16 +195,13 @@
               &:after {
                 content: none;
               }
-              &:nth-child(2n) {
-                width: 48%;
-                margin-right: 0;
-              }
             }
           }
         }
         .box-3 {
           .bg_white{
             padding-bottom: 0;
+            padding-top: 40px;
             .paggs_buts {
               a {
                 width:45%;
@@ -220,10 +223,13 @@
               margin-right: 0;
               ul {
                 border:none;
+                li {
+                  box-sizing: border-box;
+                }
               }
               &:first-child {
                 ul {
-                  border-top: 1px solid rgba(32,35,39,.1);
+                  border-top: none
                 }
               }
               &:nth-child(2n) {
@@ -256,10 +262,11 @@
               padding-bottom: 15px;
               max-width: 470px;
               width: 100%;
+              margin: 0;
               .item {
                 max-width: 470px;
                 width: 100%;
-                margin-right: 0;
+                margin: 20px 0;
                 &:after {
                   content: none;
                 }
@@ -281,13 +288,17 @@
             }
           }
           .right_side {
-
+            margin: 0;
+            + hr {
+              display: none;
+            }
           }
 
         }
         .box-3 {
           .bg_white{
             padding-bottom: 0;
+            padding-top: 40px;
             .paggs_buts {
               a {
                 width: 45%;
@@ -307,10 +318,13 @@
 
               ul {
                 border:none;
+                li {
+                  box-sizing: border-box;
+                }
               }
               &:first-child {
                 ul {
-                  border-top: 1px solid rgba(32,35,39,.1);
+                  border:none;
                 }
               }
               width: 100%;

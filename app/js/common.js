@@ -112,7 +112,7 @@ $(document).ready(function() {
             $('.menu nav ul li a').removeClass('wow fadeInDown');
 
             $(window).on('scroll', function() {
-                $('header').addClass('active');
+                // $('header').addClass('active');
                 $('header.active').css('background', 'rgba(255, 255, 255, 0.8)');
                 $('.bars.bars1').addClass('show').removeClass('hide');
                 $('.menu').addClass('hide').removeClass('show');
@@ -144,6 +144,7 @@ $(document).ready(function() {
 			$('header').css('background', 'rgba(0, 0, 0, 0.4)');
 			$('header #logo').attr('src', 'img/evestudio_logo_r_whire.svg');
 			$(".b24-widget-button-position-bottom-middle.b24-widget-button-wrapper").hide();
+			console.log('act');
 			menu = 1;
 		} else if (menu == 1) {
 			$('main nav.nav').fadeOut(300);
@@ -153,6 +154,7 @@ $(document).ready(function() {
             $('body').css("overflow", "auto");
 			// $('#box-2, #box-3, footer').fadeIn();
             $('header .right div.bars').removeClass("act");
+            $('header').addClass('active');
             $('header').css('background', 'rgb(255, 255, 255)');
             $('header #logo').attr('src', 'img/evestudio_logo_r.svg');
             // $('header .right div.bars').css({'border-top': '2px solid white', 'border-bottom': '2px solid white'});
